@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission 0 — Alphabet &amp; Aussprache</title>
+<style>
+  :root{
+    --bg:#0f172a;
+    --panel:#111827;
+    --card:#ffffff;
+    --text:#172033;
+    --muted:#64748b;
+    --blue:#2563eb;
+    --blue2:#1d4ed8;
+    --green:#15803d;
+    --green-bg:#ecfdf5;
+    --red:#b91c1c;
+    --red-bg:#fef2f2;
+    --orange:#c2410c;
+    --purple:#7c3aed;
+    --line:#dbe3ef;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+    min-height:100vh;
+  }
+  .app{
+    max-width:860px;
+    margin:0 auto;
+    padding:20px 14px 34px;
+  }
+  .top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .top h1{
+    margin:0;
+    font-size:clamp(21px,4vw,32px);
+    line-height:1.1;
+  }
+  .top p{
+    margin:5px 0 0;
+    color:#cbd5e1;
+    font-size:13px;
+  }
+  .badge{
+    white-space:nowrap;
+    background:#dbeafe;
+    color:#1e3a8a;
+    font-weight:700;
+    padding:7px 12px;
+    border-radius:999px;
+    font-size:12px;
+  }
+  .progress-wrap{
+    background:rgba(255,255,255,.14);
+    border-radius:999px;
+    height:12px;
+    overflow:hidden;
+    margin:10px 0 16px;
+  }
+  .progress{
+    height:100%;
+    width:0;
+    background:linear-gradient(90deg,#60a5fa,#22c55e);
+    transition:width .3s ease;
+  }
+  .card{
+    background:var(--card);
+    color:var(--text);
+    border-radius:18px;
+    padding:clamp(18px,4vw,34px);
+    box-shadow:0 18px 50px rgba(0,0,0,.28);
+  }
+  .meta{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    align-items:center;
+    margin-bottom:18px;
+    color:var(--muted);
+    font-size:13px;
+  }
+  .kind{
+    background:#eff6ff;
+    color:#1e40af;
+    border-radius:999px;
+    padding:5px 9px;
+    font-weight:700;
+  }
+  .question{
+    font-size:clamp(22px,4vw,34px);
+    font-weight:700;
+    line-height:1.25;
+    margin:4px 0 7px;
+  }
+  .vn{
+    color:#0f766e;
+    font-size:14px;
+    margin-bottom:21px;
+  }
+  .options{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+  }
+  button.option{
+    border:2px solid var(--line);
+    background:#f8fafc;
+    color:#111827;
+    border-radius:14px;
+    padding:15px 14px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.15s ease;
+    min-height:58px;
+  }
+  button.option:hover{
+    border-color:#93c5fd;
+    transform:translateY(-1px);
+  }
+  button.option:disabled{cursor:default;transform:none}
+  button.option.correct{
+    border-color:#16a34a;
+    background:var(--green-bg);
+    color:var(--green);
+  }
+  button.option.wrong{
+    border-color:#dc2626;
+    background:var(--red-bg);
+    color:var(--red);
+  }
+  .feedback{
+    margin-top:18px;
+    border-radius:12px;
+    padding:12px 14px;
+    display:none;
+    line-height:1.45;
+    font-size:14px;
+  }
+  .feedback.good{
+    display:block;
+    background:var(--green-bg);
+    color:#14532d;
+    border-left:4px solid #16a34a;
+  }
+  .feedback.bad{
+    display:block;
+    background:var(--red-bg);
+    color:#7f1d1d;
+    border-left:4px solid #dc2626;
+  }
+  .actions{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:20px;
+  }
+  .btn{
+    border:0;
+    border-radius:12px;
+    padding:12px 18px;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+  }
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-primary:hover{background:var(--blue2)}
+  .btn-secondary{background:#e2e8f0;color:#334155}
+  .scoreline{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:14px;
+  }
+  .chip{
+    background:rgba(255,255,255,.12);
+    color:#e2e8f0;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:999px;
+    padding:6px 10px;
+    font-size:12px;
+  }
+  .medal-chip{
+    font-weight:800;
+    letter-spacing:.2px;
+  }
+  .medal-bronze{color:#f0b27a}
+  .medal-silver{color:#e5e7eb}
+  .medal-gold{color:#fde68a}
+  .medal-result{
+    font-size:24px;
+    font-weight:800;
+    margin:8px 0 4px;
+  }
+  .center{text-align:center}
+  .big{
+    font-size:64px;
+    margin:5px 0 10px;
+  }
+  .result-title{
+    font-size:30px;
+    font-weight:800;
+    margin:0 0 8px;
+  }
+  .result-sub{
+    color:var(--muted);
+    font-size:15px;
+    margin-bottom:18px;
+  }
+  .result-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin:16px 0 22px;
+  }
+  .stat{
+    background:#f8fafc;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 10px;
+  }
+  .stat strong{
+    display:block;
+    font-size:26px;
+    color:#0f172a;
+  }
+  .stat span{
+    color:var(--muted);
+    font-size:12px;
+  }
+  .name-box{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:10px;
+  }
+  .letter{
+    min-width:45px;
+    padding:11px 12px;
+    border:2px solid var(--line);
+    border-radius:10px;
+    background:#fff;
+    color:#111827;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+  }
+  .letter.selected{
+    background:#dbeafe;
+    border-color:#2563eb;
+  }
+  @media(max-width:620px){
+    .options{grid-template-columns:1fr}
+    .top{align-items:flex-start;flex-direction:column}
+    .badge{align-self:flex-start}
+    .result-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <div>
+      <h1>🇩🇪 Mission 0 — Alphabet &amp; Aussprache</h1><p style='margin:6px 0 0;color:#cbd5e1'><em>🇻🇳 Nhiệm vụ 0 – Bảng chữ cái &amp; Phát âm</em></p>
+      <p>Alphabet · Vokale · Umlaute · ch · st/sp · Auslautverhärtung · Z/R</p>
+    </div>
+    <div class="badge" id="counter">Aufgabe 1 / 17</div>
+  </div>
+
+  <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+
+  <div class="card" id="card"></div>
+
+  <div class="scoreline">
+    <div class="chip">⭐ Punkte: <span id="score">0</span></div>
+    <div class="chip">✅ Richtig: <span id="correctCount">0</span></div>
+    <div class="chip medal-chip" id="medalStatus">🥉 Bronze</div>
+    <div class="chip">🔁 Wiederholung falscher Aufgaben am Ende</div>
+  </div>
+</div>
+
+<script>
+const baseQuestions = [
+  {
+    kind:"Umlaut",
+    q:"Welcher Umlaut fehlt? sch_n",
+    vn:"Chữ biến âm nào còn thiếu?",
+    options:["Ä","Ö","Ü","ß"],
+    answer:"Ö",
+    de:"Richtig: schön. Der Umlaut gehört zur richtigen Schreibweise und Aussprache.",
+    vi:"Đúng: schön. Umlaut là một phần của cách viết và phát âm đúng."
+  },
+  {
+    kind:"Umlaut",
+    q:"Welcher Umlaut fehlt? _bung",
+    vn:"Chữ biến âm nào còn thiếu?",
+    options:["Ö","Ä","Ü","E"],
+    answer:"Ü",
+    de:"Richtig: Übung.",
+    vi:"Đúng: Übung."
+  },
+  {
+    kind:"Umlaut",
+    q:"Welcher Umlaut fehlt? _rzte",
+    vn:"Chữ biến âm nào còn thiếu?",
+    options:["Ü","Ä","Ö","A"],
+    answer:"Ä",
+    de:"Richtig: Ärzte. Hier ist Ä kurz [ɛ].",
+    vi:"Đúng: Ärzte. Ở đây Ä được phát âm ngắn [ɛ]."
+  },
+  {
+    kind:"ch-Laut",
+    q:"Welcher ch-Laut ist in „ich“?",
+    vn:"Trong từ „ich“ là âm ch nào?",
+    options:["ich-Laut [ç]","ach-Laut [x]"],
+    answer:"ich-Laut [ç]",
+    de:"Grundregel: Nach i hört man hier den ich-Laut [ç].",
+    vi:"Quy tắc cơ bản: Sau i, ở đây ta nghe âm ich [ç]."
+  },
+  {
+    kind:"ch-Laut",
+    q:"Welcher ch-Laut ist in „Buch“?",
+    vn:"Trong từ „Buch“ là âm ch nào?",
+    options:["ich-Laut [ç]","ach-Laut [x]"],
+    answer:"ach-Laut [x]",
+    de:"Grundregel: Nach u hört man hier den ach-Laut [x].",
+    vi:"Quy tắc cơ bản: Sau u, ở đây ta nghe âm ach [x]."
+  },
+  {
+    kind:"sch / st / sp",
+    q:"Ergänze: ___ule",
+    vn:"Điền phần còn thiếu.",
+    options:["Sch","Sp","St","S"],
+    answer:"Sch",
+    de:"Schule beginnt mit Sch.",
+    vi:"Schule bắt đầu bằng Sch."
+  },
+  {
+    kind:"sch / st / sp",
+    q:"Ergänze: ___rechen",
+    vn:"Điền phần còn thiếu.",
+    options:["St","Sch","Sp","S"],
+    answer:"Sp",
+    de:"sprechen beginnt mit Sp und klingt am Anfang wie „schp“.",
+    vi:"sprechen bắt đầu bằng Sp và đọc gần như „schp“."
+  },
+  {
+    kind:"sch / st / sp",
+    q:"Ergänze: ___raße",
+    vn:"Điền phần còn thiếu.",
+    options:["St","Sp","Sch","S"],
+    answer:"St",
+    de:"Straße beginnt mit St und klingt am Wortanfang wie „scht“.",
+    vi:"Straße bắt đầu bằng St và ở đầu từ được đọc gần như „scht“."
+  },
+  {
+    kind:"Auslautverhärtung",
+    q:"Wie klingt das d am Ende von „Abend“?",
+    vn:"Chữ d ở cuối từ „Abend“ được phát âm như thế nào?",
+    options:["[d]","[t]","[k]","[p]"],
+    answer:"[t]",
+    de:"Am Wortende wird d stimmlos wie [t] gesprochen. Die Schreibweise bleibt Abend.",
+    vi:"Ở cuối từ, d được phát âm vô thanh như [t]. Cách viết vẫn là Abend."
+  },
+  {
+    kind:"Auslautverhärtung",
+    q:"Wie klingt das g am Ende von „Weg“?",
+    vn:"Chữ g ở cuối từ „Weg“ được phát âm như thế nào?",
+    options:["[g]","[d]","[k]","[p]"],
+    answer:"[k]",
+    de:"Am Wortende wird g stimmlos wie [k] gesprochen. Die Schreibweise bleibt Weg.",
+    vi:"Ở cuối từ, g được phát âm vô thanh như [k]. Cách viết vẫn là Weg."
+  },
+  {
+    kind:"Auslautverhärtung",
+    q:"Wie klingt das b am Ende von „Urlaub“?",
+    vn:"Chữ b ở cuối từ „Urlaub“ được phát âm như thế nào?",
+    options:["[p]","[b]","[t]","[k]"],
+    answer:"[p]",
+    de:"Am Wortende wird b stimmlos wie [p] gesprochen. Die Schreibweise bleibt Urlaub.",
+    vi:"Ở cuối từ, b được phát âm vô thanh như [p]. Cách viết vẫn là Urlaub."
+  },
+  {
+    kind:"V oder W",
+    q:"Wie klingt das V in „Vater“?",
+    vn:"Chữ V trong „Vater“ được phát âm như thế nào?",
+    options:["wie F","wie W","wie englisches V","gar nicht"],
+    answer:"wie F",
+    de:"In vielen deutschen Wörtern klingt V wie F: Vater.",
+    vi:"Trong nhiều từ gốc Đức, V được phát âm như F: Vater."
+  },
+  {
+    kind:"V oder W",
+    q:"Wie klingt das W in „Wohnung“?",
+    vn:"Chữ W trong „Wohnung“ được phát âm như thế nào?",
+    options:["wie deutsches V","wie F","wie englisches W","wie U"],
+    answer:"wie deutsches V",
+    de:"Das deutsche W klingt wie ein stimmhaftes V.",
+    vi:"W trong tiếng Đức được phát âm gần như âm V hữu thanh."
+  },
+  {
+    kind:"Z",
+    q:"Wie klingt der Anfang von „Zeit“?",
+    vn:"Âm đầu của từ „Zeit“ được phát âm như thế nào?",
+    options:["ts","s","z wie Englisch","sch"],
+    answer:"ts",
+    de:"Z klingt in deutschen Wörtern wie „ts“.",
+    vi:"Trong từ tiếng Đức, Z được phát âm như „ts“."
+  },
+  {
+    kind:"Vokale",
+    q:"Welches Wort hat hier ein langes E [eː]?",
+    vn:"Từ nào ở đây có âm E dài [eː]?",
+    options:["der Esel","essen","Bett","nett"],
+    answer:"der Esel",
+    de:"Im Wort „Esel“ ist das E lang [eː]. In deutschen Wörtern können Vokale lang oder kurz sein.",
+    vi:"Trong từ „Esel“, E được phát âm dài [eː]. Nguyên âm tiếng Đức có thể dài hoặc ngắn."
+  },
+  {
+    kind:"Umlaut",
+    q:"Welche Aussage ist richtig?",
+    vn:"Phát biểu nào đúng?",
+    options:["Ä ist immer lang.","Ä kann lang oder kurz sein.","Ä klingt immer wie A.","Ä wird nicht gesprochen."],
+    answer:"Ä kann lang oder kurz sein.",
+    de:"Richtig: Ä kann lang sein wie in „spät“ [ɛː] oder kurz wie in „Ärzte“ [ɛ].",
+    vi:"Đúng: Ä có thể dài như trong „spät“ [ɛː] hoặc ngắn như trong „Ärzte“ [ɛ]."
+  },
+  {
+    kind:"Alphabet",
+    q:"Welcher Buchstabe kommt nach M?",
+    vn:"Chữ cái nào đứng sau M?",
+    options:["N","L","O","P"],
+    answer:"N",
+    de:"Im Alphabet kommt N nach M.",
+    vi:"Trong bảng chữ cái, N đứng sau M."
+  }
+];
+
+let questions = [...baseQuestions];
+let current = 0;
+let score = 0;
+let correct = 0;
+let wrongQuestions = [];
+let answered = false;
+let reviewRound = false;
+
+const card = document.getElementById("card");
+const counter = document.getElementById("counter");
+const progress = document.getElementById("progress");
+const scoreEl = document.getElementById("score");
+const correctEl = document.getElementById("correctCount");
+const medalStatus = document.getElementById("medalStatus");
+
+function medalFor(percent){
+  if(percent >= 85) return {emoji:"🥇", name:"Gold", cls:"medal-gold"};
+  if(percent >= 60) return {emoji:"🥈", name:"Silber", cls:"medal-silver"};
+  return {emoji:"🥉", name:"Bronze", cls:"medal-bronze"};
+}
+
+function updateMedal(){
+  const maxBase = baseQuestions.length * 10;
+  const percent = Math.min(100, Math.round((score / maxBase) * 100));
+  const medal = medalFor(percent);
+  medalStatus.className = `chip medal-chip ${medal.cls}`;
+  medalStatus.textContent = `${medal.emoji} ${medal.name}`;
+}
+
+function renderQuestion(){
+  answered = false;
+  const item = questions[current];
+  counter.textContent = `Aufgabe ${current+1} / ${questions.length}`;
+  progress.style.width = `${(current/questions.length)*100}%`;
+
+  card.innerHTML = `
+    <div class="meta">
+      <span class="kind">${item.kind}</span>
+      <span>${reviewRound ? "Wiederholung / Ôn lại" : "Spielrunde / Vòng chơi"}</span>
+    </div>
+    <div class="question">${item.q}</div>
+    <div class="vn">${item.vn}</div>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback" aria-live="polite"></div>
+    <div class="actions">
+      <button class="btn btn-secondary" id="restartBtn" type="button">Neu starten<br><small>Chơi lại</small></button>
+      <button class="btn btn-primary" id="nextBtn" type="button" style="display:none">Weiter<br><small>Tiếp tục</small></button>
+    </div>
+  `;
+
+  const optionsWrap = document.getElementById("options");
+  item.options.forEach(opt=>{
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "option";
+    btn.textContent = opt;
+    btn.addEventListener("click",()=>chooseAnswer(btn,opt,item));
+    optionsWrap.appendChild(btn);
+  });
+
+  document.getElementById("nextBtn").addEventListener("click",nextQuestion);
+  document.getElementById("restartBtn").addEventListener("click",restartGame);
+}
+
+function chooseAnswer(button, selected, item){
+  if(answered) return;
+  answered = true;
+
+  const buttons = [...document.querySelectorAll(".option")];
+  buttons.forEach(b=>{
+    b.disabled = true;
+    if(b.textContent === item.answer) b.classList.add("correct");
+  });
+
+  const feedback = document.getElementById("feedback");
+  const nextBtn = document.getElementById("nextBtn");
+
+  if(selected === item.answer){
+    button.classList.add("correct");
+    score += reviewRound ? 5 : 10;
+    correct++;
+    feedback.className = "feedback good";
+    feedback.innerHTML = `✅ <strong>Richtig!</strong><br><em>Chính xác!</em><br>${item.de}<br><em>${item.vi}</em>`;
+  }else{
+    button.classList.add("wrong");
+    if(!reviewRound) wrongQuestions.push(item);
+    feedback.className = "feedback bad";
+    feedback.innerHTML = `❌ <strong>Noch einmal.</strong><br><em>Hãy thử lại.</em><br>${item.de}<br><em>${item.vi}</em>`;
+  }
+
+  scoreEl.textContent = score;
+  correctEl.textContent = correct;
+  updateMedal();
+  nextBtn.style.display = "inline-block";
+}
+
+function nextQuestion(){
+  current++;
+  if(current < questions.length){
+    updateMedal();
+renderQuestion();
+    return;
+  }
+
+  if(!reviewRound && wrongQuestions.length){
+    reviewRound = true;
+    questions = [...wrongQuestions];
+    wrongQuestions = [];
+    current = 0;
+    renderQuestion();
+    return;
+  }
+
+  showResult();
+}
+
+function showResult(){
+  progress.style.width = "100%";
+  counter.textContent = "Fertig";
+  const maxBase = baseQuestions.length * 10;
+  const percent = Math.round((score / maxBase) * 100);
+  const medal = medalFor(percent);
+  let emoji = medal.emoji;
+  let title = `${medal.name}-Medaille`;
+  let vi = medal.name === "Gold" ? "Huy chương vàng" : medal.name === "Silber" ? "Huy chương bạc" : "Huy chương đồng";
+
+
+  card.innerHTML = `
+    <div class="center">
+      <div class="big">${emoji}</div>
+      <div class="result-title">${title}</div>
+      <div class="medal-result ${medal.cls}">${medal.emoji} ${medal.name}</div>
+      <div class="result-sub">${vi}</div>
+      <div class="result-grid">
+        <div class="stat"><strong>${score}</strong><span>Punkte</span></div>
+        <div class="stat"><strong>${correct}</strong><span>richtige Antworten</span></div>
+        <div class="stat"><strong>${percent}%</strong><span>Ergebnis</span></div>
+      </div>
+      <button class="btn btn-primary" id="againBtn" type="button">Noch einmal spielen</button>
+    </div>
+  `;
+  document.getElementById("againBtn").addEventListener("click",restartGame);
+}
+
+function restartGame(){
+  questions = [...baseQuestions];
+  current = 0;
+  score = 0;
+  correct = 0;
+  wrongQuestions = [];
+  answered = false;
+  reviewRound = false;
+  scoreEl.textContent = "0";
+  correctEl.textContent = "0";
+  updateMedal();
+  renderQuestion();
+}
+
+renderQuestion();
+</script>
+</body>
+</html>

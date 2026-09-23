@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 15 – Übungsblatt Im Restaurant</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 15</h1>
+  <h2>Übungsblatt: Im Restaurant · Dativpronomen · schmecken · gefallen</h2>
+  <div class="vn">Bài tập: Ở nhà hàng · Đại từ Dativ · schmecken · gefallen</div>
+  <div class="rule">
+    <strong>Merke:</strong><br>
+    <strong>schmecken + Dativ</strong> → Die Suppe <strong>schmeckt mir</strong> gut. Das Essen/Getränk ist das Subjekt.<br>
+    <strong>gefallen + Dativ</strong> → Das Restaurant <strong>gefällt mir</strong>. Die Sache ist das Subjekt.<br>
+    <strong>Dativpronomen:</strong> mir · dir · ihm · ihr · uns · euch · ihnen/Ihnen.<br>
+    Singular → <strong>schmeckt / gefällt</strong> · Plural → <strong>schmecken / gefallen</strong>.
+  </div>
+  <div class="toolbar">
+    <button onclick="saveAll()">💾 Antworten speichern</button>
+    <button class="secondary" onclick="loadAll()">↻ Gespeicherte Antworten laden</button>
+    <button class="light" onclick="clearAll()">Alles löschen</button>
+  </div>
+  <div id="status" class="status">Die Antworten werden automatisch im Browser gespeichert.</div>
+</header>
+
+<section>
+<h3>1. Im Restaurant – Welches Wort passt?</h3>
+<p>Ergänze das passende Restaurantwort. <span class="vn">Điền từ vựng nhà hàng phù hợp.</span></p>
+<div class="wordbank">Speisekarte · Kellner · Kellnerin · Vorspeise · Hauptspeise · Nachspeise · Rechnung · reservieren</div>
+<div class="task"><div class="prompt">1. Dort stehen die Gerichte und Getränke. → die ______</div><input type="text" data-save><div class="solution">Speisekarte</div></div>
+<div class="task"><div class="prompt">2. Diese Person bringt das Essen an den Tisch. → der ______ / die ______</div><input type="text" data-save><div class="solution">Kellner / Kellnerin</div></div>
+<div class="task"><div class="prompt">3. Sie kommt vor der Hauptspeise. → die ______</div><input type="text" data-save><div class="solution">Vorspeise</div></div>
+<div class="task"><div class="prompt">4. Sie kommt oft am Ende, z. B. Eis oder Kuchen. → die ______</div><input type="text" data-save><div class="solution">Nachspeise</div></div>
+<div class="task"><div class="prompt">5. Man bezahlt sie am Ende. → die ______</div><input type="text" data-save><div class="solution">Rechnung</div></div>
+<div class="task"><div class="prompt">6. Einen Tisch vorher buchen = einen Tisch ______.</div><input type="text" data-save><div class="solution">reservieren</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. Geschmack – Welches Wort passt?</h3>
+<p>Ergänze das passende Wort. <span class="vn">Điền từ chỉ vị phù hợp.</span></p>
+<div class="wordbank">lecker · salzig · süß · scharf</div>
+<div class="task"><div class="prompt">1. Der Kuchen hat viel Zucker. Er ist ______.</div><input type="text" data-save><div class="solution">süß</div></div>
+<div class="task"><div class="prompt">2. Im Curry ist viel Chili. Es ist ______.</div><input type="text" data-save><div class="solution">scharf</div></div>
+<div class="task"><div class="prompt">3. In der Suppe ist zu viel Salz. Sie ist zu ______.</div><input type="text" data-save><div class="solution">salzig</div></div>
+<div class="task"><div class="prompt">4. Das Essen schmeckt sehr gut. Es ist ______.</div><input type="text" data-save><div class="solution">lecker</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. Dativpronomen</h3>
+<p>Ergänze das passende Dativpronomen. <span class="vn">Điền đại từ Dativ phù hợp.</span></p>
+<div class="note"><strong>ich → mir · du → dir · er/es → ihm · sie → ihr · wir → uns · ihr → euch · sie/Sie → ihnen/Ihnen</strong></div>
+<div class="task"><div class="prompt">1. Die Suppe schmeckt ______ gut. (ich)</div><input type="text" data-save><div class="solution">mir</div></div>
+<div class="task"><div class="prompt">2. Schmeckt ______ der Kaffee? (du)</div><input type="text" data-save><div class="solution">dir</div></div>
+<div class="task"><div class="prompt">3. Der Kuchen schmeckt ______ sehr gut. (Jonas)</div><input type="text" data-save><div class="solution">ihm</div></div>
+<div class="task"><div class="prompt">4. Das Restaurant gefällt ______. (sie, Singular)</div><input type="text" data-save><div class="solution">ihr</div></div>
+<div class="task"><div class="prompt">5. Das Essen schmeckt ______ gut. (wir)</div><input type="text" data-save><div class="solution">uns</div></div>
+<div class="task"><div class="prompt">6. Gefallen ______ die neuen Stühle? (ihr)</div><input type="text" data-save><div class="solution">euch</div></div>
+<div class="task"><div class="prompt">7. Die Musik gefällt ______. (sie, Plural)</div><input type="text" data-save><div class="solution">ihnen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. schmeckt oder schmecken?</h3>
+<p>Ergänze die richtige Form von <strong>schmecken</strong>. Entscheide nach dem Essen/Getränk als Subjekt. <span class="vn">Điền dạng đúng của <strong>schmecken</strong>. Quyết định theo món ăn/thức uống làm chủ ngữ.</span></p>
+<div class="note"><strong>Singular → schmeckt</strong> · <strong>Plural → schmecken</strong></div>
+<div class="task"><div class="prompt">1. Die Suppe ______ mir gut.</div><input type="text" data-save><div class="solution">schmeckt</div></div>
+<div class="task"><div class="prompt">2. Die Kuchen ______ uns sehr gut.</div><input type="text" data-save><div class="solution">schmecken</div></div>
+<div class="task"><div class="prompt">3. Das Steak ______ ihm ausgezeichnet.</div><input type="text" data-save><div class="solution">schmeckt</div></div>
+<div class="task"><div class="prompt">4. Die Getränke ______ euch nicht.</div><input type="text" data-save><div class="solution">schmecken</div></div>
+<div class="task"><div class="prompt">5. Der Fisch ______ ihr nicht so gut.</div><input type="text" data-save><div class="solution">schmeckt</div></div>
+<div class="task"><div class="prompt">6. Die Eisbecher ______ ihnen sehr gut.</div><input type="text" data-save><div class="solution">schmecken</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Satz-Puzzle – schmecken + Dativ</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp từ thành câu đúng với <strong>schmecken + Dativ</strong>.</span></p>
+<div class="note"><strong>Muster:</strong> Essen/Getränk + schmeckt/schmecken + Dativpronomen.</div>
+<div class="task"><div class="wordbank">Die Suppe / schmeckt / mir / gut</div><input type="text" data-save><div class="solution">Die Suppe schmeckt mir gut.</div></div>
+<div class="task"><div class="wordbank">Der Kuchen / schmeckt / ihm / sehr gut</div><input type="text" data-save><div class="solution">Der Kuchen schmeckt ihm sehr gut.</div></div>
+<div class="task"><div class="wordbank">Das Steak / schmeckt / ihr / sehr gut</div><input type="text" data-save><div class="solution">Das Steak schmeckt ihr sehr gut.</div></div>
+<div class="task"><div class="wordbank">Das Eis / schmeckt / euch / gut</div><input type="text" data-save><div class="solution">Das Eis schmeckt euch gut.</div></div>
+<div class="task"><div class="wordbank">Der Kaffee / schmeckt / uns / nicht</div><input type="text" data-save><div class="solution">Der Kaffee schmeckt uns nicht.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. gefällt oder gefallen?</h3>
+<p>Ergänze <strong>gefällt</strong> oder <strong>gefallen</strong>. Schau auf die Sache als Subjekt. <span class="vn">Điền <strong>gefällt</strong> hoặc <strong>gefallen</strong>. Hãy nhìn vào sự vật làm chủ ngữ.</span></p>
+<div class="note"><strong>Singular → gefällt</strong> · <strong>Plural → gefallen</strong></div>
+<div class="task"><div class="prompt">1. Das Restaurant ______ mir.</div><input type="text" data-save><div class="solution">gefällt</div></div>
+<div class="task"><div class="prompt">2. Die Stühle ______ mir.</div><input type="text" data-save><div class="solution">gefallen</div></div>
+<div class="task"><div class="prompt">3. Die Musik ______ ihnen.</div><input type="text" data-save><div class="solution">gefällt</div></div>
+<div class="task"><div class="prompt">4. Die Bilder ______ ihm.</div><input type="text" data-save><div class="solution">gefallen</div></div>
+<div class="task"><div class="prompt">5. Der Tisch ______ uns.</div><input type="text" data-save><div class="solution">gefällt</div></div>
+<div class="task"><div class="prompt">6. Die Preise ______ euch.</div><input type="text" data-save><div class="solution">gefallen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. schmecken oder gefallen?</h3>
+<p>Wähle das passende Verb und die richtige Form. <span class="vn">Chọn động từ phù hợp và chia đúng.</span></p>
+<div class="wordbank">schmecken = Essen/Getränk · gefallen = allgemeines Gefallen</div>
+<div class="task"><div class="prompt">1. Das Restaurant ______ mir sehr gut.</div><input type="text" data-save><div class="solution">gefällt</div></div>
+<div class="task"><div class="prompt">2. Die Suppe ______ ihr nicht.</div><input type="text" data-save><div class="solution">schmeckt</div></div>
+<div class="task"><div class="prompt">3. Die neuen Stühle ______ euch.</div><input type="text" data-save><div class="solution">gefallen</div></div>
+<div class="task"><div class="prompt">4. Der Kuchen ______ ihm ausgezeichnet.</div><input type="text" data-save><div class="solution">schmeckt</div></div>
+<div class="task"><div class="prompt">5. Die Musik hier ______ uns sehr.</div><input type="text" data-save><div class="solution">gefällt</div></div>
+<div class="task"><div class="prompt">6. Das Eis ______ dir gut.</div><input type="text" data-save><div class="solution">schmeckt</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại toàn bộ câu cho đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> Essen/Sache als Subjekt · Dativpronomen · schmeckt/schmecken · gefällt/gefallen.</div>
+<div class="task"><div class="prompt">1. Ich schmecke die Suppe gut.</div><input type="text" data-save><div class="solution">Die Suppe schmeckt mir gut.</div></div>
+<div class="task"><div class="prompt">2. Die Suppe schmeckt ich gut.</div><input type="text" data-save><div class="solution">Die Suppe schmeckt mir gut.</div></div>
+<div class="task"><div class="prompt">3. Der Kuchen schmecken ihm.</div><input type="text" data-save><div class="solution">Der Kuchen schmeckt ihm.</div></div>
+<div class="task"><div class="prompt">4. Ich gefalle das Restaurant.</div><input type="text" data-save><div class="solution">Das Restaurant gefällt mir.</div></div>
+<div class="task"><div class="prompt">5. Die Stühle gefällt ihnen.</div><input type="text" data-save><div class="solution">Die Stühle gefallen ihnen.</div></div>
+<div class="task"><div class="prompt">6. Das Ambiente gefällt zu mir.</div><input type="text" data-save><div class="solution">Das Ambiente gefällt mir.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Lesen – Im Restaurant</h3>
+<div class="violet">Mai und Jonas sind im Restaurant. Mai bestellt eine Suppe und Jonas bestellt ein Steak. Die Suppe schmeckt Mai sehr gut, aber Jonas findet sein Steak zu salzig. Das Restaurant gefällt beiden sehr gut. Besonders die Musik und die Deko gefallen ihnen. Am Ende möchten sie die Rechnung.</div>
+<p>Beantworte die Fragen. <span class="vn">Đọc đoạn văn và trả lời các câu hỏi.</span></p>
+<div class="task"><div class="prompt">1. Was bestellt Mai?</div><input type="text" data-save><div class="solution">Sie bestellt eine Suppe.</div></div>
+<div class="task"><div class="prompt">2. Was bestellt Jonas?</div><input type="text" data-save><div class="solution">Er bestellt ein Steak.</div></div>
+<div class="task"><div class="prompt">3. Wie schmeckt Mai die Suppe?</div><input type="text" data-save><div class="solution">Die Suppe schmeckt ihr sehr gut.</div></div>
+<div class="task"><div class="prompt">4. Wie findet Jonas sein Steak?</div><input type="text" data-save><div class="solution">Er findet es zu salzig.</div></div>
+<div class="task"><div class="prompt">5. Was gefällt ihnen im Restaurant?</div><input type="text" data-save><div class="solution">Die Musik und die Deko gefallen ihnen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>10. Formelle Tischreservierung</h3>
+<p>Schreibe eine kurze formelle E-Mail an ein Restaurant. Nenne Datum/Tag, Uhrzeit und Personenzahl und bitte um Bestätigung. <span class="vn">Viết một email trang trọng ngắn cho nhà hàng. Nêu ngày, giờ, số người và đề nghị xác nhận.</span></p>
+<div class="violet"><strong>Hilfe:</strong> Sehr geehrte Damen und Herren, · ich möchte einen Tisch reservieren. · am Freitag um 19 Uhr · für vier Personen · Bitte bestätigen Sie die Reservierung. · Mit freundlichen Grüßen</div>
+<div class="task"><textarea data-save placeholder="Sehr geehrte Damen und Herren,&#10;&#10;ich möchte ..."></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 15 · Im Restaurant<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+
+<script>
+const KEY="a1_l15_restaurant_dativ_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

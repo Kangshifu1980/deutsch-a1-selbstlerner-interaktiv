@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 14 – Übungsblatt Regeln & Wünsche</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 14</h1>
+  <h2>Übungsblatt: Regeln · Pläne · wollen · dürfen · sollen</h2>
+  <div class="vn">Bài tập: Quy tắc · Kế hoạch · wollen · dürfen · sollen</div>
+  <div class="rule">
+    <strong>Merke:</strong><br>
+    <strong>wollen</strong> = feste Absicht / klarer Plan → Ich <strong>will</strong> heute Deutsch lernen.<br>
+    <strong>dürfen</strong> = Erlaubnis → Du <strong>darfst</strong> hier parken. · <strong>nicht dürfen</strong> = Verbot.<br>
+    <strong>sollen</strong> = Empfehlung / Auftrag / Erwartung von einer anderen Person.<br>
+    <strong>nicht müssen</strong> = keine Pflicht → Du musst heute nicht arbeiten.
+  </div>
+  <div class="toolbar">
+    <button onclick="saveAll()">💾 Antworten speichern</button>
+    <button class="secondary" onclick="loadAll()">↻ Gespeicherte Antworten laden</button>
+    <button class="light" onclick="clearAll()">Alles löschen</button>
+  </div>
+  <div id="status" class="status">Die Antworten werden automatisch im Browser gespeichert.</div>
+</header>
+
+<section>
+<h3>1. Regeln & Verbote – Welches Wort passt?</h3>
+<p>Ergänze das passende Wort aus der Wortbank. <span class="vn">Điền từ phù hợp từ khung từ vựng.</span></p>
+<div class="wordbank">Rauchverbot · Ruhezeit · Mülltrennung · Handyverbot · Hausordnung · Erlaubnis</div>
+<div class="task"><div class="prompt">1. Man darf hier nicht rauchen. → das ______</div><input type="text" data-save><div class="solution">Rauchverbot</div></div>
+<div class="task"><div class="prompt">2. Nach 22 Uhr soll es leise sein. → die ______</div><input type="text" data-save><div class="solution">Ruhezeit</div></div>
+<div class="task"><div class="prompt">3. Papier, Glas und Restmüll werden getrennt. → die ______</div><input type="text" data-save><div class="solution">Mülltrennung</div></div>
+<div class="task"><div class="prompt">4. In der Schule darf man das Handy nicht benutzen. → das ______</div><input type="text" data-save><div class="solution">Handyverbot</div></div>
+<div class="task"><div class="prompt">5. Dort stehen die Regeln für das Haus. → die ______</div><input type="text" data-save><div class="solution">Hausordnung</div></div>
+<div class="task"><div class="prompt">6. Man darf etwas tun. Man hat eine ______.</div><input type="text" data-save><div class="solution">Erlaubnis</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. wollen konjugieren</h3>
+<p>Ergänze die richtige Form von <strong>wollen</strong>. <span class="vn">Điền dạng chia đúng của <strong>wollen</strong>.</span></p>
+<div class="task"><div class="prompt">1. Ich ______ heute Deutsch lernen.</div><input type="text" data-save><div class="solution">will</div></div>
+<div class="task"><div class="prompt">2. Du ______ am Samstag Freunde treffen.</div><input type="text" data-save><div class="solution">willst</div></div>
+<div class="task"><div class="prompt">3. Er ______ nächstes Jahr nach Berlin reisen.</div><input type="text" data-save><div class="solution">will</div></div>
+<div class="task"><div class="prompt">4. Wir ______ am Wochenende ins Kino gehen.</div><input type="text" data-save><div class="solution">wollen</div></div>
+<div class="task"><div class="prompt">5. Ihr ______ heute zusammen einkaufen.</div><input type="text" data-save><div class="solution">wollt</div></div>
+<div class="task"><div class="prompt">6. Sie (Plural) ______ morgen früh anfangen.</div><input type="text" data-save><div class="solution">wollen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. Satz-Puzzle – wollen + Infinitiv</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp từ thành câu đúng với <strong>wollen</strong>.</span></p>
+<div class="note"><strong>Tipp:</strong> wollen auf Position 2 · Vollverb im Infinitiv am Satzende.</div>
+<div class="task"><div class="wordbank">ich / heute / Deutsch / lernen / will</div><input type="text" data-save><div class="solution">Ich will heute Deutsch lernen.</div></div>
+<div class="task"><div class="wordbank">du / am Samstag / Freunde / treffen / willst</div><input type="text" data-save><div class="solution">Du willst am Samstag Freunde treffen.</div></div>
+<div class="task"><div class="wordbank">er / ins Kino / gehen / will</div><input type="text" data-save><div class="solution">Er will ins Kino gehen.</div></div>
+<div class="task"><div class="wordbank">wir / nächstes Jahr / nach Berlin / reisen / wollen</div><input type="text" data-save><div class="solution">Wir wollen nächstes Jahr nach Berlin reisen.</div></div>
+<div class="task"><div class="wordbank">ihr / gerne / zusammen / kochen / wollt</div><input type="text" data-save><div class="solution">Ihr wollt gerne zusammen kochen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. dürfen – Erlaubnis oder Verbot?</h3>
+<p>Ergänze die richtige Form von <strong>dürfen</strong>. Achte auf <strong>nicht</strong>. <span class="vn">Điền dạng đúng của <strong>dürfen</strong>. Chú ý đến <strong>nicht</strong>.</span></p>
+<div class="task"><div class="prompt">1. In der Bibliothek ______ man nicht laut sprechen.</div><input type="text" data-save><div class="solution">darf</div></div>
+<div class="task"><div class="prompt">2. ______ ich dein Handy benutzen?</div><input type="text" data-save><div class="solution">Darf</div></div>
+<div class="task"><div class="prompt">3. Kinder ______ hier nicht allein schwimmen.</div><input type="text" data-save><div class="solution">dürfen</div></div>
+<div class="task"><div class="prompt">4. Du ______ gerne bei uns übernachten.</div><input type="text" data-save><div class="solution">darfst</div></div>
+<div class="task"><div class="prompt">5. Wir ______ im Büro nicht rauchen.</div><input type="text" data-save><div class="solution">dürfen</div></div>
+<div class="task"><div class="prompt">6. ______ ihr am Wochenende lange schlafen?</div><input type="text" data-save><div class="solution">Dürft</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. nicht dürfen oder nicht müssen?</h3>
+<p>Entscheide: Ist es ein <strong>Verbot</strong> oder gibt es <strong>keine Pflicht</strong>? Schreibe den vollständigen Satz. <span class="vn">Chọn: đó là <strong>cấm</strong> hay <strong>không bắt buộc</strong>? Viết câu hoàn chỉnh.</span></p>
+<div class="note"><strong>nicht dürfen = Verbot</strong> · <strong>nicht müssen = keine Pflicht</strong></div>
+<div class="task"><div class="prompt">1. Hier ist Rauchen verboten. → Du ______ hier ______ rauchen.</div><input type="text" data-save><div class="solution">Du darfst hier nicht rauchen.</div></div>
+<div class="task"><div class="prompt">2. Heute ist frei. Arbeiten ist nicht notwendig. → Du ______ heute ______ arbeiten.</div><input type="text" data-save><div class="solution">Du musst heute nicht arbeiten.</div></div>
+<div class="task"><div class="prompt">3. Parken ist hier verboten. → Man ______ hier ______ parken.</div><input type="text" data-save><div class="solution">Man darf hier nicht parken.</div></div>
+<div class="task"><div class="prompt">4. Die Hausaufgabe ist freiwillig. → Ihr ______ die Hausaufgabe ______ machen.</div><input type="text" data-save><div class="solution">Ihr müsst die Hausaufgabe nicht machen.</div></div>
+<div class="task"><div class="prompt">5. Im Unterricht sind Handys verboten. → Wir ______ im Unterricht Handys ______ benutzen.</div><input type="text" data-save><div class="solution">Wir dürfen im Unterricht Handys nicht benutzen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. sollen konjugieren</h3>
+<p>Ergänze die richtige Form von <strong>sollen</strong>. <span class="vn">Điền dạng chia đúng của <strong>sollen</strong>.</span></p>
+<div class="task"><div class="prompt">1. Der Arzt sagt, ich ______ mehr schlafen.</div><input type="text" data-save><div class="solution">soll</div></div>
+<div class="task"><div class="prompt">2. Du ______ mehr Wasser trinken.</div><input type="text" data-save><div class="solution">sollst</div></div>
+<div class="task"><div class="prompt">3. Er ______ pünktlich sein.</div><input type="text" data-save><div class="solution">soll</div></div>
+<div class="task"><div class="prompt">4. Wir ______ die Hausaufgaben machen.</div><input type="text" data-save><div class="solution">sollen</div></div>
+<div class="task"><div class="prompt">5. Ihr ______ leiser sein.</div><input type="text" data-save><div class="solution">sollt</div></div>
+<div class="task"><div class="prompt">6. Sie (Plural) ______ den Arzt fragen.</div><input type="text" data-save><div class="solution">sollen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. wollen, dürfen oder sollen?</h3>
+<p>Wähle das passende Modalverb und konjugiere es richtig. <span class="vn">Chọn động từ khiếm khuyết phù hợp và chia đúng.</span></p>
+<div class="wordbank">wollen = feste Absicht · dürfen = Erlaubnis/Verbot · sollen = Empfehlung/Auftrag</div>
+<div class="task"><div class="prompt">1. Mein Plan ist klar: Ich ______ nächstes Jahr Deutsch lernen.</div><input type="text" data-save><div class="solution">will</div></div>
+<div class="task"><div class="prompt">2. Der Arzt sagt: Du ______ mehr Wasser trinken.</div><input type="text" data-save><div class="solution">sollst</div></div>
+<div class="task"><div class="prompt">3. Ist das erlaubt? ______ ich hier fotografieren?</div><input type="text" data-save><div class="solution">Darf</div></div>
+<div class="task"><div class="prompt">4. Unsere Eltern sagen: Wir ______ um 22 Uhr zu Hause sein.</div><input type="text" data-save><div class="solution">sollen</div></div>
+<div class="task"><div class="prompt">5. Wir haben einen festen Plan: Wir ______ am Samstag ins Kino gehen.</div><input type="text" data-save><div class="solution">wollen</div></div>
+<div class="task"><div class="prompt">6. Hier ist es verboten: Ihr ______ hier nicht parken.</div><input type="text" data-save><div class="solution">dürft</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại toàn bộ câu cho đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> Modalverbform · Infinitiv am Satzende · wollen/dürfen/sollen · nicht dürfen vs. nicht müssen.</div>
+<div class="task"><div class="prompt">1. Ich wolle ins Kino gehen.</div><input type="text" data-save><div class="solution">Ich will ins Kino gehen.</div></div>
+<div class="task"><div class="prompt">2. Er will gehen ins Kino.</div><input type="text" data-save><div class="solution">Er will ins Kino gehen.</div></div>
+<div class="task"><div class="prompt">3. Du dürfst hier parken.</div><input type="text" data-save><div class="solution">Du darfst hier parken.</div></div>
+<div class="task"><div class="prompt">4. Ich muss hier nicht rauchen. (gemeint: Verbot)</div><input type="text" data-save><div class="solution">Ich darf hier nicht rauchen.</div></div>
+<div class="task"><div class="prompt">5. Ich sollst mehr schlafen.</div><input type="text" data-save><div class="solution">Ich soll mehr schlafen.</div></div>
+<div class="task"><div class="prompt">6. Er soll trinken mehr Wasser.</div><input type="text" data-save><div class="solution">Er soll mehr Wasser trinken.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Lesen – Hausregeln und Pläne</h3>
+<div class="violet">Linh wohnt in einem Wohnheim. Nach 22 Uhr ist Ruhezeit. Man darf im Gebäude nicht rauchen und Fahrräder dürfen nicht im Flur stehen. Am Samstag will Linh Freunde treffen. Ihre Lehrerin sagt, sie soll vorher die Hausaufgaben machen. Am Sonntag muss sie nicht früh aufstehen.</div>
+<p>Beantworte die Fragen. <span class="vn">Đọc đoạn văn và trả lời các câu hỏi.</span></p>
+<div class="task"><div class="prompt">1. Was ist nach 22 Uhr?</div><input type="text" data-save><div class="solution">Nach 22 Uhr ist Ruhezeit.</div></div>
+<div class="task"><div class="prompt">2. Darf man im Gebäude rauchen?</div><input type="text" data-save><div class="solution">Nein, man darf im Gebäude nicht rauchen.</div></div>
+<div class="task"><div class="prompt">3. Was will Linh am Samstag machen?</div><input type="text" data-save><div class="solution">Sie will Freunde treffen.</div></div>
+<div class="task"><div class="prompt">4. Was soll sie vorher machen?</div><input type="text" data-save><div class="solution">Sie soll vorher die Hausaufgaben machen.</div></div>
+<div class="task"><div class="prompt">5. Muss sie am Sonntag früh aufstehen?</div><input type="text" data-save><div class="solution">Nein, sie muss am Sonntag nicht früh aufstehen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>10. Meine Regeln & Pläne</h3>
+<p>Schreibe 5–7 Sätze. Benutze mindestens einmal <strong>wollen</strong>, <strong>dürfen / nicht dürfen</strong> und <strong>sollen</strong>. <span class="vn">Viết 5–7 câu. Dùng ít nhất một lần <strong>wollen</strong>, <strong>dürfen / nicht dürfen</strong> và <strong>sollen</strong>.</span></p>
+<div class="note"><strong>Hilfe:</strong> Ich will … · Bei mir darf man … · Man darf nicht … · Meine Eltern / mein Lehrer sagen, ich soll …</div>
+<div class="task"><div class="prompt">1. Was willst du am Wochenende machen?</div><textarea data-save placeholder="Am Wochenende will ich ..."></textarea></div>
+<div class="task"><div class="prompt">2. Was darf man bei dir zu Hause?</div><textarea data-save placeholder="Bei mir zu Hause darf man ..."></textarea></div>
+<div class="task"><div class="prompt">3. Was darf man bei dir nicht?</div><textarea data-save placeholder="Man darf nicht ..."></textarea></div>
+<div class="task"><div class="prompt">4. Was sollst du diese Woche machen?</div><textarea data-save placeholder="Ich soll ..."></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 14 · Regeln &amp; Wünsche<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+
+<script>
+const KEY="a1_l14_regeln_wuensche_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

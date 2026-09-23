@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 8 – Übungsblatt Akkusativ</title>
+<style>
+:root{
+  --blue:#1e3a8a; --blue2:#2563eb; --teal:#0f766e; --bg:#f4f6f8;
+  --card:#ffffff; --line:#dbe3ea; --soft:#eff6ff; --green:#f0fdf4;
+  --yellow:#fefce8; --red:#fff7ed; --text:#1f2937; --muted:#64748b;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}
+.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text], textarea, select{
+  width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;
+  font:inherit;background:#fff;color:var(--text)
+}
+textarea{min-height:72px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}
+button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.article-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.article-grid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center}
+.der{color:#1e40af;font-weight:800}.die{color:#9d174d;font-weight:800}.das{color:#166534;font-weight:800}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.article-grid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{
+ body{background:white} main{max-width:none;margin:0} section,header{break-inside:avoid}
+ .toolbar,button{display:none!important} input,textarea,select{border:1px solid #aaa}
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 8</h1>
+  <h2>Übungsblatt: Akkusativ – Essen &amp; Trinken</h2>
+  <div class="vn">Bài tập: Cách 4 – Ăn &amp; Uống</div>
+
+  <div class="rule">
+    <strong>Merke:</strong> Im Akkusativ ändert sich nur der maskuline Artikel:<br>
+    <span class="der">der → den</span> &nbsp; | &nbsp; <span class="der">ein → einen</span><br>
+    <span class="die">die / eine</span> und <span class="das">das / ein</span> bleiben gleich.
+  </div>
+
+  <div class="toolbar">
+    <button onclick="saveAll()">💾 Antworten speichern</button>
+    <button class="secondary" onclick="loadAll()">↻ Gespeicherte Antworten laden</button>
+    <button class="light" onclick="clearAll()">Alles löschen</button>
+  </div>
+  <div id="status" class="status">Die Antworten werden auch automatisch im Browser gespeichert.</div>
+</header>
+
+<section>
+<h3>1. Artikel-Check: Nominativ → Akkusativ</h3>
+<p>Schreibe den richtigen Akkusativ-Artikel. <span class="vn">Điền mạo từ Akkusativ đúng.</span></p>
+
+<div class="article-grid">
+  <div><span class="der">der</span> → <strong>den</strong></div>
+  <div><span class="der">ein</span> → <strong>einen</strong></div>
+  <div><span class="die">die / eine</span> → gleich</div>
+  <div><span class="das">das / ein</span> → gleich</div>
+</div>
+
+<div class="task"><div class="prompt">1. Ich kaufe ___ Apfel. (der / die / das)</div><input type="text" data-save><div class="solution">den</div></div>
+<div class="task"><div class="prompt">2. Er trinkt ___ Kaffee. (ein / eine)</div><input type="text" data-save><div class="solution">einen</div></div>
+<div class="task"><div class="prompt">3. Wir kaufen ___ Milch. (der / die / das)</div><input type="text" data-save><div class="solution">die</div></div>
+<div class="task"><div class="prompt">4. Sie isst ___ Banane. (ein / eine)</div><input type="text" data-save><div class="solution">eine</div></div>
+<div class="task"><div class="prompt">5. Du kaufst ___ Brot. (der / die / das)</div><input type="text" data-save><div class="solution">das</div></div>
+<div class="task"><div class="prompt">6. Ich esse ___ Ei. (ein / eine)</div><input type="text" data-save><div class="solution">ein</div></div>
+<div class="task"><div class="prompt">7. Ihr trinkt ___ Saft. (der / die / das)</div><input type="text" data-save><div class="solution">den</div></div>
+<div class="task"><div class="prompt">8. Anna kauft ___ Salat. (ein / eine)</div><input type="text" data-save><div class="solution">einen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. essen oder trinken?</h3>
+<p>Setze das richtige Verb ein und konjugiere es: <strong>essen · trinken</strong>. <span class="vn">Chọn động từ đúng và chia động từ: <strong>essen · trinken</strong>.</span></p>
+<div class="note"><strong>Achtung:</strong> essen → du <strong>isst</strong>, er/sie/es <strong>isst</strong>.</div>
+
+<div class="task"><div class="prompt">1. Ich ______ den Fisch.</div><input type="text" data-save><div class="solution">esse</div></div>
+<div class="task"><div class="prompt">2. Du ______ den Tee.</div><input type="text" data-save><div class="solution">trinkst</div></div>
+<div class="task"><div class="prompt">3. Er ______ einen Apfel.</div><input type="text" data-save><div class="solution">isst</div></div>
+<div class="task"><div class="prompt">4. Wir ______ das Wasser.</div><input type="text" data-save><div class="solution">trinken</div></div>
+<div class="task"><div class="prompt">5. Ihr ______ die Wurst.</div><input type="text" data-save><div class="solution">esst</div></div>
+<div class="task"><div class="prompt">6. Sie ______ einen Kaffee. (Singular / sie = she)</div><input type="text" data-save><div class="solution">trinkt</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. Satz-Puzzle</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp các từ thành câu đúng.</span></p>
+
+<div class="task">
+  <div class="wordbank">ich / einen / Apfel / esse</div>
+  <input type="text" data-save>
+  <div class="solution">Ich esse einen Apfel.</div>
+</div>
+<div class="task">
+  <div class="wordbank">trinkt / den / Tee / Anna</div>
+  <input type="text" data-save>
+  <div class="solution">Anna trinkt den Tee.</div>
+</div>
+<div class="task">
+  <div class="wordbank">wir / die / Milch / kaufen</div>
+  <input type="text" data-save>
+  <div class="solution">Wir kaufen die Milch.</div>
+</div>
+<div class="task">
+  <div class="wordbank">isst / er / den / Fisch</div>
+  <input type="text" data-save>
+  <div class="solution">Er isst den Fisch.</div>
+</div>
+<div class="task">
+  <div class="wordbank">einen / Kaffee / du / trinkst</div>
+  <input type="text" data-save>
+  <div class="solution">Du trinkst einen Kaffee.</div>
+</div>
+<div class="task">
+  <div class="wordbank">kauft / einen / Salat / sie</div>
+  <input type="text" data-save>
+  <div class="solution">Sie kauft einen Salat.</div>
+</div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại câu đúng.</span></p>
+
+<div class="errorbox">Tipp: Prüfe zuerst <strong>Verb</strong> und dann <strong>Artikel</strong>.</div>
+
+<div class="task"><div class="prompt">1. Ich esse der Apfel.</div><input type="text" data-save><div class="solution">Ich esse den Apfel.</div></div>
+<div class="task"><div class="prompt">2. Er esst den Fisch.</div><input type="text" data-save><div class="solution">Er isst den Fisch.</div></div>
+<div class="task"><div class="prompt">3. Ich trinke ein Kaffee.</div><input type="text" data-save><div class="solution">Ich trinke einen Kaffee.</div></div>
+<div class="task"><div class="prompt">4. Wir kaufen einen Milch.</div><input type="text" data-save><div class="solution">Wir kaufen die Milch.</div></div>
+<div class="task"><div class="prompt">5. Sie isst die Brot.</div><input type="text" data-save><div class="solution">Sie isst das Brot.</div></div>
+<div class="task"><div class="prompt">6. Du trinkt den Saft.</div><input type="text" data-save><div class="solution">Du trinkst den Saft.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Wen oder was?</h3>
+<p>Beantworte die Frage mit einem vollständigen Satz. Benutze den richtigen Akkusativ. <span class="vn">Trả lời bằng câu đầy đủ và dùng Akkusativ đúng.</span></p>
+
+<div class="task"><div class="prompt">1. Was isst du? → Apfel</div><input type="text" data-save placeholder="Ich esse ..."><div class="solution">Beispiel: Ich esse einen Apfel.</div></div>
+<div class="task"><div class="prompt">2. Was trinkt Anna? → Tee</div><input type="text" data-save><div class="solution">Beispiel: Anna trinkt den Tee.</div></div>
+<div class="task"><div class="prompt">3. Was kauft ihr? → Brot + Käse</div><input type="text" data-save><div class="solution">Beispiel: Wir kaufen das Brot und den Käse.</div></div>
+<div class="task"><div class="prompt">4. Was nimmt er? → Salat</div><input type="text" data-save><div class="solution">Beispiel: Er nimmt den Salat.</div></div>
+<div class="task"><div class="prompt">5. Was trinkst du? → Kaffee</div><input type="text" data-save><div class="solution">Beispiel: Ich trinke einen Kaffee.</div></div>
+<button onclick="toggleSolutions(this)">Beispiele zeigen</button>
+</section>
+
+<section>
+<h3>6. Supermarkt – Was kaufst du?</h3>
+<p>Schreibe vollständige Sätze. Verwende mindestens drei Produkte. <span class="vn">Viết câu đầy đủ và dùng ít nhất ba sản phẩm.</span></p>
+<div class="wordbank">
+🍎 der Apfel · 🍌 die Banane · 🥖 das Brot · 🧀 der Käse · 🥛 die Milch · 🥚 das Ei · 🐟 der Fisch · 🥗 der Salat · 🥤 der Saft · ☕ der Kaffee
+</div>
+
+<div class="task">
+  <div class="prompt">1. Was kaufst du zum Frühstück?</div>
+  <textarea data-save placeholder="Ich kaufe ..."></textarea>
+</div>
+<div class="task">
+  <div class="prompt">2. Was kaufst du für das Abendessen?</div>
+  <textarea data-save placeholder="Ich kaufe ..."></textarea>
+</div>
+<div class="task">
+  <div class="prompt">3. Was kaufst du diese Woche im Supermarkt?</div>
+  <textarea data-save placeholder="Diese Woche kaufe ich ..."></textarea>
+</div>
+</section>
+
+<section>
+<h3>7. Mini-Lesetext</h3>
+<p>Lies den Text und beantworte die Fragen. <span class="vn">Đọc đoạn văn và trả lời câu hỏi.</span></p>
+
+<div class="note">
+<strong>Text:</strong><br>
+Heute geht Mia in den Supermarkt. Sie kauft einen Apfel, eine Banane, das Brot und den Käse.
+Für das Abendessen nimmt sie den Fisch und den Salat. Sie kauft auch einen Saft und eine Flasche Wasser.
+Zu Hause isst Mia den Fisch mit Reis. Dazu trinkt sie den Saft.
+</div>
+
+<div class="task"><div class="prompt">1. Was kauft Mia an Obst?</div><input type="text" data-save><div class="solution">Sie kauft einen Apfel und eine Banane.</div></div>
+<div class="task"><div class="prompt">2. Was kauft sie für das Abendessen?</div><input type="text" data-save><div class="solution">Sie nimmt / kauft den Fisch und den Salat.</div></div>
+<div class="task"><div class="prompt">3. Was trinkt Mia zu Hause?</div><input type="text" data-save><div class="solution">Sie trinkt den Saft.</div></div>
+<div class="task"><div class="prompt">4. Schreibe zwei Akkusativobjekte aus dem Text.</div><input type="text" data-save><div class="solution">Zum Beispiel: einen Apfel, eine Banane, das Brot, den Käse, den Fisch, den Salat, einen Saft.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Challenge ⭐ Nur Stichwörter</h3>
+<p>Bilde selbst einen vollständigen Satz. Du musst Verb, Artikel und Satzstellung selbst wählen. <span class="vn">Tự viết câu hoàn chỉnh: chọn động từ, mạo từ và trật tự từ.</span></p>
+
+<div class="task"><div class="wordbank">ich · Kaffee · trinken</div><input type="text" data-save><div class="solution">Beispiel: Ich trinke einen Kaffee.</div></div>
+<div class="task"><div class="wordbank">er · Fisch · essen</div><input type="text" data-save><div class="solution">Beispiel: Er isst den Fisch.</div></div>
+<div class="task"><div class="wordbank">wir · Milch · kaufen</div><input type="text" data-save><div class="solution">Beispiel: Wir kaufen die Milch.</div></div>
+<div class="task"><div class="wordbank">sie · Apfel + Banane · kaufen</div><input type="text" data-save><div class="solution">Beispiel: Sie kauft einen Apfel und eine Banane.</div></div>
+<div class="task"><div class="wordbank">du · Tee · trinken</div><input type="text" data-save><div class="solution">Beispiel: Du trinkst den Tee.</div></div>
+<div class="task"><div class="wordbank">ihr · Brot + Käse · essen</div><input type="text" data-save><div class="solution">Beispiel: Ihr esst das Brot und den Käse.</div></div>
+<button onclick="toggleSolutions(this)">Beispiele zeigen</button>
+</section>
+
+<section>
+<h3>9. Über dich</h3>
+<p>Antworte frei. <span class="vn">Trả lời tự do.</span></p>
+<div class="task"><div class="prompt">Was isst du gern zum Frühstück?</div><textarea data-save></textarea></div>
+<div class="task"><div class="prompt">Trinkst du Kaffee oder Tee?</div><textarea data-save></textarea></div>
+<div class="task"><div class="prompt">Was kaufst du oft im Supermarkt?</div><textarea data-save></textarea></div>
+<div class="task"><div class="prompt">Was isst du nicht?</div><textarea data-save></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 8 · Akkusativ – Essen &amp; Trinken<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+
+<script>
+const KEY="a1_l8_akkusativ_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden auch automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw) return;
+  const data=JSON.parse(raw);
+  fields().forEach((el,i)=>{if(data[i]!==undefined) el.value=data[i];});
+  document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?")) return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

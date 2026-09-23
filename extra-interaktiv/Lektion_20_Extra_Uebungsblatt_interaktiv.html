@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 20 – Übungsblatt Perfekt Teil 2</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 20</h1>
+  <h2>Übungsblatt: Perfekt – Teil 2 · sein oder haben · Bewegungsverben · Reisen</h2>
+</header>
+
+<div class="toolbar">
+  <button onclick="saveAll()">💾 Antworten speichern</button>
+  <button onclick="loadAll()">📂 Antworten laden</button>
+  <button class="danger" onclick="clearAll()">🗑️ Alles löschen</button>
+  <span id="status">Die Antworten werden automatisch im Browser gespeichert.</span>
+</div>
+
+<section>
+<h3>1. „sein“ im Perfekt</h3>
+<p>Ergänze die richtige Form von <strong>sein</strong>. <span class="vn">Điền đúng dạng của „sein“.</span></p>
+<div class="note"><strong>Hilfe:</strong> ich <b>bin</b> · du <b>bist</b> · er/sie/es <b>ist</b> · wir <b>sind</b> · ihr <b>seid</b> · sie/Sie <b>sind</b></div>
+<div class="task"><div class="prompt">1. Ich ______ nach Berlin gefahren.</div><input type="text" data-save><div class="solution">bin</div></div>
+<div class="task"><div class="prompt">2. Du ______ nach Rom geflogen.</div><input type="text" data-save><div class="solution">bist</div></div>
+<div class="task"><div class="prompt">3. Er ______ ins Hotel gegangen.</div><input type="text" data-save><div class="solution">ist</div></div>
+<div class="task"><div class="prompt">4. Wir ______ am Wochenende gewandert.</div><input type="text" data-save><div class="solution">sind</div></div>
+<div class="task"><div class="prompt">5. Ihr ______ spät gekommen.</div><input type="text" data-save><div class="solution">seid</div></div>
+<div class="task"><div class="prompt">6. Sie (Plural) ______ im Hotel geblieben.</div><input type="text" data-save><div class="solution">sind</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. sein oder haben?</h3>
+<p>Ergänze das richtige Hilfsverb in der richtigen Form. <span class="vn">Chọn „sein“ hoặc „haben“ và chia đúng.</span></p>
+<div class="note"><strong>Merke:</strong> gehen, fahren, fliegen, kommen, reisen, wandern und bleiben → <b>sein</b>. Bekannte Tätigkeitsverben wie arbeiten, telefonieren, lernen, putzen → <b>haben</b>.</div>
+<div class="task"><div class="prompt">1. Ich ______ gestern nach Hause gefahren.</div><input type="text" data-save><div class="solution">bin</div></div>
+<div class="task"><div class="prompt">2. Wir ______ gestern gearbeitet.</div><input type="text" data-save><div class="solution">haben</div></div>
+<div class="task"><div class="prompt">3. Du ______ nach Berlin geflogen.</div><input type="text" data-save><div class="solution">bist</div></div>
+<div class="task"><div class="prompt">4. Er ______ lange telefoniert.</div><input type="text" data-save><div class="solution">hat</div></div>
+<div class="task"><div class="prompt">5. Ihr ______ in die Berge gewandert.</div><input type="text" data-save><div class="solution">seid</div></div>
+<div class="task"><div class="prompt">6. Sie ______ die Koffer gepackt.</div><input type="text" data-save><div class="solution">haben</div></div>
+<div class="task"><div class="prompt">7. Anna ______ spät gekommen.</div><input type="text" data-save><div class="solution">ist</div></div>
+<div class="task"><div class="prompt">8. Tom ______ Musik gehört.</div><input type="text" data-save><div class="solution">hat</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. Partizipformen der Bewegungsverben</h3>
+<p>Bilde das richtige Partizip Perfekt. <span class="vn">Tạo phân từ quá khứ đúng.</span></p>
+<div class="wordbank">gegangen · gefahren · geflogen · gekommen · geblieben · gereist · gewandert</div>
+<div class="task"><div class="prompt">1. gehen → ______</div><input type="text" data-save><div class="solution">gegangen</div></div>
+<div class="task"><div class="prompt">2. fahren → ______</div><input type="text" data-save><div class="solution">gefahren</div></div>
+<div class="task"><div class="prompt">3. fliegen → ______</div><input type="text" data-save><div class="solution">geflogen</div></div>
+<div class="task"><div class="prompt">4. kommen → ______</div><input type="text" data-save><div class="solution">gekommen</div></div>
+<div class="task"><div class="prompt">5. bleiben → ______</div><input type="text" data-save><div class="solution">geblieben</div></div>
+<div class="task"><div class="prompt">6. reisen → ______</div><input type="text" data-save><div class="solution">gereist</div></div>
+<div class="task"><div class="prompt">7. wandern → ______</div><input type="text" data-save><div class="solution">gewandert</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. Ganze Perfekt-Sätze</h3>
+<p>Bilde vollständige Sätze. Entscheide selbst: <strong>sein oder haben?</strong> <span class="vn">Tạo câu Perfekt hoàn chỉnh và tự chọn trợ động từ.</span></p>
+<div class="task"><div class="prompt">1. ich / letztes Jahr / nach Spanien / fliegen</div><input type="text" data-save><div class="solution">Ich bin letztes Jahr nach Spanien geflogen.</div></div>
+<div class="task"><div class="prompt">2. wir / gestern / die Wohnung / putzen</div><input type="text" data-save><div class="solution">Wir haben gestern die Wohnung geputzt.</div></div>
+<div class="task"><div class="prompt">3. du / am Sonntag / in die Berge / wandern</div><input type="text" data-save><div class="solution">Du bist am Sonntag in die Berge gewandert.</div></div>
+<div class="task"><div class="prompt">4. sie / gestern Abend / lange / telefonieren</div><input type="text" data-save><div class="solution">Sie hat gestern Abend lange telefoniert.</div></div>
+<div class="task"><div class="prompt">5. ihr / letzten Sommer / mit dem Zug / fahren</div><input type="text" data-save><div class="solution">Ihr seid letzten Sommer mit dem Zug gefahren.</div></div>
+<div class="task"><div class="prompt">6. wir / am Freitag / die Koffer / packen</div><input type="text" data-save><div class="solution">Wir haben am Freitag die Koffer gepackt.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Verkehrsmittel & Reisen</h3>
+<p>Ergänze das passende Wort. <span class="vn">Điền từ phù hợp về phương tiện giao thông và du lịch.</span></p>
+<div class="wordbank">Auto · Bus · Zug · Fahrrad · Flugzeug · Urlaub · Reise · Ausflug · Koffer · Hotel</div>
+<div class="task"><div class="prompt">1. Man fliegt mit dem ______.</div><input type="text" data-save><div class="solution">Flugzeug</div></div>
+<div class="task"><div class="prompt">2. Man fährt auf Schienen mit dem ______.</div><input type="text" data-save><div class="solution">Zug</div></div>
+<div class="task"><div class="prompt">3. Kleidung für die Reise packt man in den ______.</div><input type="text" data-save><div class="solution">Koffer</div></div>
+<div class="task"><div class="prompt">4. Auf einer Reise kann man in einem ______ schlafen.</div><input type="text" data-save><div class="solution">Hotel</div></div>
+<div class="task"><div class="prompt">5. Eine kurze Reise am Wochenende kann ein ______ sein.</div><input type="text" data-save><div class="solution">Ausflug</div></div>
+<div class="task"><div class="prompt">6. Zwei Wochen frei und reisen: Ich mache ______.</div><input type="text" data-save><div class="solution">Urlaub</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Fehler finden und korrigieren</h3>
+<p>Jeder Satz enthält einen Fehler. Schreibe ihn richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại câu đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> sein/haben · Partizip · Satzklammer.</div>
+<div class="task"><div class="prompt">1. Ich habe nach Berlin gefahren.</div><input type="text" data-save><div class="solution">Ich bin nach Berlin gefahren.</div></div>
+<div class="task"><div class="prompt">2. Du bist gegehen.</div><input type="text" data-save><div class="solution">Du bist gegangen.</div></div>
+<div class="task"><div class="prompt">3. Wir sind gestern gearbeitet.</div><input type="text" data-save><div class="solution">Wir haben gestern gearbeitet.</div></div>
+<div class="task"><div class="prompt">4. Sie ist gewandern.</div><input type="text" data-save><div class="solution">Sie ist gewandert.</div></div>
+<div class="task"><div class="prompt">5. Er ist gestern telefoniert.</div><input type="text" data-save><div class="solution">Er hat gestern telefoniert.</div></div>
+<div class="task"><div class="prompt">6. Ihr seid nach Italien gefliegt.</div><input type="text" data-save><div class="solution">Ihr seid nach Italien geflogen.</div></div>
+<div class="task"><div class="prompt">7. Anna hat spät gekommen.</div><input type="text" data-save><div class="solution">Anna ist spät gekommen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Satz-Puzzle</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp từ thành câu đúng.</span></p>
+<div class="task"><div class="wordbank">bin / ich / gestern / nach Hause / gefahren</div><input type="text" data-save><div class="solution">Ich bin gestern nach Hause gefahren.</div></div>
+<div class="task"><div class="wordbank">am Wochenende / wir / gewandert / sind</div><input type="text" data-save><div class="solution">Wir sind am Wochenende gewandert.</div></div>
+<div class="task"><div class="wordbank">die Koffer / haben / gepackt / sie</div><input type="text" data-save><div class="solution">Sie haben die Koffer gepackt.</div></div>
+<div class="task"><div class="wordbank">mit dem Flugzeug / ist / nach Spanien / er / geflogen</div><input type="text" data-save><div class="solution">Er ist mit dem Flugzeug nach Spanien geflogen.</div></div>
+<div class="task"><div class="wordbank">lange / gestern Abend / telefoniert / du / hast</div><input type="text" data-save><div class="solution">Du hast gestern Abend lange telefoniert.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Lesen – Ein Wochenende in den Bergen</h3>
+<div class="violet">Lisa und Tom sind letztes Wochenende in die Berge gefahren. Am Freitagabend haben sie die Koffer gepackt und sind früh ins Bett gegangen. Am Samstagmorgen sind sie mit dem Zug in die Berge gefahren. Die Fahrt hat drei Stunden gedauert. Am Nachmittag sind sie gewandert und haben die schöne Landschaft fotografiert. Am Abend sind sie müde, aber glücklich ins Hotel zurückgekommen. Dort haben sie zusammen gelacht und Musik gehört. Am Sonntag sind sie noch einmal gewandert und am Abend mit dem Zug nach Hause gefahren.</div>
+<p>Wähle die richtige Antwort. <span class="vn">Đọc và chọn đáp án đúng.</span></p>
+<div class="task"><div class="prompt">1. Wohin sind Lisa und Tom gefahren?<br>A) ans Meer　B) in die Berge　C) nach Hause</div><input type="text" data-save><div class="solution">B – in die Berge</div></div>
+<div class="task"><div class="prompt">2. Was haben sie am Freitagabend gemacht?<br>A) die Koffer gepackt　B) fotografiert　C) telefoniert</div><input type="text" data-save><div class="solution">A – die Koffer gepackt</div></div>
+<div class="task"><div class="prompt">3. Wie lange hat die Zugfahrt gedauert?<br>A) eine Stunde　B) zwei Stunden　C) drei Stunden</div><input type="text" data-save><div class="solution">C – drei Stunden</div></div>
+<div class="task"><div class="prompt">4. Was haben sie am Nachmittag gemacht?<br>A) gewandert und fotografiert　B) nur geschlafen　C) telefoniert</div><input type="text" data-save><div class="solution">A – gewandert und fotografiert</div></div>
+<div class="task"><div class="prompt">5. Wie waren sie am Abend?<br>A) böse　B) müde, aber glücklich　C) krank</div><input type="text" data-save><div class="solution">B – müde, aber glücklich</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Mini-Übersetzung DE ↔ VN</h3>
+<p>Übersetze. <span class="vn">Dịch các câu sau.</span></p>
+<div class="task"><div class="prompt">1. Ich bin mit dem Zug nach Berlin gefahren. → Tiếng Việt</div><input type="text" data-save><div class="solution">Tôi đã đi Berlin bằng tàu hỏa.</div></div>
+<div class="task"><div class="prompt">2. Wir sind am Wochenende gewandert. → Tiếng Việt</div><input type="text" data-save><div class="solution">Chúng tôi đã đi bộ đường dài vào cuối tuần.</div></div>
+<div class="task"><div class="prompt">3. Tôi đã bay đến Đức bằng máy bay. → Deutsch</div><input type="text" data-save><div class="solution">Ich bin mit dem Flugzeug nach Deutschland geflogen.</div></div>
+<div class="task"><div class="prompt">4. Họ đã ở lại khách sạn. → Deutsch</div><input type="text" data-save><div class="solution">Sie sind im Hotel geblieben.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>10. Transfer – Meine letzte Reise</h3>
+<p>Schreibe 5–7 Sätze über einen Ausflug oder eine Reise. Benutze mindestens <strong>3 Verben mit sein</strong> und <strong>2 Verben mit haben</strong>. <span class="vn">Viết 5–7 câu về một chuyến đi. Dùng ít nhất 3 động từ với „sein“ và 2 động từ với „haben“.</span></p>
+<div class="violet"><strong>Hilfe:</strong> Letztes Wochenende bin ich ... · Ich bin mit ... gefahren. · Danach bin ich ... · Im Hotel habe ich ... · Am Abend habe ich ...</div>
+<div class="task"><textarea data-save placeholder="Letztes Wochenende bin ich ...&#10;Ich bin mit ... gefahren.&#10;Danach ..."></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 20 · Das Perfekt – Teil 2<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+<script>
+const KEY="a1_l20_perfekt_teil2_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 11 – Übungsblatt Uhrzeiten & Tagesablauf</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 11</h1>
+  <h2>Übungsblatt: Uhrzeiten · Tagesablauf · trennbare Verben</h2>
+  <div class="vn">Bài tập: Giờ giấc · Nhịp sinh hoạt hằng ngày · động từ tách được</div>
+  <div class="rule">
+    <strong>Merke:</strong><br>
+    <strong>um</strong> = genaue Uhrzeit → Ich stehe <strong>um 7 Uhr</strong> auf.<br>
+    <strong>gegen</strong> = ungefähr → Ich komme <strong>gegen 8 Uhr</strong>.<br>
+    <strong>von … bis</strong> = Zeitraum → Ich arbeite <strong>von 8 bis 16 Uhr</strong>.<br>
+    Trennbares Verb: <strong>Ich stehe um 7 Uhr auf.</strong> → konjugierter Stamm auf Position 2, Präfix am Satzende.
+  </div>
+  <div class="toolbar">
+    <button onclick="saveAll()">💾 Antworten speichern</button>
+    <button class="secondary" onclick="loadAll()">↻ Gespeicherte Antworten laden</button>
+    <button class="light" onclick="clearAll()">Alles löschen</button>
+  </div>
+  <div id="status" class="status">Die Antworten werden automatisch im Browser gespeichert.</div>
+</header>
+
+<section>
+<h3>1. Wie spät ist es?</h3>
+<p>Schreibe die Uhrzeit in Worten. <span class="vn">Viết giờ bằng chữ.</span></p>
+<div class="clockgrid"><div>07:00</div><div>07:30</div><div>08:15</div><div>09:50</div></div>
+<div class="task"><div class="prompt">1. 07:00 →</div><input type="text" data-save><div class="solution">Es ist sieben Uhr.</div></div>
+<div class="task"><div class="prompt">2. 07:30 →</div><input type="text" data-save><div class="solution">Es ist halb acht. / Es ist sieben Uhr dreißig.</div></div>
+<div class="task"><div class="prompt">3. 08:15 →</div><input type="text" data-save><div class="solution">Es ist Viertel nach acht. / Es ist acht Uhr fünfzehn.</div></div>
+<div class="task"><div class="prompt">4. 09:50 →</div><input type="text" data-save><div class="solution">Es ist zehn vor zehn. / Es ist neun Uhr fünfzig.</div></div>
+<div class="task"><div class="prompt">5. 12:30 →</div><input type="text" data-save><div class="solution">Es ist halb eins. / Es ist zwölf Uhr dreißig.</div></div>
+<div class="task"><div class="prompt">6. 18:45 →</div><input type="text" data-save><div class="solution">Es ist Viertel vor sieben. / Es ist achtzehn Uhr fünfundvierzig.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. Formell oder informell?</h3>
+<p>Schreibe die jeweils andere Form. <span class="vn">Viết cách nói giờ còn lại: chính thức hoặc thân mật.</span></p>
+<div class="task"><div class="prompt">1. 07:30 → halb acht → offiziell:</div><input type="text" data-save><div class="solution">sieben Uhr dreißig</div></div>
+<div class="task"><div class="prompt">2. 09:15 → neun Uhr fünfzehn → informell:</div><input type="text" data-save><div class="solution">Viertel nach neun</div></div>
+<div class="task"><div class="prompt">3. 14:50 → vierzehn Uhr fünfzig → informell:</div><input type="text" data-save><div class="solution">zehn vor drei</div></div>
+<div class="task"><div class="prompt">4. 18:30 → halb sieben → offiziell:</div><input type="text" data-save><div class="solution">achtzehn Uhr dreißig</div></div>
+<div class="task"><div class="prompt">5. 20:15 → Viertel nach acht → offiziell:</div><input type="text" data-save><div class="solution">zwanzig Uhr fünfzehn</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. um, gegen oder von … bis?</h3>
+<p>Ergänze die passende Zeitangabe. <span class="vn">Điền um, gegen hoặc von … bis.</span></p>
+<div class="note"><strong>Tipp:</strong> genaue Zeit = <strong>um</strong> · ungefähr = <strong>gegen</strong> · Zeitraum = <strong>von … bis</strong></div>
+<div class="task"><div class="prompt">1. Ich stehe ______ 7 Uhr auf.</div><input type="text" data-save><div class="solution">um</div></div>
+<div class="task"><div class="prompt">2. Der Deutschkurs ist ______ 9 ______ 11 Uhr.</div><input type="text" data-save><div class="solution">von · bis</div></div>
+<div class="task"><div class="prompt">3. Wir treffen uns ungefähr um 12 Uhr. → Wir treffen uns ______ 12 Uhr.</div><input type="text" data-save><div class="solution">gegen</div></div>
+<div class="task"><div class="prompt">4. Das Geschäft ist ______ 9 ______ 20 Uhr geöffnet.</div><input type="text" data-save><div class="solution">von · bis</div></div>
+<div class="task"><div class="prompt">5. Mein Zug fährt genau ______ 18 Uhr.</div><input type="text" data-save><div class="solution">um</div></div>
+<div class="task"><div class="prompt">6. Der Film beginnt ungefähr ______ 20 Uhr.</div><input type="text" data-save><div class="solution">gegen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. Trennbare Verben – setze richtig ein</h3>
+<p>Konjugiere das Verb. Das Präfix steht am Satzende. <span class="vn">Chia động từ. Tiền tố đứng cuối câu.</span></p>
+<div class="wordbank">aufstehen · anfangen · einkaufen · anrufen · fernsehen · aufhören</div>
+<div class="task"><div class="prompt">1. Ich ______ um 6 Uhr ______. (aufstehen)</div><input type="text" data-save><div class="solution">stehe · auf</div></div>
+<div class="task"><div class="prompt">2. Der Unterricht ______ um 9 Uhr ______. (anfangen)</div><input type="text" data-save><div class="solution">fängt · an</div></div>
+<div class="task"><div class="prompt">3. Wir ______ am Nachmittag im Supermarkt ______. (einkaufen)</div><input type="text" data-save><div class="solution">kaufen · ein</div></div>
+<div class="task"><div class="prompt">4. Du ______ deine Mutter am Abend ______. (anrufen)</div><input type="text" data-save><div class="solution">rufst · an</div></div>
+<div class="task"><div class="prompt">5. Ihr ______ abends gern ______. (fernsehen)</div><input type="text" data-save><div class="solution">seht · fern</div></div>
+<div class="task"><div class="prompt">6. Ich ______ um 17 Uhr mit der Arbeit ______. (aufhören)</div><input type="text" data-save><div class="solution">höre · auf</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Satz-Puzzle – Verbklammer</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp các từ thành câu đúng.</span></p>
+<div class="task"><div class="wordbank">ich / um 7 Uhr / auf / stehe</div><input type="text" data-save><div class="solution">Ich stehe um 7 Uhr auf.</div></div>
+<div class="task"><div class="wordbank">um 9 Uhr / der Unterricht / an / fängt</div><input type="text" data-save><div class="solution">Der Unterricht fängt um 9 Uhr an.</div></div>
+<div class="task"><div class="wordbank">am Nachmittag / wir / im Supermarkt / ein / kaufen</div><input type="text" data-save><div class="solution">Wir kaufen am Nachmittag im Supermarkt ein.</div></div>
+<div class="task"><div class="wordbank">du / am Abend / deine Mutter / an / rufst</div><input type="text" data-save><div class="solution">Du rufst am Abend deine Mutter an.</div></div>
+<div class="task"><div class="wordbank">abends / gern / wir / fern / sehen</div><input type="text" data-save><div class="solution">Wir sehen abends gern fern.</div></div>
+<div class="task"><div class="wordbank">um 17 Uhr / ich / auf / höre</div><input type="text" data-save><div class="solution">Ich höre um 17 Uhr auf.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại câu đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> um/gegen/von…bis · Position des Präfixes · Verbform.</div>
+<div class="task"><div class="prompt">1. Ich stehe auf um 7 Uhr.</div><input type="text" data-save><div class="solution">Ich stehe um 7 Uhr auf.</div></div>
+<div class="task"><div class="prompt">2. Ich arbeite von 8 bis um 16 Uhr.</div><input type="text" data-save><div class="solution">Ich arbeite von 8 bis 16 Uhr.</div></div>
+<div class="task"><div class="prompt">3. Der Unterricht anfangen um 9 Uhr.</div><input type="text" data-save><div class="solution">Der Unterricht fängt um 9 Uhr an.</div></div>
+<div class="task"><div class="prompt">4. Wir kaufen ein am Nachmittag.</div><input type="text" data-save><div class="solution">Wir kaufen am Nachmittag ein.</div></div>
+<div class="task"><div class="prompt">5. Ich stehe in 7 Uhr auf.</div><input type="text" data-save><div class="solution">Ich stehe um 7 Uhr auf.</div></div>
+<div class="task"><div class="prompt">6. Du anrufst deine Mutter am Abend.</div><input type="text" data-save><div class="solution">Du rufst deine Mutter am Abend an.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Tageszeiten und Tagesablauf</h3>
+<p>Ergänze das passende Wort. <span class="vn">Điền từ phù hợp.</span></p>
+<div class="wordbank">morgens · vormittags · nachmittags · abends · nachts</div>
+<div class="task"><div class="prompt">1. ______ stehe ich auf und frühstücke.</div><input type="text" data-save><div class="solution">Morgens</div></div>
+<div class="task"><div class="prompt">2. ______ arbeite ich von 9 bis 12 Uhr.</div><input type="text" data-save><div class="solution">Vormittags</div></div>
+<div class="task"><div class="prompt">3. ______ lerne ich Deutsch oder kaufe ein.</div><input type="text" data-save><div class="solution">Nachmittags</div></div>
+<div class="task"><div class="prompt">4. ______ koche ich und sehe manchmal fern.</div><input type="text" data-save><div class="solution">Abends</div></div>
+<div class="task"><div class="prompt">5. ______ schlafe ich.</div><input type="text" data-save><div class="solution">Nachts</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Lesen – Marias Tag</h3>
+<div class="violet">Maria steht von Montag bis Freitag um 6:30 Uhr auf. Um 7 Uhr frühstückt sie. Gegen 8 Uhr fährt sie zur Arbeit. Sie arbeitet von 9 bis 17 Uhr. Danach kauft sie oft ein. Gegen 18 Uhr ist sie zu Hause. Abends kocht sie, ruft manchmal ihre Schwester an und sieht fern. Um 23 Uhr geht sie ins Bett.</div>
+<p>Beantworte die Fragen. <span class="vn">Trả lời các câu hỏi.</span></p>
+<div class="task"><div class="prompt">1. Wann steht Maria auf?</div><input type="text" data-save><div class="solution">Sie steht um 6:30 Uhr auf.</div></div>
+<div class="task"><div class="prompt">2. Wann fährt sie ungefähr zur Arbeit?</div><input type="text" data-save><div class="solution">Sie fährt gegen 8 Uhr zur Arbeit.</div></div>
+<div class="task"><div class="prompt">3. Von wann bis wann arbeitet sie?</div><input type="text" data-save><div class="solution">Sie arbeitet von 9 bis 17 Uhr.</div></div>
+<div class="task"><div class="prompt">4. Was macht sie nach der Arbeit?</div><input type="text" data-save><div class="solution">Sie kauft oft ein.</div></div>
+<div class="task"><div class="prompt">5. Was macht sie abends?</div><input type="text" data-save><div class="solution">Sie kocht, ruft manchmal ihre Schwester an und sieht fern.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Mein Tagesablauf</h3>
+<p>Schreibe über deinen Tag. Benutze Uhrzeiten und mindestens zwei trennbare Verben. <span class="vn">Viết về một ngày của bạn. Dùng giờ và ít nhất hai động từ tách được.</span></p>
+<div class="note"><strong>Hilfe:</strong> morgens · um … Uhr · gegen … Uhr · von … bis … · aufstehen · anfangen · einkaufen · anrufen · fernsehen · aufhören</div>
+<div class="task"><div class="prompt">1. Wann stehst du auf?</div><textarea data-save placeholder="Ich stehe ..."></textarea></div>
+<div class="task"><div class="prompt">2. Was machst du am Vormittag und am Nachmittag?</div><textarea data-save placeholder="Vormittags ... / Nachmittags ..."></textarea></div>
+<div class="task"><div class="prompt">3. Was machst du am Abend?</div><textarea data-save placeholder="Abends ..."></textarea></div>
+<div class="task"><div class="prompt">4. Schreibe 5–7 Sätze über deinen typischen Tagesablauf.</div><textarea data-save placeholder="Mein Tag beginnt ..."></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 11 · Uhrzeiten &amp; Tagesablauf<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+<script>
+const KEY="a1_l11_uhrzeit_tagesablauf_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw) return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined) el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?")) return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 7 – Übungsblatt Sein, Haben & Adjektive</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:72px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b} button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 7</h1>
+  <h2>Übungsblatt: sein · haben · Adjektive</h2>
+  <div class="vn">Bài tập: sein · haben · tính từ</div>
+
+  <div class="rule">
+    <strong>Merke:</strong><br>
+    <strong>sein + Adjektiv</strong> → Ihr seid fit. / Anna ist müde.<br>
+    <strong>haben + Nomen</strong> → Wir haben viel Zeit. / Wir haben Angst.<br>
+    Nach <strong>sein</strong> bleibt das Adjektiv <strong>ohne Endung</strong>.
+  </div>
+
+  <div class="toolbar">
+    <button onclick="saveAll()">💾 Antworten speichern</button>
+    <button class="secondary" onclick="loadAll()">↻ Gespeicherte Antworten laden</button>
+    <button class="light" onclick="clearAll()">Alles löschen</button>
+  </div>
+  <div id="status" class="status">Die Antworten werden automatisch im Browser gespeichert.</div>
+</header>
+
+<section>
+<h3>1. sein oder haben?</h3>
+<p>Setze das richtige Verb ein und konjugiere es: <strong>sein · haben</strong>. <span class="vn">Chọn động từ đúng và chia động từ: sein · haben.</span></p>
+
+<div class="task"><div class="prompt">1. Ich ______ heute sehr entspannt.</div><input type="text" data-save><div class="solution">bin</div></div>
+<div class="task"><div class="prompt">2. Du ______ heute wenig Zeit.</div><input type="text" data-save><div class="solution">hast</div></div>
+<div class="task"><div class="prompt">3. Jonas ______ krank.</div><input type="text" data-save><div class="solution">ist</div></div>
+<div class="task"><div class="prompt">4. Wir ______ ein neues Auto.</div><input type="text" data-save><div class="solution">haben</div></div>
+<div class="task"><div class="prompt">5. Ihr ______ nach dem Sport müde.</div><input type="text" data-save><div class="solution">seid</div></div>
+<div class="task"><div class="prompt">6. Lea ______ vor der Prüfung Angst.</div><input type="text" data-save><div class="solution">hat</div></div>
+<div class="task"><div class="prompt">7. Meine Eltern ______ heute sehr glücklich.</div><input type="text" data-save><div class="solution">sind</div></div>
+<div class="task"><div class="prompt">8. Tom und Nina ______ zwei Fahrräder.</div><input type="text" data-save><div class="solution">haben</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. haben konjugieren</h3>
+<p>Ergänze die richtige Form von <strong>haben</strong>. <span class="vn">Điền dạng đúng của “haben”.</span></p>
+<div class="note"><strong>Tipp:</strong> Besonders wichtig: <strong>du hast</strong> · <strong>er/sie/es hat</strong>.</div>
+
+<div class="task"><div class="prompt">1. ich → ______</div><input type="text" data-save><div class="solution">habe</div></div>
+<div class="task"><div class="prompt">2. du → ______</div><input type="text" data-save><div class="solution">hast</div></div>
+<div class="task"><div class="prompt">3. er / sie / es → ______</div><input type="text" data-save><div class="solution">hat</div></div>
+<div class="task"><div class="prompt">4. wir → ______</div><input type="text" data-save><div class="solution">haben</div></div>
+<div class="task"><div class="prompt">5. ihr → ______</div><input type="text" data-save><div class="solution">habt</div></div>
+<div class="task"><div class="prompt">6. sie / Sie → ______</div><input type="text" data-save><div class="solution">haben</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. Adjektiv oder Nomen?</h3>
+<p>Schreibe einen vollständigen Satz. Entscheide selbst zwischen <strong>sein + Adjektiv</strong> und <strong>haben + Nomen</strong>. <span class="vn">Viết một câu hoàn chỉnh. Tự quyết định dùng <strong>sein + tính từ</strong> hay <strong>haben + danh từ</strong>.</span></p>
+<div class="wordbank">müde · Hunger · nervös · Durst · glücklich · Angst · krank · Zeit</div>
+
+<div class="task"><div class="prompt">1. ich · entspannt</div><input type="text" data-save><div class="solution">Ich bin entspannt.</div></div>
+<div class="task"><div class="prompt">2. du · Zeit</div><input type="text" data-save><div class="solution">Du hast viel Zeit.</div></div>
+<div class="task"><div class="prompt">3. er · krank</div><input type="text" data-save><div class="solution">Er ist krank.</div></div>
+<div class="task"><div class="prompt">4. wir · Angst</div><input type="text" data-save><div class="solution">Wir haben Angst.</div></div>
+<div class="task"><div class="prompt">5. Lena · gestresst</div><input type="text" data-save><div class="solution">Lena ist gestresst.</div></div>
+<div class="task"><div class="prompt">6. ihr · Glück</div><input type="text" data-save><div class="solution">Ihr habt Glück.</div></div>
+<div class="task"><div class="prompt">7. meine Schwester · fit</div><input type="text" data-save><div class="solution">Meine Schwester ist fit.</div></div>
+<div class="task"><div class="prompt">8. Paul · ein Auto</div><input type="text" data-save><div class="solution">Paul hat ein Auto.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. Satz-Puzzle</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp các từ thành câu đúng.</span></p>
+
+<div class="task"><div class="wordbank">heute / entspannt / Maria / ist</div><input type="text" data-save><div class="solution">Maria ist heute entspannt.</div></div>
+<div class="task"><div class="wordbank">die Kinder / gesund / sind</div><input type="text" data-save><div class="solution">Die Kinder sind gesund.</div></div>
+<div class="task"><div class="wordbank">viel / Zeit / wir / haben</div><input type="text" data-save><div class="solution">Wir haben viel Zeit.</div></div>
+<div class="task"><div class="wordbank">mein Bruder / sehr / freundlich / ist</div><input type="text" data-save><div class="solution">Mein Bruder ist sehr freundlich.</div></div>
+<div class="task"><div class="wordbank">heute / bin / ich / fit</div><input type="text" data-save><div class="solution">Ich bin heute fit. / Heute bin ich fit.</div></div>
+<div class="task"><div class="wordbank">ein / Auto / hat / Daniel</div><input type="text" data-save><div class="solution">Daniel hat ein Auto.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại câu đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> sein oder haben? · richtige Verbform? · Adjektiv ohne Endung?</div>
+
+<div class="task"><div class="prompt">1. Wir haben glücklich.</div><input type="text" data-save><div class="solution">Wir sind glücklich.</div></div>
+<div class="task"><div class="prompt">2. Er haben Durst.</div><input type="text" data-save><div class="solution">Er hat Durst.</div></div>
+<div class="task"><div class="prompt">3. Ihr ist fit.</div><input type="text" data-save><div class="solution">Ihr seid fit.</div></div>
+<div class="task"><div class="prompt">4. Du bist Angst.</div><input type="text" data-save><div class="solution">Du hast Angst.</div></div>
+<div class="task"><div class="prompt">5. Mein Bruder haben freundlich.</div><input type="text" data-save><div class="solution">Mein Bruder ist freundlich.</div></div>
+<div class="task"><div class="prompt">6. Wir hat viel Zeit.</div><input type="text" data-save><div class="solution">Wir haben viel Zeit.</div></div>
+<div class="task"><div class="prompt">7. Anna ist müdes.</div><input type="text" data-save><div class="solution">Anna ist müde.</div></div>
+<div class="task"><div class="prompt">8. Paul hat 30 Jahre.</div><input type="text" data-save><div class="solution">Paul ist 30 Jahre alt.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Gegenteile</h3>
+<p>Schreibe das passende Gegenteil und danach einen ganzen Satz. <span class="vn">Viết từ trái nghĩa phù hợp rồi viết một câu hoàn chỉnh.</span></p>
+<div class="violet">Beispiel: traurig → <strong>glücklich</strong> → Ich bin nicht traurig, ich bin glücklich.</div>
+
+<div class="task"><div class="prompt">1. müde → ______</div><input type="text" data-save placeholder="Gegenteil"><input type="text" data-save placeholder="Ganzer Satz"><div class="solution">fit · Ich bin nicht müde, ich bin fit.</div></div>
+<div class="task"><div class="prompt">2. krank → ______</div><input type="text" data-save placeholder="Gegenteil"><input type="text" data-save placeholder="Ganzer Satz"><div class="solution">gesund · Ich bin nicht krank, ich bin gesund.</div></div>
+<div class="task"><div class="prompt">3. hungrig → ______</div><input type="text" data-save placeholder="Gegenteil"><input type="text" data-save placeholder="Ganzer Satz"><div class="solution">satt · Ich bin nicht hungrig, ich bin satt.</div></div>
+<div class="task"><div class="prompt">4. groß → ______</div><input type="text" data-save placeholder="Gegenteil"><input type="text" data-save placeholder="Ganzer Satz"><div class="solution">klein · Ich bin nicht groß, ich bin klein.</div></div>
+<div class="task"><div class="prompt">5. gestresst → ______</div><input type="text" data-save placeholder="Gegenteil"><input type="text" data-save placeholder="Ganzer Satz"><div class="solution">entspannt · Ich bin nicht gestresst, ich bin entspannt.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Fragen und Antworten</h3>
+<p>Beantworte die Fragen mit einem vollständigen Satz. <span class="vn">Trả lời các câu hỏi bằng một câu hoàn chỉnh.</span></p>
+
+<div class="task"><div class="prompt">1. Wie fühlst du dich heute?</div><textarea data-save placeholder="Heute bin ich ..."></textarea></div>
+<div class="task"><div class="prompt">2. Hast du heute Hunger?</div><textarea data-save placeholder="Ja, ich ... / Nein, ich ..."></textarea></div>
+<div class="task"><div class="prompt">3. Hast du Durst?</div><textarea data-save></textarea></div>
+<div class="task"><div class="prompt">4. Bist du vor einer Prüfung nervös?</div><textarea data-save></textarea></div>
+<div class="task"><div class="prompt">5. Hast du heute viel Zeit?</div><textarea data-save></textarea></div>
+<div class="task"><div class="prompt">6. Bist du gerade müde oder fit?</div><textarea data-save></textarea></div>
+</section>
+
+<section>
+<h3>8. Mini-Lesetext</h3>
+<p>Lies den Text und beantworte die Fragen.</p>
+
+<div class="note">
+<strong>Text:</strong><br>
+Heute ist Samstag. Ben ist früh wach und sehr fit. Er hat viel Zeit und möchte seine Freundin Lara besuchen.
+Lara ist heute ein bisschen gestresst, weil sie viele Aufgaben für die Universität hat. Sie hat aber keinen Hunger, nur Durst.
+Ben bringt Wasser mit. Am Nachmittag machen sie eine Pause. Danach ist Lara wieder entspannt und Ben ist glücklich, weil sie zusammen Zeit haben.
+</div>
+
+<div class="task"><div class="prompt">1. Wie fühlt sich Ben am Morgen?</div><input type="text" data-save><div class="solution">Er ist sehr fit.</div></div>
+<div class="task"><div class="prompt">2. Warum ist Lara gestresst?</div><input type="text" data-save><div class="solution">Weil sie viele Aufgaben für die Universität hat.</div></div>
+<div class="task"><div class="prompt">3. Hat Lara Hunger?</div><input type="text" data-save><div class="solution">Nein, sie hat keinen Hunger.</div></div>
+<div class="task"><div class="prompt">4. Was hat Lara?</div><input type="text" data-save><div class="solution">Sie hat Durst.</div></div>
+<div class="task"><div class="prompt">5. Wie fühlt sich Lara nach der Pause?</div><input type="text" data-save><div class="solution">Sie ist wieder entspannt.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Challenge ⭐ Nur Stichwörter</h3>
+<p>Bilde einen vollständigen Satz. Entscheide selbst: <strong>sein oder haben?</strong> <span class="vn">Viết một câu hoàn chỉnh. Tự quyết định dùng <strong>sein</strong> hay <strong>haben</strong>.</span></p>
+
+<div class="task"><div class="wordbank">ich · heute · entspannt</div><input type="text" data-save><div class="solution">Heute bin ich entspannt. / Ich bin heute entspannt.</div></div>
+<div class="task"><div class="wordbank">du · viel Zeit</div><input type="text" data-save><div class="solution">Du hast viel Zeit.</div></div>
+<div class="task"><div class="wordbank">Lena · nach der Arbeit · müde</div><input type="text" data-save><div class="solution">Lena ist nach der Arbeit müde.</div></div>
+<div class="task"><div class="wordbank">wir · heute · Durst</div><input type="text" data-save><div class="solution">Wir haben heute Durst. / Heute haben wir Durst.</div></div>
+<div class="task"><div class="wordbank">mein Bruder · glücklich</div><input type="text" data-save><div class="solution">Mein Bruder ist glücklich.</div></div>
+<div class="task"><div class="wordbank">ihr · Angst</div><input type="text" data-save><div class="solution">Ihr habt Angst.</div></div>
+<div class="task"><div class="wordbank">die Kinder · müde</div><input type="text" data-save><div class="solution">Die Kinder sind müde.</div></div>
+<div class="task"><div class="wordbank">Anna · neues Handy · glücklich</div><input type="text" data-save><div class="solution">Anna hat ein neues Handy. Sie ist glücklich.</div></div>
+<button onclick="toggleSolutions(this)">Beispiele zeigen</button>
+</section>
+
+<section>
+<h3>10. Über dich</h3>
+<p>Schreibe fünf Sätze über dich: drei mit <strong>sein + Adjektiv</strong> und zwei mit <strong>haben + Nomen</strong>. <span class="vn">Viết 5 câu về bản thân: 3 câu với <strong>sein + tính từ</strong> và 2 câu với <strong>haben + danh từ</strong>.</span></p>
+<div class="task"><div class="prompt">1. sein + Adjektiv</div><input type="text" data-save placeholder="Ich bin ..."></div>
+<div class="task"><div class="prompt">2. sein + Adjektiv</div><input type="text" data-save placeholder="Ich bin ..."></div>
+<div class="task"><div class="prompt">3. sein + Adjektiv</div><input type="text" data-save placeholder="Ich bin ..."></div>
+<div class="task"><div class="prompt">4. haben + Nomen</div><input type="text" data-save placeholder="Ich habe ..."></div>
+<div class="task"><div class="prompt">5. haben + Nomen</div><input type="text" data-save placeholder="Ich habe ..."></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 7 · sein · haben · Adjektive<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+
+<script>
+const KEY="a1_l7_sein_haben_adjektive_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  localStorage.setItem(KEY,JSON.stringify(fields().map(el=>el.value)));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw) return;
+  const data=JSON.parse(raw);
+  fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+  document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

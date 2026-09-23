@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 24 – Extra-Übungsblatt interaktiv</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🎓 Deutsch A1 – Lektion 24</h1>
+  <h2>Extra-Übungsblatt: Abschlussprojekt · A1-Gesamtwiederholung · 2-Minuten-Präsentation</h2>
+</header>
+
+<div class="toolbar">
+  <button onclick="saveAll()">💾 Antworten speichern</button>
+  <button onclick="loadAll()">📂 Antworten laden</button>
+  <button class="danger" onclick="clearAll()">🗑️ Alles löschen</button>
+  <span id="status">Die Antworten werden automatisch im Browser gespeichert.</span>
+</div>
+
+<section>
+<h3>1. A1-Grammatik-Werkzeugkiste</h3>
+<p>Ergänze die passende Struktur oder Form. <span class="vn">Điền cấu trúc hoặc dạng phù hợp.</span></p>
+<div class="task"><div class="prompt">1. Ich ______ Lisa. (sein)</div><input type="text" data-save><div class="solution">bin</div></div>
+<div class="task"><div class="prompt">2. Woher ______ du? (kommen)</div><input type="text" data-save><div class="solution">kommst</div></div>
+<div class="task"><div class="prompt">3. Ich habe ______ Auto. (kein)</div><input type="text" data-save><div class="solution">kein</div></div>
+<div class="task"><div class="prompt">4. Ich möchte ______ Kaffee. (ein, Akkusativ)</div><input type="text" data-save><div class="solution">einen</div></div>
+<div class="task"><div class="prompt">5. Der Tisch steht ______ Wohnzimmer. (in + das)</div><input type="text" data-save><div class="solution">im</div></div>
+<div class="task"><div class="prompt">6. Ich stehe um 7 Uhr ______. (aufstehen)</div><input type="text" data-save><div class="solution">auf</div></div>
+<div class="task"><div class="prompt">7. Ich kann gut ______. (schwimmen)</div><input type="text" data-save><div class="solution">schwimmen</div></div>
+<div class="task"><div class="prompt">8. Ich ______ gestern gekocht. (Perfekt)</div><input type="text" data-save><div class="solution">habe</div></div>
+<div class="task"><div class="prompt">9. Ich ______ nach Berlin gefahren. (Perfekt)</div><input type="text" data-save><div class="solution">bin</div></div>
+<div class="task"><div class="prompt">10. Berlin ist ______ als Leipzig. (groß)</div><input type="text" data-save><div class="solution">größer</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. Nebensätze und Konjunktionen</h3>
+<p>Ergänze <strong>dass, weil, denn, und</strong> oder <strong>aber</strong>. <span class="vn">Điền liên từ phù hợp.</span></p>
+<div class="task"><div class="prompt">1. Ich finde, ______ Deutsch interessant ist.</div><input type="text" data-save><div class="solution">dass</div></div>
+<div class="task"><div class="prompt">2. Ich lerne Deutsch, ______ ich mit meinen Nachbarn sprechen möchte.</div><input type="text" data-save><div class="solution">weil</div></div>
+<div class="task"><div class="prompt">3. Ich lerne Deutsch, ______ die Sprache ist interessant.</div><input type="text" data-save><div class="solution">denn</div></div>
+<div class="task"><div class="prompt">4. Ich spiele Tennis ______ ich koche gern.</div><input type="text" data-save><div class="solution">und</div></div>
+<div class="task"><div class="prompt">5. Hamburg ist schön, ______ Berlin ist auch interessant.</div><input type="text" data-save><div class="solution">aber</div></div>
+<div class="task"><div class="prompt">6. Ich glaube, ______ mein Deutsch besser geworden ist.</div><input type="text" data-save><div class="solution">dass</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. Typische Kursfehler korrigieren</h3>
+<p>Schreibe jeden Satz richtig. <span class="vn">Sửa lại mỗi câu cho đúng.</span></p>
+<div class="task"><div class="prompt">1. Ich habe keinen Auto.</div><input type="text" data-save><div class="solution">Ich habe kein Auto.</div></div>
+<div class="task"><div class="prompt">2. Ich bin gestern gekocht.</div><input type="text" data-save><div class="solution">Ich habe gestern gekocht.</div></div>
+<div class="task"><div class="prompt">3. Der Zug ist mehr schnell als das Auto.</div><input type="text" data-save><div class="solution">Der Zug ist schneller als das Auto.</div></div>
+<div class="task"><div class="prompt">4. Ich finde, dass ist Berlin schön.</div><input type="text" data-save><div class="solution">Ich finde, dass Berlin schön ist.</div></div>
+<div class="task"><div class="prompt">5. Ich mag Kaffee, aber ich mag Tee auch.</div><input type="text" data-save><div class="solution">Ich mag Kaffee und ich mag Tee auch.</div></div>
+<div class="task"><div class="prompt">6. Ich kann schwimme gut.</div><input type="text" data-save><div class="solution">Ich kann gut schwimmen.</div></div>
+<div class="task"><div class="prompt">7. Gestern ich habe meine Freunde besucht.</div><input type="text" data-save><div class="solution">Gestern habe ich meine Freunde besucht.</div></div>
+<div class="task"><div class="prompt">8. Ich komme nicht, weil ich bin krank.</div><input type="text" data-save><div class="solution">Ich komme nicht, weil ich krank bin.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. Wortschatz-Recycling</h3>
+<p>Ordne jedem Thema zwei passende Wörter oder Ausdrücke zu. <span class="vn">Viết hai từ/cụm từ phù hợp cho mỗi chủ đề.</span></p>
+<div class="task"><div class="prompt">1. Begrüßung &amp; Herkunft:</div><input type="text" data-save><div class="solution">z. B. heißen, kommen aus, sprechen, das Land</div></div>
+<div class="task"><div class="prompt">2. Familie &amp; Berufe:</div><input type="text" data-save><div class="solution">z. B. die Familie, der Bruder, die Schwester, der Beruf</div></div>
+<div class="task"><div class="prompt">3. Essen &amp; Einkaufen:</div><input type="text" data-save><div class="solution">z. B. das Brot, kaufen, der Preis, kosten</div></div>
+<div class="task"><div class="prompt">4. Wohnung &amp; Möbel:</div><input type="text" data-save><div class="solution">z. B. das Zimmer, der Tisch, das Bett, die Küche</div></div>
+<div class="task"><div class="prompt">5. Tagesablauf &amp; Termine:</div><input type="text" data-save><div class="solution">z. B. aufstehen, frühstücken, der Termin, um ... Uhr</div></div>
+<div class="task"><div class="prompt">6. Freizeit &amp; Fähigkeiten:</div><input type="text" data-save><div class="solution">z. B. können, mögen, das Hobby, gern</div></div>
+<div class="task"><div class="prompt">7. Restaurant &amp; Wegbeschreibung:</div><input type="text" data-save><div class="solution">z. B. bestellen, schmecken, geradeaus, links</div></div>
+<div class="task"><div class="prompt">8. Vergangenheit:</div><input type="text" data-save><div class="solution">z. B. gemacht, gegangen, gefahren, gekauft</div></div>
+<button onclick="toggleSolutions(this)">Beispiele zeigen</button>
+</section>
+
+<section>
+<h3>5. Perfekt – mein letztes Wochenende</h3>
+<p>Bilde vollständige Sätze im Perfekt. <span class="vn">Tạo câu hoàn chỉnh ở thì Perfekt.</span></p>
+<div class="task"><div class="prompt">1. ich / nach Berlin / fahren</div><input type="text" data-save><div class="solution">Ich bin nach Berlin gefahren.</div></div>
+<div class="task"><div class="prompt">2. ich / Freunde / besuchen</div><input type="text" data-save><div class="solution">Ich habe Freunde besucht.</div></div>
+<div class="task"><div class="prompt">3. wir / zusammen / essen</div><input type="text" data-save><div class="solution">Wir haben zusammen gegessen.</div></div>
+<div class="task"><div class="prompt">4. wir / viel / lachen</div><input type="text" data-save><div class="solution">Wir haben viel gelacht.</div></div>
+<div class="task"><div class="prompt">5. ich / früh / aufstehen</div><input type="text" data-save><div class="solution">Ich bin früh aufgestanden.</div></div>
+<div class="task"><div class="prompt">6. ich / meine Familie / anrufen</div><input type="text" data-save><div class="solution">Ich habe meine Familie angerufen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Vergleiche und Meinungen</h3>
+<p>Schreibe vollständige Sätze. Benutze Komparativ/Superlativ und, wenn möglich, <strong>dass</strong>. <span class="vn">Viết câu hoàn chỉnh với so sánh và ý kiến.</span></p>
+<div class="task"><div class="prompt">1. Hamburg / schön / Berlin (Komparativ)</div><input type="text" data-save><div class="solution">Hamburg ist schöner als Berlin.</div></div>
+<div class="task"><div class="prompt">2. Fahrrad / langsam / Zug (Komparativ)</div><input type="text" data-save><div class="solution">Das Fahrrad ist langsamer als der Zug.</div></div>
+<div class="task"><div class="prompt">3. Deutsch / interessant / Englisch – „Ich finde, dass ...“</div><input type="text" data-save><div class="solution">z. B. Ich finde, dass Deutsch interessanter als Englisch ist.</div></div>
+<div class="task"><div class="prompt">4. dein Lieblingsessen – Superlativ mit „am besten“</div><input type="text" data-save><div class="solution">z. B. Pizza schmeckt mir am besten.</div></div>
+<button onclick="toggleSolutions(this)">Beispiele zeigen</button>
+</section>
+
+<section>
+<h3>7. Bausteine für deine Abschlusspräsentation</h3>
+<p>Notiere zu jeder Frage nur Stichpunkte. <span class="vn">Chỉ ghi từ khóa cho mỗi câu hỏi.</span></p>
+<div class="task"><div class="prompt">1. Wer bist du? Wie heißt du?</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">2. Woher kommst du? Welche Sprachen sprichst du?</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">3. Was ist dein Beruf? Wie ist deine Familie?</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">4. Wie sieht dein Tagesablauf aus?</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">5. Was sind deine Hobbys? Was kannst du gut?</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">6. Was hast du letztes Wochenende gemacht?</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">7. Welche zwei Dinge möchtest du vergleichen?</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">8. Warum lernst du Deutsch?</div><input type="text" data-save></div>
+</section>
+
+<section>
+<h3>8. Grammatik-Check für deine Präsentation</h3>
+<p>Schreibe je einen eigenen Beispielsatz. Ziel: mindestens 8–10 verschiedene Strukturen aktiv benutzen. <span class="vn">Viết một câu ví dụ của riêng bạn cho mỗi cấu trúc.</span></p>
+<div class="task"><div class="prompt">1. sein / heißen:</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">2. Possessivartikel:</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">3. trennbares Verb:</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">4. Modalverb + Infinitiv:</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">5. Perfekt mit haben:</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">6. Perfekt mit sein:</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">7. Komparativ/Superlativ:</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">8. dass-Satz:</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">9. weil-Satz:</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">10. denn / und / aber:</div><input type="text" data-save></div>
+</section>
+
+<section>
+<h3>9. 2-Minuten-Präsentation – Schreibvorbereitung</h3>
+<p>Schreibe jetzt einen zusammenhängenden Entwurf über dich. Behandle: <strong>Name/Herkunft/Sprachen/Beruf/Familie</strong>, <strong>Tagesablauf/Hobbys</strong>, <strong>ein Erlebnis im Perfekt</strong>, <strong>einen Vergleich</strong> und <strong>eine Begründung mit weil/denn/dass</strong>. <span class="vn">Viết bản nháp mạch lạc cho bài thuyết trình 2 phút.</span></p>
+<div class="violet"><strong>Ziel:</strong> klare Einleitung · mindestens 8–10 A1-Strukturen · verständliche Übergänge · klarer Schluss</div>
+<div class="task"><textarea data-save placeholder="Hallo, ich heiße ... und ich komme aus ...&#10;An einem normalen Tag ...&#10;Letztes Wochenende ...&#10;Ich finde, dass ...&#10;Ich lerne Deutsch, weil ...&#10;Vielen Dank fürs Zuhören!"></textarea></div>
+</section>
+
+<section>
+<h3>10. Freies Sprechen – nur Stichpunkte!</h3>
+<p>Reduziere deinen Entwurf auf kurze Stichpunkte. Keine ganzen Sätze. Danach sprich ca. 2 Minuten frei. <span class="vn">Rút bài nháp thành các từ khóa ngắn; sau đó nói tự do khoảng 2 phút.</span></p>
+<div class="errorbox"><strong>Wichtig:</strong> Nicht ablesen. Die Stichpunkte sollen dich nur erinnern.</div>
+<div class="task"><textarea data-save placeholder="Name – Herkunft – Sprachen&#10;Beruf – Familie&#10;7 Uhr aufstehen – Arbeit – Hobby&#10;Wochenende: ...&#10;Vergleich: ...&#10;Deutsch lernen: weil ..."></textarea></div>
+</section>
+
+<section>
+<h3>11. Selbstbewertung nach dem Vortrag</h3>
+<p>Bewerte dich kurz und schreibe einen konkreten nächsten Schritt. <span class="vn">Tự đánh giá ngắn và ghi một bước cải thiện cụ thể.</span></p>
+<div class="task"><div class="prompt">Inhalt vollständig? (1–3 Sterne + kurzer Kommentar)</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">Grammatik variiert? (1–3 Sterne + kurzer Kommentar)</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">Flüssig gesprochen? (1–3 Sterne + kurzer Kommentar)</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">Was möchte ich beim nächsten Versuch verbessern?</div><textarea data-save></textarea></div>
+</section>
+
+<section>
+<h3>12. Mein Weg zu A2</h3>
+<p>Schreibe eine kurze Lernreflexion. <span class="vn">Viết một đoạn tự đánh giá ngắn cho bước chuyển lên A2.</span></p>
+<div class="task"><div class="prompt">Das kann ich auf A1 schon gut:</div><textarea data-save></textarea></div>
+<div class="task"><div class="prompt">Diese Grammatik möchte ich noch wiederholen:</div><textarea data-save></textarea></div>
+<div class="task"><div class="prompt">Diesen Wortschatz brauche ich besonders oft:</div><textarea data-save></textarea></div>
+<div class="task"><div class="prompt">Mein persönliches Ziel für A2:</div><textarea data-save></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 24 · Abschlussprojekt · Extra-Übungsblatt<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+<script>
+const KEY="a1_l24_abschlussprojekt_extra_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

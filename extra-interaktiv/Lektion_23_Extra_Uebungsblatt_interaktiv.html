@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 23 – Extra-Übungsblatt interaktiv</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 23</h1>
+  <h2>Extra-Übungsblatt: E-Mails &amp; Briefe · und/aber · weil/denn · Schreiben Teil 2</h2>
+</header>
+
+<div class="toolbar">
+  <button onclick="saveAll()">💾 Antworten speichern</button>
+  <button onclick="loadAll()">📂 Antworten laden</button>
+  <button class="danger" onclick="clearAll()">🗑️ Alles löschen</button>
+  <span id="status">Die Antworten werden automatisch im Browser gespeichert.</span>
+</div>
+
+<section>
+<h3>1. Wortschatz – E-Mail und Brief</h3>
+<p>Ergänze das passende Wort. <span class="vn">Điền từ phù hợp.</span></p>
+<div class="violet"><strong>Wörter:</strong> Betreff · Anrede · Grußformel · Empfänger · Absender · einladen · absagen · antworten</div>
+<div class="task"><div class="prompt">1. Oben in der E-Mail steht der ______. Er sagt kurz, worum es geht.</div><input type="text" data-save><div class="solution">Betreff</div></div>
+<div class="task"><div class="prompt">2. „Liebe Anna,“ ist eine ______.</div><input type="text" data-save><div class="solution">Anrede</div></div>
+<div class="task"><div class="prompt">3. „Viele Grüße“ ist eine ______.</div><input type="text" data-save><div class="solution">Grußformel</div></div>
+<div class="task"><div class="prompt">4. Die Person, die die E-Mail bekommt, ist der ______.</div><input type="text" data-save><div class="solution">Empfänger</div></div>
+<div class="task"><div class="prompt">5. Die Person, die die E-Mail schreibt, ist der ______.</div><input type="text" data-save><div class="solution">Absender</div></div>
+<div class="task"><div class="prompt">6. Ich möchte dich zu meiner Party ______.</div><input type="text" data-save><div class="solution">einladen</div></div>
+<div class="task"><div class="prompt">7. Leider kann ich nicht kommen. Ich muss den Termin ______.</div><input type="text" data-save><div class="solution">absagen</div></div>
+<div class="task"><div class="prompt">8. Bitte ______ mir bald auf meine E-Mail.</div><input type="text" data-save><div class="solution">antworte</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. Informell oder formell?</h3>
+<p>Schreibe <strong>informell</strong> oder <strong>formell</strong>. <span class="vn">Viết “thân mật” hoặc “trang trọng”.</span></p>
+<div class="task"><div class="prompt">1. Liebe Anna,</div><input type="text" data-save><div class="solution">informell</div></div>
+<div class="task"><div class="prompt">2. Sehr geehrte Damen und Herren,</div><input type="text" data-save><div class="solution">formell</div></div>
+<div class="task"><div class="prompt">3. Viele Grüße</div><input type="text" data-save><div class="solution">informell</div></div>
+<div class="task"><div class="prompt">4. Mit freundlichen Grüßen</div><input type="text" data-save><div class="solution">formell</div></div>
+<div class="task"><div class="prompt">5. Hallo Tom,</div><input type="text" data-save><div class="solution">informell</div></div>
+<div class="task"><div class="prompt">6. Sehr geehrter Herr Schmidt,</div><input type="text" data-save><div class="solution">formell</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. „und“ oder „aber“?</h3>
+<p>Ergänze die passende Konjunktion. Achte auf das Komma vor <strong>aber</strong>. <span class="vn">Điền liên từ phù hợp. Chú ý dấu phẩy trước “aber”.</span></p>
+<div class="task"><div class="prompt">1. Ich schreibe eine E-Mail ______ ich lade meine Freundin ein.</div><input type="text" data-save><div class="solution">und</div></div>
+<div class="task"><div class="prompt">2. Ich möchte zur Party kommen, ______ ich habe keine Zeit.</div><input type="text" data-save><div class="solution">aber</div></div>
+<div class="task"><div class="prompt">3. Der Betreff ist klar, ______ die Anrede fehlt noch.</div><input type="text" data-save><div class="solution">aber</div></div>
+<div class="task"><div class="prompt">4. Ich freue mich über deine Einladung ______ ich sage gern zu.</div><input type="text" data-save><div class="solution">und</div></div>
+<div class="task"><div class="prompt">5. Er möchte absagen, ______ er findet keine passenden Worte.</div><input type="text" data-save><div class="solution">aber</div></div>
+<div class="task"><div class="prompt">6. Lisa schreibt den Betreff ______ sie beginnt mit der Anrede.</div><input type="text" data-save><div class="solution">und</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. weil-Sätze – Verb ans Ende</h3>
+<p>Verbinde die Satzteile mit <strong>weil</strong>. <span class="vn">Nối các phần câu bằng “weil”; động từ đã chia đứng cuối mệnh đề.</span></p>
+<div class="violet"><strong>Muster:</strong> Ich komme nicht. Ich bin krank. → Ich komme nicht, weil ich krank <strong>bin</strong>.</div>
+<div class="task"><div class="prompt">1. Ich kann nicht kommen / ich bin krank.</div><input type="text" data-save><div class="solution">Ich kann nicht kommen, weil ich krank bin.</div></div>
+<div class="task"><div class="prompt">2. Sie schreibt eine E-Mail / sie hat eine Frage.</div><input type="text" data-save><div class="solution">Sie schreibt eine E-Mail, weil sie eine Frage hat.</div></div>
+<div class="task"><div class="prompt">3. Wir sagen die Party ab / das Wetter ist schlecht.</div><input type="text" data-save><div class="solution">Wir sagen die Party ab, weil das Wetter schlecht ist.</div></div>
+<div class="task"><div class="prompt">4. Er antwortet nicht / er hat wenig Zeit.</div><input type="text" data-save><div class="solution">Er antwortet nicht, weil er wenig Zeit hat.</div></div>
+<div class="task"><div class="prompt">5. Ich freue mich / du kommst zu meinem Geburtstag.</div><input type="text" data-save><div class="solution">Ich freue mich, weil du zu meinem Geburtstag kommst.</div></div>
+<div class="task"><div class="prompt">6. Anna lädt Tom ein / er ist ihr bester Freund.</div><input type="text" data-save><div class="solution">Anna lädt Tom ein, weil er ihr bester Freund ist.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. denn oder weil?</h3>
+<p>Wähle nach der vorgegebenen Wortstellung. <span class="vn">Chọn theo trật tự từ đã cho.</span></p>
+<div class="violet"><strong>Merke:</strong> denn + Hauptsatz → Verb Position 2. &nbsp; | &nbsp; weil + Nebensatz → Verb am Ende.</div>
+<div class="task"><div class="prompt">1. Ich schreibe dir, ______ ich habe eine wichtige Frage.</div><input type="text" data-save><div class="solution">denn</div></div>
+<div class="task"><div class="prompt">2. Wir sagen ab, ______ das Wetter schlecht ist.</div><input type="text" data-save><div class="solution">weil</div></div>
+<div class="task"><div class="prompt">3. Sie kommt später, ______ sie muss noch arbeiten.</div><input type="text" data-save><div class="solution">denn</div></div>
+<div class="task"><div class="prompt">4. Er antwortet nicht, ______ er keine Zeit hat.</div><input type="text" data-save><div class="solution">weil</div></div>
+<div class="task"><div class="prompt">5. Ich freue mich, ______ du kommst zu meiner Party.</div><input type="text" data-save><div class="solution">denn</div></div>
+<div class="task"><div class="prompt">6. Anna lädt dich ein, ______ sie dich sehr mag.</div><input type="text" data-save><div class="solution">weil</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Konjunktionen-Mix</h3>
+<p>Ergänze <strong>und, aber, denn</strong> oder <strong>weil</strong>. <span class="vn">Điền und, aber, denn hoặc weil.</span></p>
+<div class="task"><div class="prompt">1. Ich schreibe eine E-Mail ______ ich lade dich zur Party ein.</div><input type="text" data-save><div class="solution">und</div></div>
+<div class="task"><div class="prompt">2. Ich möchte kommen, ______ ich habe leider keine Zeit.</div><input type="text" data-save><div class="solution">aber</div></div>
+<div class="task"><div class="prompt">3. Ich kann nicht kommen, ______ ich krank bin.</div><input type="text" data-save><div class="solution">weil</div></div>
+<div class="task"><div class="prompt">4. Ich kann nicht kommen, ______ ich bin krank.</div><input type="text" data-save><div class="solution">denn</div></div>
+<div class="task"><div class="prompt">5. Der Brief ist fertig, ______ der Umschlag fehlt noch.</div><input type="text" data-save><div class="solution">aber</div></div>
+<div class="task"><div class="prompt">6. Ich antworte sofort, ______ die Frage wichtig ist.</div><input type="text" data-save><div class="solution">weil</div></div>
+<div class="task"><div class="prompt">7. Ich freue mich über deine Mail ______ ich antworte heute.</div><input type="text" data-save><div class="solution">und</div></div>
+<div class="task"><div class="prompt">8. Ich schreibe Ihnen, ______ ich habe eine Frage zu meinem Termin.</div><input type="text" data-save><div class="solution">denn</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Fehler finden und korrigieren</h3>
+<p>Jeder Satz enthält einen typischen Fehler. Schreibe ihn richtig. <span class="vn">Mỗi câu có một lỗi điển hình. Hãy sửa lại.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> Wortstellung · Komma · und/aber · denn/weil · du/Sie · Anrede/Grußformel</div>
+<div class="task"><div class="prompt">1. Ich kann nicht kommen, weil ich bin krank.</div><input type="text" data-save><div class="solution">Ich kann nicht kommen, weil ich krank bin.</div></div>
+<div class="task"><div class="prompt">2. Ich komme nicht denn ich bin krank.</div><input type="text" data-save><div class="solution">Ich komme nicht, denn ich bin krank.</div></div>
+<div class="task"><div class="prompt">3. Ich komme nicht, denn ich krank bin.</div><input type="text" data-save><div class="solution">Ich komme nicht, denn ich bin krank.</div></div>
+<div class="task"><div class="prompt">4. Ich komme aber ich habe wenig Zeit.</div><input type="text" data-save><div class="solution">Ich komme, aber ich habe wenig Zeit.</div></div>
+<div class="task"><div class="prompt">5. Ich mag Kaffee und ich mag keinen Tee.</div><input type="text" data-save><div class="solution">Ich mag Kaffee, aber ich mag keinen Tee.</div></div>
+<div class="task"><div class="prompt">6. Sehr geehrte Frau Meier, kannst du mir bitte antworten?</div><input type="text" data-save><div class="solution">Sehr geehrte Frau Meier, können Sie mir bitte antworten?</div></div>
+<div class="task"><div class="prompt">7. Liebe Anna, ... Mit freundlichen Grüßen</div><input type="text" data-save><div class="solution">Liebe Anna, ... Viele Grüße</div></div>
+<div class="task"><div class="prompt">8. Sehr geehrte Damen und Herren ... Viele Grüße</div><input type="text" data-save><div class="solution">Sehr geehrte Damen und Herren, ... Mit freundlichen Grüßen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Eine E-Mail richtig aufbauen</h3>
+<p>Schreibe zu jedem Punkt ein passendes Element. <span class="vn">Viết thành phần phù hợp cho từng mục.</span></p>
+<div class="task"><div class="prompt">1. Betreff für eine Geburtstagseinladung:</div><input type="text" data-save><div class="solution">z. B. Einladung zu meiner Geburtstagsparty</div></div>
+<div class="task"><div class="prompt">2. Informelle Anrede an Anna:</div><input type="text" data-save><div class="solution">Liebe Anna,</div></div>
+<div class="task"><div class="prompt">3. Formelle Anrede, wenn du keinen Namen kennst:</div><input type="text" data-save><div class="solution">Sehr geehrte Damen und Herren,</div></div>
+<div class="task"><div class="prompt">4. Informelle Grußformel:</div><input type="text" data-save><div class="solution">Viele Grüße</div></div>
+<div class="task"><div class="prompt">5. Formelle Grußformel:</div><input type="text" data-save><div class="solution">Mit freundlichen Grüßen</div></div>
+<div class="task"><div class="prompt">6. Nach „Sehr geehrte Frau Meier,“: „______ schreibe Ihnen wegen meines Termins.“</div><input type="text" data-save><div class="solution">ich</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Schreibtraining – Informelle E-Mail</h3>
+<p>Dein Freund Tom lädt dich am Samstag zu seiner Party ein. Du kannst nicht kommen. Schreibe eine kurze E-Mail. Behandle alle drei Punkte: <strong>bedanken</strong>, <strong>Grund nennen</strong>, <strong>anderen Termin vorschlagen</strong>. Benutze mindestens einmal <strong>weil</strong> oder <strong>denn</strong>. <span class="vn">Tom mời bạn dự tiệc thứ Bảy nhưng bạn không thể đến. Viết email ngắn: cảm ơn, nêu lý do, đề nghị một dịp khác.</span></p>
+<div class="violet"><strong>Check:</strong> passende Anrede · alle 3 Punkte · richtige Wortstellung · passende Grußformel</div>
+<div class="task"><textarea data-save placeholder="Lieber Tom,&#10;vielen Dank für ...&#10;Leider ...&#10;Viele Grüße&#10;..."></textarea>
+<div class="solution">Muster: Lieber Tom, vielen Dank für deine Einladung! Leider kann ich am Samstag nicht kommen, weil ich arbeiten muss. Hast du am Sonntag Zeit? Dann können wir zusammen Kaffee trinken. Viele Grüße, Alex</div></div>
+<button onclick="toggleSolutions(this)">Musterlösung zeigen</button>
+</section>
+
+<section>
+<h3>10. Prüfungssimulation – Schreiben Teil 2</h3>
+<p>Deine Freundin Anna hat bald Geburtstag. Schreibe ihr eine E-Mail mit ungefähr 30 Wörtern. Gehe auf <strong>alle drei Punkte</strong> ein: gratulieren, sagen ob du zur Party kommst oder nicht und warum, einen Vorschlag für ein gemeinsames Treffen machen. <span class="vn">Bạn Anna sắp sinh nhật. Viết email khoảng 30 từ, đề cập đủ ba ý.</span></p>
+<div class="errorbox"><strong>Prüfungsmodus:</strong> Plane etwa 10–15 Minuten. Schreibe ohne Wörterbuch und kontrolliere danach Anrede, 3 Inhaltspunkte, Konjunktionen und Grußformel.</div>
+<div class="task"><textarea data-save placeholder="Liebe Anna,&#10;..."></textarea>
+<div class="solution">Musterlösung: Liebe Anna, herzlichen Glückwunsch zum Geburtstag! Ich kann leider nicht zu deiner Party kommen, weil ich an dem Tag arbeiten muss. Lass uns doch am Sonntag zusammen Kaffee trinken und feiern! Viele Grüße, Lisa</div></div>
+<button onclick="toggleSolutions(this)">Musterlösung zeigen</button>
+</section>
+
+<section>
+<h3>11. Transfer – Formelle E-Mail</h3>
+<p>Du hast einen Termin, kannst aber nicht kommen. Schreibe eine kurze formelle E-Mail an eine Firma oder Praxis. Nenne den Termin, den Grund und bitte um einen neuen Termin. Bleibe konsequent bei <strong>Sie/Ihnen</strong>. <span class="vn">Bạn có lịch hẹn nhưng không thể đến. Viết email trang trọng: nêu lịch hẹn, lý do và xin lịch mới; dùng nhất quán Sie/Ihnen.</span></p>
+<div class="violet"><strong>Hilfe:</strong> Sehr geehrte Damen und Herren, · Ich schreibe Ihnen wegen ... · Leider kann ich nicht kommen, weil ... · Können Sie mir bitte einen neuen Termin geben? · Mit freundlichen Grüßen</div>
+<div class="task"><textarea data-save placeholder="Betreff: Termin am ...&#10;Sehr geehrte Damen und Herren,&#10;ich schreibe Ihnen ...&#10;Mit freundlichen Grüßen&#10;..."></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 23 · E-Mails &amp; Briefe<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+<script>
+const KEY="a1_l23_emails_briefe_extra_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 12 – Übungsblatt Wochentage & Termine</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 12</h1>
+  <h2>Übungsblatt: Wochentage · Monate · müssen · Termine</h2>
+  <div class="vn">Bài tập: Các ngày trong tuần · Các tháng · müssen · Lịch hẹn</div>
+  <div class="rule">
+    <strong>Merke:</strong><br>
+    <strong>am</strong> + Wochentag → am Montag, am Wochenende.<br>
+    <strong>im</strong> + Monat → im Mai, im Dezember.<br>
+    Modalverb <strong>müssen</strong>: Ich <strong>muss</strong> am Montag arbeiten.<br>
+    Satzklammer: konjugiertes <strong>müssen</strong> auf Position 2, Vollverb im <strong>Infinitiv am Satzende</strong>.
+  </div>
+  <div class="toolbar">
+    <button onclick="saveAll()">💾 Antworten speichern</button>
+    <button class="secondary" onclick="loadAll()">↻ Gespeicherte Antworten laden</button>
+    <button class="light" onclick="clearAll()">Alles löschen</button>
+  </div>
+  <div id="status" class="status">Die Antworten werden automatisch im Browser gespeichert.</div>
+</header>
+
+
+<section>
+<h3>1. Wochentage – Welcher Tag passt?</h3>
+<p>Schreibe den richtigen Wochentag. <span class="vn">Viết đúng tên ngày trong tuần.</span></p>
+<div class="wordbank">Montag · Dienstag · Mittwoch · Donnerstag · Freitag · Samstag · Sonntag · Wochenende</div>
+<div class="task"><div class="prompt">1. thứ Hai →</div><input type="text" data-save><div class="solution">Montag</div></div>
+<div class="task"><div class="prompt">2. thứ Tư →</div><input type="text" data-save><div class="solution">Mittwoch</div></div>
+<div class="task"><div class="prompt">3. thứ Sáu →</div><input type="text" data-save><div class="solution">Freitag</div></div>
+<div class="task"><div class="prompt">4. Chủ nhật →</div><input type="text" data-save><div class="solution">Sonntag</div></div>
+<div class="task"><div class="prompt">5. cuối tuần →</div><input type="text" data-save><div class="solution">Wochenende</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. Monate – Welcher Monat passt?</h3>
+<p>Schreibe den passenden Monat. <span class="vn">Viết tháng tương ứng bằng tiếng Đức.</span></p>
+<div class="task"><div class="prompt">1. tháng Một →</div><input type="text" data-save><div class="solution">Januar</div></div>
+<div class="task"><div class="prompt">2. tháng Ba →</div><input type="text" data-save><div class="solution">März</div></div>
+<div class="task"><div class="prompt">3. tháng Năm →</div><input type="text" data-save><div class="solution">Mai</div></div>
+<div class="task"><div class="prompt">4. tháng Tám →</div><input type="text" data-save><div class="solution">August</div></div>
+<div class="task"><div class="prompt">5. tháng Mười →</div><input type="text" data-save><div class="solution">Oktober</div></div>
+<div class="task"><div class="prompt">6. tháng Mười Hai →</div><input type="text" data-save><div class="solution">Dezember</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. am oder im?</h3>
+<p>Ergänze <strong>am</strong> bei Wochentagen und <strong>im</strong> bei Monaten. <span class="vn">Điền <strong>am</strong> trước ngày trong tuần và <strong>im</strong> trước tháng.</span></p>
+<div class="note"><strong>Tipp:</strong> am Montag · am Wochenende · im Mai · im Dezember</div>
+<div class="task"><div class="prompt">1. Ich habe ______ Montag Deutschkurs.</div><input type="text" data-save><div class="solution">am</div></div>
+<div class="task"><div class="prompt">2. Mein Geburtstag ist ______ Mai.</div><input type="text" data-save><div class="solution">im</div></div>
+<div class="task"><div class="prompt">3. Wir treffen uns ______ Samstag.</div><input type="text" data-save><div class="solution">am</div></div>
+<div class="task"><div class="prompt">4. ______ Dezember feiern wir Weihnachten.</div><input type="text" data-save><div class="solution">Im</div></div>
+<div class="task"><div class="prompt">5. Hast du ______ Mittwoch Zeit?</div><input type="text" data-save><div class="solution">am</div></div>
+<div class="task"><div class="prompt">6. ______ August ist es sehr heiß.</div><input type="text" data-save><div class="solution">Im</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. müssen konjugieren</h3>
+<p>Ergänze die richtige Form von <strong>müssen</strong>. <span class="vn">Điền dạng chia đúng của <strong>müssen</strong>.</span></p>
+<div class="task"><div class="prompt">1. Ich ______ am Montag arbeiten.</div><input type="text" data-save><div class="solution">muss</div></div>
+<div class="task"><div class="prompt">2. Du ______ früh aufstehen.</div><input type="text" data-save><div class="solution">musst</div></div>
+<div class="task"><div class="prompt">3. Er ______ am Samstag einkaufen.</div><input type="text" data-save><div class="solution">muss</div></div>
+<div class="task"><div class="prompt">4. Wir ______ pünktlich sein.</div><input type="text" data-save><div class="solution">müssen</div></div>
+<div class="task"><div class="prompt">5. Ihr ______ um 17 Uhr anrufen.</div><input type="text" data-save><div class="solution">müsst</div></div>
+<div class="task"><div class="prompt">6. Sie (Plural) ______ am Dienstag arbeiten.</div><input type="text" data-save><div class="solution">müssen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Satz-Puzzle – Modalverb-Satzklammer</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp từ thành câu đúng với động từ khiếm khuyết.</span></p>
+<div class="note"><strong>Merke:</strong> müssen auf Position 2 · Vollverb im Infinitiv am Satzende.</div>
+<div class="task"><div class="wordbank">ich / am Montag / arbeiten / muss</div><input type="text" data-save><div class="solution">Ich muss am Montag arbeiten.</div></div>
+<div class="task"><div class="wordbank">du / um 6 Uhr / aufstehen / musst</div><input type="text" data-save><div class="solution">Du musst um 6 Uhr aufstehen.</div></div>
+<div class="task"><div class="wordbank">er / am Samstag / einkaufen / muss</div><input type="text" data-save><div class="solution">Er muss am Samstag einkaufen.</div></div>
+<div class="task"><div class="wordbank">wir / am Freitag / aufräumen / müssen</div><input type="text" data-save><div class="solution">Wir müssen am Freitag aufräumen.</div></div>
+<div class="task"><div class="wordbank">ihr / um 17 Uhr / anrufen / müsst</div><input type="text" data-save><div class="solution">Ihr müsst um 17 Uhr anrufen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại toàn bộ câu cho đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> Form von müssen · Infinitiv am Satzende · trennbares Verb bleibt mit Modalverb zusammen · am/im.</div>
+<div class="task"><div class="prompt">1. Ich müsse am Montag arbeiten.</div><input type="text" data-save><div class="solution">Ich muss am Montag arbeiten.</div></div>
+<div class="task"><div class="prompt">2. Du musst aufstehe um 6 Uhr.</div><input type="text" data-save><div class="solution">Du musst um 6 Uhr aufstehen.</div></div>
+<div class="task"><div class="prompt">3. Er muss am Samstag ein kaufen.</div><input type="text" data-save><div class="solution">Er muss am Samstag einkaufen.</div></div>
+<div class="task"><div class="prompt">4. Ihr müsst um 17 Uhr ruft an.</div><input type="text" data-save><div class="solution">Ihr müsst um 17 Uhr anrufen.</div></div>
+<div class="task"><div class="prompt">5. Ich arbeite in Montag.</div><input type="text" data-save><div class="solution">Ich arbeite am Montag.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Termine verstehen</h3>
+<p>Lies den Plan und beantworte die Fragen. <span class="vn">Đọc lịch và trả lời các câu hỏi.</span></p>
+<div class="violet"><strong>Plan:</strong> Montag 08:00 Deutschkurs · Mittwoch 15:00 Arzttermin · Donnerstag Eltern anrufen · Samstag Wohnung aufräumen · Sonntag frei</div>
+<div class="task"><div class="prompt">1. Wann ist der Deutschkurs?</div><input type="text" data-save><div class="solution">Am Montag um 8 Uhr.</div></div>
+<div class="task"><div class="prompt">2. Wann ist der Arzttermin?</div><input type="text" data-save><div class="solution">Am Mittwoch um 15 Uhr.</div></div>
+<div class="task"><div class="prompt">3. Wen muss man am Donnerstag anrufen?</div><input type="text" data-save><div class="solution">Die Eltern.</div></div>
+<div class="task"><div class="prompt">4. Was muss man am Samstag machen?</div><input type="text" data-save><div class="solution">Die Wohnung aufräumen.</div></div>
+<div class="task"><div class="prompt">5. Wann ist frei?</div><input type="text" data-save><div class="solution">Am Sonntag.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Termin vereinbaren</h3>
+<p>Ergänze den Dialog mit den Wörtern aus der Wortbank. <span class="vn">Hoàn thành đoạn hội thoại bằng các từ trong khung.</span></p>
+<div class="wordbank">Termin · Mittwoch · Donnerstag · Zeit · 10 Uhr</div>
+<div class="task"><div class="prompt">A: Guten Tag. Ich muss meinen ______ verschieben.</div><input type="text" data-save><div class="solution">Termin</div></div>
+<div class="task"><div class="prompt">B: Kein Problem. Wann haben Sie ______?</div><input type="text" data-save><div class="solution">Zeit</div></div>
+<div class="task"><div class="prompt">A: Am ______ kann ich leider nicht.</div><input type="text" data-save><div class="solution">Mittwoch</div></div>
+<div class="task"><div class="prompt">A: Am ______ habe ich Zeit.</div><input type="text" data-save><div class="solution">Donnerstag</div></div>
+<div class="task"><div class="prompt">B: Passt Ihnen Donnerstag um ______?</div><input type="text" data-save><div class="solution">10 Uhr</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Meine Woche</h3>
+<p>Schreibe über deine Woche. Benutze mindestens zwei Wochentage mit <strong>am</strong> und mindestens zwei Sätze mit <strong>müssen</strong>. <span class="vn">Viết về tuần của bạn. Dùng ít nhất hai ngày với <strong>am</strong> và ít nhất hai câu với <strong>müssen</strong>.</span></p>
+<div class="note"><strong>Hilfe:</strong> am Montag · am Mittwoch · am Wochenende · ich muss … · wir müssen … · arbeiten · einkaufen · anrufen · aufräumen</div>
+<div class="task"><div class="prompt">1. Was musst du am Montag machen?</div><textarea data-save placeholder="Am Montag muss ich ..."></textarea></div>
+<div class="task"><div class="prompt">2. Was machst du am Mittwoch?</div><textarea data-save placeholder="Am Mittwoch ..."></textarea></div>
+<div class="task"><div class="prompt">3. Was musst du am Wochenende machen?</div><textarea data-save placeholder="Am Wochenende muss ich ..."></textarea></div>
+<div class="task"><div class="prompt">4. Schreibe 4–6 Sätze über deine Woche.</div><textarea data-save placeholder="Meine Woche ..."></textarea></div>
+</section>
+<footer>
+Deutsch A1 · Lektion 12 · Wochentage &amp; Termine<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+<script>
+const KEY="a1_l12_wochentage_termine_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw) return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined) el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?")) return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

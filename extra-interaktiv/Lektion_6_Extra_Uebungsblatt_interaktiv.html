@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 6 – Übungsblatt Meine Familie</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:72px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid #93c5fd;border-color:transparent}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b} button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 6</h1>
+  <h2>Übungsblatt: Meine Familie · mein/dein · Plural</h2>
+  <div class="vn">Bài tập: Gia đình · mein/dein · số nhiều</div>
+  <div class="rule">
+    <strong>Merke:</strong><br>
+    <strong>der → mein/dein</strong> Vater · <strong>die → meine/deine</strong> Mutter ·
+    <strong>das → mein/dein</strong> Kind · <strong>Plural → meine/deine</strong> Eltern.<br>
+    Lerne die Pluralform am besten immer zusammen mit dem Nomen.
+  </div>
+  <div class="toolbar">
+    <button onclick="saveAll()">💾 Antworten speichern</button>
+    <button class="secondary" onclick="loadAll()">↻ Gespeicherte Antworten laden</button>
+    <button class="light" onclick="clearAll()">Alles löschen</button>
+  </div>
+  <div id="status" class="status">Die Antworten werden automatisch im Browser gespeichert.</div>
+</header>
+
+<section>
+<h3>1. Familie – Welches Wort passt?</h3>
+<p>Ergänze das passende Familienwort. <span class="vn">Điền từ chỉ thành viên gia đình phù hợp.</span></p>
+<div class="wordbank">Mutter · Vater · Bruder · Schwester · Opa · Oma · Onkel · Tante</div>
+<div class="task"><div class="prompt">1. der Vater meines Vaters → mein ______</div><input type="text" data-save><div class="solution">Opa</div></div>
+<div class="task"><div class="prompt">2. die Mutter meiner Mutter → meine ______</div><input type="text" data-save><div class="solution">Oma</div></div>
+<div class="task"><div class="prompt">3. ein männliches Geschwister → mein ______</div><input type="text" data-save><div class="solution">Bruder</div></div>
+<div class="task"><div class="prompt">4. ein weibliches Geschwister → meine ______</div><input type="text" data-save><div class="solution">Schwester</div></div>
+<div class="task"><div class="prompt">5. der Bruder meines Vaters → mein ______</div><input type="text" data-save><div class="solution">Onkel</div></div>
+<div class="task"><div class="prompt">6. die Schwester meiner Mutter → meine ______</div><input type="text" data-save><div class="solution">Tante</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. mein oder meine?</h3>
+<p>Ergänze <strong>mein</strong> oder <strong>meine</strong>. <span class="vn">Điền mein hoặc meine.</span></p>
+<div class="task"><div class="prompt">1. Das ist ______ Vater.</div><input type="text" data-save><div class="solution">mein</div></div>
+<div class="task"><div class="prompt">2. Das ist ______ Mutter.</div><input type="text" data-save><div class="solution">meine</div></div>
+<div class="task"><div class="prompt">3. Das ist ______ Kind.</div><input type="text" data-save><div class="solution">mein</div></div>
+<div class="task"><div class="prompt">4. Das sind ______ Eltern.</div><input type="text" data-save><div class="solution">meine</div></div>
+<div class="task"><div class="prompt">5. Das ist ______ Bruder.</div><input type="text" data-save><div class="solution">mein</div></div>
+<div class="task"><div class="prompt">6. Das sind ______ Schwestern.</div><input type="text" data-save><div class="solution">meine</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. dein oder deine?</h3>
+<p>Ergänze <strong>dein</strong> oder <strong>deine</strong>. <span class="vn">Điền dein hoặc deine.</span></p>
+<div class="task"><div class="prompt">1. Ist das ______ Bruder?</div><input type="text" data-save><div class="solution">dein</div></div>
+<div class="task"><div class="prompt">2. Ist das ______ Schwester?</div><input type="text" data-save><div class="solution">deine</div></div>
+<div class="task"><div class="prompt">3. Sind das ______ Eltern?</div><input type="text" data-save><div class="solution">deine</div></div>
+<div class="task"><div class="prompt">4. Ist das ______ Opa?</div><input type="text" data-save><div class="solution">dein</div></div>
+<div class="task"><div class="prompt">5. Ist das ______ Tante?</div><input type="text" data-save><div class="solution">deine</div></div>
+<div class="task"><div class="prompt">6. Sind das ______ Cousinen?</div><input type="text" data-save><div class="solution">deine</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. Singular → Plural</h3>
+<p>Schreibe die Pluralform. <span class="vn">Viết dạng số nhiều.</span></p>
+<div class="note"><strong>Tipp:</strong> Achte auf Umlaut und Endung: Vater → Väter, Mutter → Mütter.</div>
+<div class="task"><div class="prompt">1. der Vater → die ______</div><input type="text" data-save><div class="solution">Väter</div></div>
+<div class="task"><div class="prompt">2. die Mutter → die ______</div><input type="text" data-save><div class="solution">Mütter</div></div>
+<div class="task"><div class="prompt">3. der Bruder → die ______</div><input type="text" data-save><div class="solution">Brüder</div></div>
+<div class="task"><div class="prompt">4. die Schwester → die ______</div><input type="text" data-save><div class="solution">Schwestern</div></div>
+<div class="task"><div class="prompt">5. der Sohn → die ______</div><input type="text" data-save><div class="solution">Söhne</div></div>
+<div class="task"><div class="prompt">6. die Tochter → die ______</div><input type="text" data-save><div class="solution">Töchter</div></div>
+<div class="task"><div class="prompt">7. das Kind → die ______</div><input type="text" data-save><div class="solution">Kinder</div></div>
+<div class="task"><div class="prompt">8. der Onkel → die ______</div><input type="text" data-save><div class="solution">Onkel</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Satz-Puzzle</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp các từ thành câu đúng.</span></p>
+<div class="task"><div class="wordbank">das / mein / Vater / ist</div><input type="text" data-save><div class="solution">Das ist mein Vater.</div></div>
+<div class="task"><div class="wordbank">meine / das / Mutter / ist</div><input type="text" data-save><div class="solution">Das ist meine Mutter.</div></div>
+<div class="task"><div class="wordbank">meine / das / Eltern / sind</div><input type="text" data-save><div class="solution">Das sind meine Eltern.</div></div>
+<div class="task"><div class="wordbank">dein / ist / Bruder / das</div><input type="text" data-save><div class="solution">Ist das dein Bruder?</div></div>
+<div class="task"><div class="wordbank">deine / sind / das / Geschwister</div><input type="text" data-save><div class="solution">Sind das deine Geschwister?</div></div>
+<div class="task"><div class="wordbank">zwei / meine / das / Tanten / sind</div><input type="text" data-save><div class="solution">Das sind meine zwei Tanten.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại câu đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> mein/meine · dein/deine · Singular/Plural · ist/sind.</div>
+<div class="task"><div class="prompt">1. Das ist meine Vater.</div><input type="text" data-save><div class="solution">Das ist mein Vater.</div></div>
+<div class="task"><div class="prompt">2. Das ist mein Mutter.</div><input type="text" data-save><div class="solution">Das ist meine Mutter.</div></div>
+<div class="task"><div class="prompt">3. Das sind mein Eltern.</div><input type="text" data-save><div class="solution">Das sind meine Eltern.</div></div>
+<div class="task"><div class="prompt">4. Ist das deine Bruder?</div><input type="text" data-save><div class="solution">Ist das dein Bruder?</div></div>
+<div class="task"><div class="prompt">5. Das sind meine Bruders.</div><input type="text" data-save><div class="solution">Das sind meine Brüder.</div></div>
+<div class="task"><div class="prompt">6. Das ist meine Geschwister.</div><input type="text" data-save><div class="solution">Das sind meine Geschwister.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Wer ist wer?</h3>
+<p>Finde die passende Familienbezeichnung. <span class="vn">Tìm từ chỉ quan hệ gia đình phù hợp.</span></p>
+<div class="violet">Beispiel: Der Bruder meines Vaters → mein Onkel.</div>
+<div class="task"><div class="prompt">1. Die Schwester meiner Mutter → meine ______</div><input type="text" data-save><div class="solution">Tante</div></div>
+<div class="task"><div class="prompt">2. Der Sohn meiner Eltern, nicht ich → mein ______</div><input type="text" data-save><div class="solution">Bruder</div></div>
+<div class="task"><div class="prompt">3. Die Tochter meiner Eltern, nicht ich → meine ______</div><input type="text" data-save><div class="solution">Schwester</div></div>
+<div class="task"><div class="prompt">4. Vater und Mutter zusammen → meine ______</div><input type="text" data-save><div class="solution">Eltern</div></div>
+<div class="task"><div class="prompt">5. Bruder und Schwester zusammen → meine ______</div><input type="text" data-save><div class="solution">Geschwister</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Mini-Lesetext</h3>
+<p>Lies den Text und beantworte die Fragen. <span class="vn">Đọc đoạn văn và trả lời câu hỏi.</span></p>
+<div class="note"><strong>Text:</strong><br>
+Hallo! Ich heiße Linh. Das ist meine Familie. Meine Eltern heißen Hoa und Minh.
+Ich habe einen Bruder. Er heißt Nam. Meine Oma heißt Lan und mein Opa heißt Bao.
+Meine Tante Mai und mein Onkel Tuan sind auch auf dem Familienfoto.
+</div>
+<div class="note"><strong>Lesetipp:</strong> „Ich habe einen Bruder“ ist hier ein bekanntes Redemittel. Die vollständige Konjugation von <strong>haben</strong> kommt in Lektion 7.</div>
+<div class="task"><div class="prompt">1. Wie heißen Linhs Eltern?</div><input type="text" data-save><div class="solution">Sie heißen Hoa und Minh.</div></div>
+<div class="task"><div class="prompt">2. Wie heißt Linhs Bruder?</div><input type="text" data-save><div class="solution">Er heißt Nam.</div></div>
+<div class="task"><div class="prompt">3. Wie heißt Linhs Oma?</div><input type="text" data-save><div class="solution">Sie heißt Lan.</div></div>
+<div class="task"><div class="prompt">4. Wie heißt Linhs Opa?</div><input type="text" data-save><div class="solution">Er heißt Bao.</div></div>
+<div class="task"><div class="prompt">5. Welche zwei weiteren Familienmitglieder sind auf dem Foto?</div><input type="text" data-save><div class="solution">Ihre Tante Mai und ihr Onkel Tuan.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Challenge ⭐ Nur Stichwörter</h3>
+<p>Bilde einen vollständigen Satz mit <strong>mein/meine</strong> oder <strong>dein/deine</strong>.</p>
+<div class="task"><div class="wordbank">ich · Vater · Thomas</div><input type="text" data-save><div class="solution">Das ist mein Vater Thomas.</div></div>
+<div class="task"><div class="wordbank">ich · Mutter · Anna</div><input type="text" data-save><div class="solution">Das ist meine Mutter Anna.</div></div>
+<div class="task"><div class="wordbank">ich · Eltern · Hoa und Minh</div><input type="text" data-save><div class="solution">Das sind meine Eltern Hoa und Minh.</div></div>
+<div class="task"><div class="wordbank">du · Bruder · Nam ?</div><input type="text" data-save><div class="solution">Ist das dein Bruder Nam?</div></div>
+<div class="task"><div class="wordbank">du · Schwestern · Lan und Mai ?</div><input type="text" data-save><div class="solution">Sind das deine Schwestern Lan und Mai?</div></div>
+<button onclick="toggleSolutions(this)">Beispiele zeigen</button>
+</section>
+
+<section>
+<h3>10. Über deine Familie</h3>
+<p>Schreibe fünf kurze Sätze. Benutze den Stoff aus Lektion 6. <span class="vn">Viết 5 câu ngắn về gia đình. Dùng kiến thức của bài 6.</span></p>
+<div class="task"><div class="prompt">1. mein + maskulin</div><input type="text" data-save placeholder="Das ist mein ..."></div>
+<div class="task"><div class="prompt">2. meine + feminin</div><input type="text" data-save placeholder="Das ist meine ..."></div>
+<div class="task"><div class="prompt">3. meine + Plural</div><input type="text" data-save placeholder="Das sind meine ..."></div>
+<div class="task"><div class="prompt">4. dein/deine – eine Frage</div><input type="text" data-save placeholder="Ist das dein ...? / Sind das deine ...?"></div>
+<div class="task"><div class="prompt">5. Redemittel aus L6</div><input type="text" data-save placeholder="Ich habe ... / Meine Familie ..."></div>
+<div class="note"><strong>Selbstcheck:</strong> Passt <strong>mein/meine</strong>? Ist der Plural richtig? Ist der Satz vollständig?</div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 6 · Meine Familie · mein/dein · Plural<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+
+<script>
+const KEY="a1_l6_familie_mein_dein_plural_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  localStorage.setItem(KEY,JSON.stringify(fields().map(el=>el.value)));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw) return;
+  const data=JSON.parse(raw);
+  fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+  document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

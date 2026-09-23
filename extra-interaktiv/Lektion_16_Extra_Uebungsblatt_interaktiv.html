@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 16 – Übungsblatt Wegbeschreibung</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 16</h1>
+  <h2>Übungsblatt: Wegbeschreibung · Imperativ · lokale Präpositionen</h2>
+  <div class="vn">Bài tập: Hỏi đường &amp; chỉ đường · Thể mệnh lệnh · Giới từ chỉ vị trí</div>
+  <div class="rule">
+    <strong>Merke:</strong><br>
+    <strong>Imperativ du:</strong> Geh! · Bieg ab! · Nimm! · Fahr!<br>
+    <strong>Imperativ ihr:</strong> Geht! · Biegt ab! · Nehmt! · Fahrt!<br>
+    <strong>Imperativ Sie:</strong> Gehen Sie! · Biegen Sie ab! · Nehmen Sie! · Fahren Sie!<br>
+    Weg: <strong>an … vorbei</strong> · <strong>gegenüber</strong> · <strong>zwischen</strong> · <strong>bis zu</strong>.
+  </div>
+  <div class="toolbar">
+    <button onclick="saveAll()">💾 Antworten speichern</button>
+    <button class="secondary" onclick="loadAll()">↻ Gespeicherte Antworten laden</button>
+    <button class="light" onclick="clearAll()">Alles löschen</button>
+  </div>
+  <div id="status" class="status">Die Antworten werden automatisch im Browser gespeichert.</div>
+</header>
+
+<section>
+<h3>1. Gebäude in der Stadt – Welches Wort passt?</h3>
+<p>Ergänze das passende Gebäude. <span class="vn">Điền tên tòa nhà phù hợp.</span></p>
+<div class="wordbank">Rathaus · Kirche · Bahnhof · Bank · Apotheke · Museum · Post · Supermarkt · Krankenhaus · Schule</div>
+<div class="task"><div class="prompt">1. Dort fahren Züge ab und kommen an. → der ______</div><input type="text" data-save><div class="solution">Bahnhof</div></div>
+<div class="task"><div class="prompt">2. Dort kauft man Medikamente. → die ______</div><input type="text" data-save><div class="solution">Apotheke</div></div>
+<div class="task"><div class="prompt">3. Dort sieht man Kunst und Ausstellungen. → das ______</div><input type="text" data-save><div class="solution">Museum</div></div>
+<div class="task"><div class="prompt">4. Dort kauft man Lebensmittel. → der ______</div><input type="text" data-save><div class="solution">Supermarkt</div></div>
+<div class="task"><div class="prompt">5. Dort werden kranke Menschen behandelt. → das ______</div><input type="text" data-save><div class="solution">Krankenhaus</div></div>
+<div class="task"><div class="prompt">6. Dort lernen Kinder und Jugendliche. → die ______</div><input type="text" data-save><div class="solution">Schule</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. Richtungen – Welches Wort passt?</h3>
+<p>Ergänze das passende Richtungswort. <span class="vn">Điền từ chỉ hướng phù hợp.</span></p>
+<div class="wordbank">links · rechts · geradeaus · Kreuzung · Ampel · Ecke · Straße</div>
+<div class="task"><div class="prompt">1. ⬅️ → ______</div><input type="text" data-save><div class="solution">links</div></div>
+<div class="task"><div class="prompt">2. ➡️ → ______</div><input type="text" data-save><div class="solution">rechts</div></div>
+<div class="task"><div class="prompt">3. ⬆️ → ______</div><input type="text" data-save><div class="solution">geradeaus</div></div>
+<div class="task"><div class="prompt">4. Dort treffen sich zwei oder mehr Straßen. → die ______</div><input type="text" data-save><div class="solution">Kreuzung</div></div>
+<div class="task"><div class="prompt">5. Rot – Gelb – Grün. → die ______</div><input type="text" data-save><div class="solution">Ampel</div></div>
+<div class="task"><div class="prompt">6. „gleich um die ______“</div><input type="text" data-save><div class="solution">Ecke</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. Imperativ – du, ihr oder Sie?</h3>
+<p>Bilde die richtige Imperativform. <span class="vn">Hãy tạo đúng dạng mệnh lệnh.</span></p>
+<div class="note"><strong>du:</strong> Geh! / Nimm! / Fahr! · <strong>ihr:</strong> Geht! / Nehmt! / Fahrt! · <strong>Sie:</strong> Gehen Sie! / Nehmen Sie! / Fahren Sie!</div>
+<div class="task"><div class="prompt">1. gehen – du → ______ geradeaus!</div><input type="text" data-save><div class="solution">Geh</div></div>
+<div class="task"><div class="prompt">2. gehen – ihr → ______ geradeaus!</div><input type="text" data-save><div class="solution">Geht</div></div>
+<div class="task"><div class="prompt">3. gehen – Sie → ______ geradeaus!</div><input type="text" data-save><div class="solution">Gehen Sie</div></div>
+<div class="task"><div class="prompt">4. nehmen – du → ______ die zweite Straße links!</div><input type="text" data-save><div class="solution">Nimm</div></div>
+<div class="task"><div class="prompt">5. abbiegen – ihr → <input type="text" data-save style="width:110px;"> rechts <input type="text" data-save style="width:90px;">!</div><div class="solution">Biegt · ab</div></div>
+<div class="task"><div class="prompt">6. fahren – Sie → ______ bis zur Kreuzung!</div><input type="text" data-save><div class="solution">Fahren Sie</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. Vom Satz zum Imperativ</h3>
+<p>Verwandle den Satz in einen Befehl. Achte auf du/ihr/Sie. <span class="vn">Đổi câu thành câu mệnh lệnh. Chú ý dạng du/ihr/Sie.</span></p>
+<div class="task"><div class="prompt">1. Du gehst geradeaus.</div><input type="text" data-save><div class="solution">Geh geradeaus!</div></div>
+<div class="task"><div class="prompt">2. Ihr nehmt die zweite Straße links.</div><input type="text" data-save><div class="solution">Nehmt die zweite Straße links!</div></div>
+<div class="task"><div class="prompt">3. Sie biegen an der Ampel rechts ab.</div><input type="text" data-save><div class="solution">Biegen Sie an der Ampel rechts ab!</div></div>
+<div class="task"><div class="prompt">4. Du fährst bis zur Kreuzung.</div><input type="text" data-save><div class="solution">Fahr bis zur Kreuzung!</div></div>
+<div class="task"><div class="prompt">5. Ihr folgt der Hauptstraße.</div><input type="text" data-save><div class="solution">Folgt der Hauptstraße!</div></div>
+<div class="task"><div class="prompt">6. Sie nehmen die erste Straße rechts.</div><input type="text" data-save><div class="solution">Nehmen Sie die erste Straße rechts!</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Lokale Präpositionen</h3>
+<p>Ergänze die passende Präposition. <span class="vn">Điền giới từ phù hợp.</span></p>
+<div class="wordbank">an … vorbei · gegenüber · zwischen · bis zu</div>
+<div class="task"><div class="prompt">1. Die Bank ist ______ der Post.</div><input type="text" data-save><div class="solution">gegenüber</div></div>
+<div class="task"><div class="prompt">2. Gehen Sie <input type="text" data-save style="width:90px;"> dem Museum <input type="text" data-save style="width:110px;">.</div><div class="solution">an · vorbei</div></div>
+<div class="task"><div class="prompt">3. Der Bahnhof liegt ______ der Kirche und dem Park.</div><input type="text" data-save><div class="solution">zwischen</div></div>
+<div class="task"><div class="prompt">4. Fahren Sie ______ der nächsten Kreuzung.</div><input type="text" data-save><div class="solution">bis zu</div></div>
+<div class="task"><div class="prompt">5. Das Krankenhaus liegt ______ der Schule und der Apotheke.</div><input type="text" data-save><div class="solution">zwischen</div></div>
+<div class="task"><div class="prompt">6. Das Rathaus ist ______ dem Supermarkt.</div><input type="text" data-save><div class="solution">gegenüber</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Dativ bei der Wegbeschreibung</h3>
+<p>Ergänze die richtige Dativform. <span class="vn">Điền dạng Dativ đúng.</span></p>
+<div class="note"><strong>der → dem · die → der · das → dem · an dem → am · zu der → zur</strong></div>
+<div class="task"><div class="prompt">1. Gehen Sie an ______ Rathaus vorbei. (das)</div><input type="text" data-save><div class="solution">dem</div></div>
+<div class="task"><div class="prompt">2. Die Bank ist gegenüber ______ Post. (die)</div><input type="text" data-save><div class="solution">der</div></div>
+<div class="task"><div class="prompt">3. Der Bahnhof liegt zwischen ______ Kirche und dem Park. (die)</div><input type="text" data-save><div class="solution">der</div></div>
+<div class="task"><div class="prompt">4. Fahren Sie bis ______ Kreuzung. (zu der)</div><input type="text" data-save><div class="solution">zur</div></div>
+<div class="task"><div class="prompt">5. Gehen Sie ______ Museum vorbei. (an dem)</div><input type="text" data-save><div class="solution">am</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Nach dem Weg fragen</h3>
+<p>Ergänze die passende Frage oder Antwort. <span class="vn">Hoàn thành câu hỏi hoặc câu trả lời về đường đi.</span></p>
+<div class="wordbank">Entschuldigung · Wie komme ich · Wo ist · geradeaus · rechts · links</div>
+<div class="task"><div class="prompt">1. ______, wie komme ich zum Bahnhof?</div><input type="text" data-save><div class="solution">Entschuldigung</div></div>
+<div class="task"><div class="prompt">2. ______ zur Apotheke?</div><input type="text" data-save><div class="solution">Wie komme ich</div></div>
+<div class="task"><div class="prompt">3. ______ die Post?</div><input type="text" data-save><div class="solution">Wo ist</div></div>
+<div class="task"><div class="prompt">4. Gehen Sie zuerst ______.</div><input type="text" data-save><div class="solution">geradeaus</div></div>
+<div class="task"><div class="prompt">5. Biegen Sie an der Ampel ______ ab.</div><input type="text" data-save><div class="solution">rechts</div></div>
+<div class="task"><div class="prompt">6. Nehmen Sie die zweite Straße ______.</div><input type="text" data-save><div class="solution">links</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại toàn bộ câu cho đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> Imperativform · Wortstellung · Dativ · an … vorbei · zwischen.</div>
+<div class="task"><div class="prompt">1. Du gehst geradeaus! (als Befehl)</div><input type="text" data-save><div class="solution">Geh geradeaus!</div></div>
+<div class="task"><div class="prompt">2. Fähr geradeaus!</div><input type="text" data-save><div class="solution">Fahr geradeaus!</div></div>
+<div class="task"><div class="prompt">3. Sie gehen geradeaus! (als formeller Befehl)</div><input type="text" data-save><div class="solution">Gehen Sie geradeaus!</div></div>
+<div class="task"><div class="prompt">4. Gehen Sie an das Rathaus vorbei.</div><input type="text" data-save><div class="solution">Gehen Sie am Rathaus vorbei.</div></div>
+<div class="task"><div class="prompt">5. Es liegt zwischen die Kirche und die Post.</div><input type="text" data-save><div class="solution">Es liegt zwischen der Kirche und der Post.</div></div>
+<div class="task"><div class="prompt">6. Nimmt die erste Straße links! (du)</div><input type="text" data-save><div class="solution">Nimm die erste Straße links!</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Lesen – Der Weg zum Bahnhof</h3>
+<div class="violet">Entschuldigung, wie komme ich zum Bahnhof? – Gehen Sie zuerst geradeaus bis zur Kreuzung. Biegen Sie dort rechts ab. Gehen Sie am Museum vorbei und nehmen Sie dann die erste Straße links. Der Bahnhof liegt zwischen der Kirche und dem Park.</div>
+<p>Beantworte die Fragen. <span class="vn">Đọc chỉ đường và trả lời các câu hỏi.</span></p>
+<div class="task"><div class="prompt">1. Wohin möchte die Person?</div><input type="text" data-save><div class="solution">Zum Bahnhof.</div></div>
+<div class="task"><div class="prompt">2. Wie geht man zuerst?</div><input type="text" data-save><div class="solution">Zuerst geht man geradeaus bis zur Kreuzung.</div></div>
+<div class="task"><div class="prompt">3. Wo biegt man rechts ab?</div><input type="text" data-save><div class="solution">An der Kreuzung.</div></div>
+<div class="task"><div class="prompt">4. An welchem Gebäude geht man vorbei?</div><input type="text" data-save><div class="solution">Am Museum.</div></div>
+<div class="task"><div class="prompt">5. Wo liegt der Bahnhof?</div><input type="text" data-save><div class="solution">Zwischen der Kirche und dem Park.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>10. Einen Weg beschreiben</h3>
+<p>Schreibe eine kurze Wegbeschreibung mit 4–6 Sätzen. Benutze die <strong>Sie-Form</strong>, mindestens zwei Imperativformen und mindestens zwei Ausdrücke aus <strong>an … vorbei / gegenüber / zwischen / bis zu</strong>. <span class="vn">Viết chỉ đường ngắn 4–6 câu. Dùng dạng <strong>Sie</strong>, ít nhất hai câu mệnh lệnh và ít nhất hai cấu trúc <strong>an … vorbei / gegenüber / zwischen / bis zu</strong>.</span></p>
+<div class="violet"><strong>Hilfe:</strong> Gehen Sie … · Biegen Sie … ab. · Nehmen Sie … · Gehen Sie am … vorbei. · Fahren Sie bis zur … · Das Ziel liegt gegenüber / zwischen …</div>
+<div class="task"><textarea data-save placeholder="Gehen Sie zuerst ..."></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 16 · Wegbeschreibung<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+
+<script>
+const KEY="a1_l16_wegbeschreibung_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

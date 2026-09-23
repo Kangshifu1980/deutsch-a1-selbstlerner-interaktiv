@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 18 – Übungsblatt Körper & Gesundheit</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 18</h1>
+  <h2>Übungsblatt: Körper &amp; Gesundheit · weh tun · Schmerzen · Imperativ</h2>
+</header>
+
+<div class="toolbar">
+  <button onclick="saveAll()">💾 Antworten speichern</button>
+  <button onclick="loadAll()">📂 Antworten laden</button>
+  <button class="danger" onclick="clearAll()">🗑️ Alles löschen</button>
+  <span id="status">Die Antworten werden automatisch im Browser gespeichert.</span>
+</div>
+
+<section>
+<h3>1. Körperteile – Welches Wort passt?</h3>
+<p>Ergänze das passende Körperteil. <span class="vn">Điền bộ phận cơ thể phù hợp.</span></p>
+<div class="wordbank">Kopf · Auge · Nase · Mund · Ohr · Hals · Arm · Hand · Bauch · Rücken · Bein · Fuß</div>
+<div class="task"><div class="prompt">1. Damit sehe ich. → das ______</div><input type="text" data-save><div class="solution">Auge</div></div>
+<div class="task"><div class="prompt">2. Damit höre ich. → das ______</div><input type="text" data-save><div class="solution">Ohr</div></div>
+<div class="task"><div class="prompt">3. Damit esse und spreche ich. → der ______</div><input type="text" data-save><div class="solution">Mund</div></div>
+<div class="task"><div class="prompt">4. Zwischen Kopf und Körper ist der ______.</div><input type="text" data-save><div class="solution">Hals</div></div>
+<div class="task"><div class="prompt">5. Unter dem Rücken ist nicht der Kopf, sondern der ______.</div><input type="text" data-save><div class="solution">Bauch</div></div>
+<div class="task"><div class="prompt">6. Am Ende des Beins ist der ______.</div><input type="text" data-save><div class="solution">Fuß</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. Krankheiten und Symptome</h3>
+<p>Ergänze das passende Wort. <span class="vn">Điền từ chỉ bệnh hoặc triệu chứng phù hợp.</span></p>
+<div class="wordbank">Kopfschmerzen · Bauchschmerzen · Fieber · Husten · Schnupfen · Erkältung</div>
+<div class="task"><div class="prompt">1. Meine Temperatur ist 38,5 Grad. Ich habe ______.</div><input type="text" data-save><div class="solution">Fieber</div></div>
+<div class="task"><div class="prompt">2. Ich muss immer husten. Ich habe ______.</div><input type="text" data-save><div class="solution">Husten</div></div>
+<div class="task"><div class="prompt">3. Meine Nase läuft. Ich habe ______.</div><input type="text" data-save><div class="solution">Schnupfen</div></div>
+<div class="task"><div class="prompt">4. Mein Kopf tut stark weh. Ich habe ______.</div><input type="text" data-save><div class="solution">Kopfschmerzen</div></div>
+<div class="task"><div class="prompt">5. Mein Bauch tut weh. Ich habe ______.</div><input type="text" data-save><div class="solution">Bauchschmerzen</div></div>
+<div class="task"><div class="prompt">6. Ich habe Husten und Schnupfen und bin krank. Vielleicht habe ich eine ______.</div><input type="text" data-save><div class="solution">Erkältung</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. mein oder meine? · tut oder tun?</h3>
+<p>Ergänze beide Formen richtig. <span class="vn">Điền đúng mein/meine và tut/tun.</span></p>
+<div class="note"><strong>Muster:</strong> Mein Kopf <strong>tut</strong> weh. · Meine Beine <strong>tun</strong> weh.</div>
+<div class="task"><div class="prompt">1. ______ Rücken ______ weh.</div><input type="text" data-save placeholder="z. B. Mein ... tut"><div class="solution">Mein Rücken tut weh.</div></div>
+<div class="task"><div class="prompt">2. ______ Hand ______ weh.</div><input type="text" data-save><div class="solution">Meine Hand tut weh.</div></div>
+<div class="task"><div class="prompt">3. ______ Füße ______ weh.</div><input type="text" data-save><div class="solution">Meine Füße tun weh.</div></div>
+<div class="task"><div class="prompt">4. ______ Ohr ______ weh.</div><input type="text" data-save><div class="solution">Mein Ohr tut weh.</div></div>
+<div class="task"><div class="prompt">5. ______ Augen ______ weh.</div><input type="text" data-save><div class="solution">Meine Augen tun weh.</div></div>
+<div class="task"><div class="prompt">6. ______ Bauch ______ weh.</div><input type="text" data-save><div class="solution">Mein Bauch tut weh.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. „weh tun“ oder „Schmerzen haben“?</h3>
+<p>Schreibe einen vollständigen Satz mit der angegebenen Struktur. <span class="vn">Viết câu hoàn chỉnh theo mẫu được yêu cầu.</span></p>
+<div class="task"><div class="prompt">1. der Kopf → Ich habe ...</div><input type="text" data-save><div class="solution">Ich habe Kopfschmerzen.</div></div>
+<div class="task"><div class="prompt">2. der Hals → Mein ...</div><input type="text" data-save><div class="solution">Mein Hals tut weh.</div></div>
+<div class="task"><div class="prompt">3. der Bauch → Ich habe ...</div><input type="text" data-save><div class="solution">Ich habe Bauchschmerzen.</div></div>
+<div class="task"><div class="prompt">4. die Beine → Meine ...</div><input type="text" data-save><div class="solution">Meine Beine tun weh.</div></div>
+<div class="task"><div class="prompt">5. der Rücken → Mein ...</div><input type="text" data-save><div class="solution">Mein Rücken tut weh.</div></div>
+<div class="task"><div class="prompt">6. der Hals → Ich habe ...</div><input type="text" data-save><div class="solution">Ich habe Halsschmerzen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Beim Arzt – wichtige Phrasen</h3>
+<p>Ergänze das passende Verb oder die passende Phrase. <span class="vn">Điền động từ hoặc cụm từ phù hợp.</span></p>
+<div class="wordbank">fühlen · messen · vereinbaren · gehen · bekommen · ausruhen</div>
+<div class="task"><div class="prompt">1. Wie ______ Sie sich heute?</div><input type="text" data-save><div class="solution">fühlen</div></div>
+<div class="task"><div class="prompt">2. Ich möchte einen Termin ______.</div><input type="text" data-save><div class="solution">vereinbaren</div></div>
+<div class="task"><div class="prompt">3. Ich muss morgen zum Arzt ______.</div><input type="text" data-save><div class="solution">gehen</div></div>
+<div class="task"><div class="prompt">4. Die Ärztin möchte mein Fieber ______.</div><input type="text" data-save><div class="solution">messen</div></div>
+<div class="task"><div class="prompt">5. Ich möchte ein Rezept ______.</div><input type="text" data-save><div class="solution">bekommen</div></div>
+<div class="task"><div class="prompt">6. Du bist krank. Du musst dich zu Hause ______.</div><input type="text" data-save><div class="solution">ausruhen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Imperativ – Ratschläge beim Arzt</h3>
+<p>Bilde den Imperativ in der angegebenen Form. <span class="vn">Viết câu mệnh lệnh theo dạng du/ihr/Sie.</span></p>
+<div class="task"><div class="prompt">1. Sie / den Mund öffnen</div><input type="text" data-save><div class="solution">Öffnen Sie den Mund!</div></div>
+<div class="task"><div class="prompt">2. du / viel Wasser trinken</div><input type="text" data-save><div class="solution">Trink viel Wasser!</div></div>
+<div class="task"><div class="prompt">3. du / dich ausruhen</div><input type="text" data-save><div class="solution">Ruh dich aus!</div></div>
+<div class="task"><div class="prompt">4. ihr / heute zu Hause bleiben</div><input type="text" data-save><div class="solution">Bleibt heute zu Hause!</div></div>
+<div class="task"><div class="prompt">5. Sie / tief einatmen</div><input type="text" data-save><div class="solution">Atmen Sie tief ein!</div></div>
+<div class="task"><div class="prompt">6. du / die Tabletten nehmen</div><input type="text" data-save><div class="solution">Nimm die Tabletten!</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại toàn bộ câu cho đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> mein/meine · Singular/Plural · Schmerzen · Imperativ.</div>
+<div class="task"><div class="prompt">1. Meine Kopf tut weh.</div><input type="text" data-save><div class="solution">Mein Kopf tut weh.</div></div>
+<div class="task"><div class="prompt">2. Meine Beine tut weh.</div><input type="text" data-save><div class="solution">Meine Beine tun weh.</div></div>
+<div class="task"><div class="prompt">3. Ich habe Kopfschmerz.</div><input type="text" data-save><div class="solution">Ich habe Kopfschmerzen.</div></div>
+<div class="task"><div class="prompt">4. Trinkst viel Wasser!</div><input type="text" data-save><div class="solution">Trink viel Wasser!</div></div>
+<div class="task"><div class="prompt">5. Öffnen den Mund, bitte!</div><input type="text" data-save><div class="solution">Öffnen Sie den Mund, bitte!</div></div>
+<div class="task"><div class="prompt">6. Du ruh dich zu Hause aus!</div><input type="text" data-save><div class="solution">Ruh dich zu Hause aus!</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Satz-Puzzle – beim Arzt</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp từ thành câu đúng.</span></p>
+<div class="task"><div class="wordbank">seit gestern / ich / Husten / habe</div><input type="text" data-save><div class="solution">Ich habe seit gestern Husten.</div></div>
+<div class="task"><div class="wordbank">tut / mein / weh / Hals</div><input type="text" data-save><div class="solution">Mein Hals tut weh.</div></div>
+<div class="task"><div class="wordbank">einen Termin / möchte / ich / vereinbaren</div><input type="text" data-save><div class="solution">Ich möchte einen Termin vereinbaren.</div></div>
+<div class="task"><div class="wordbank">viel Wasser / Sie / trinken</div><input type="text" data-save><div class="solution">Trinken Sie viel Wasser!</div></div>
+<div class="task"><div class="wordbank">zum Arzt / morgen / ich / muss / gehen</div><input type="text" data-save><div class="solution">Ich muss morgen zum Arzt gehen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Lesen – Lena ist krank</h3>
+<div class="violet">Lena fühlt sich am Montagmorgen nicht gut. Ihr Kopf und ihr Hals tun weh, und sie hat 38 Grad Fieber. Sie ruft zuerst im Büro an. Danach vereinbart sie einen Termin in der Arztpraxis. Die Ärztin sagt, dass Lena eine leichte Grippe hat. Lena bekommt ein Rezept für Tabletten und soll sich ausruhen, viel Tee trinken und viel schlafen. Die Ärztin schreibt sie für vier Tage krank. Am Donnerstag fühlt Lena sich schon viel besser.</div>
+<p>Wähle die richtige Antwort. <span class="vn">Đọc đoạn văn và chọn đáp án đúng.</span></p>
+<div class="task"><div class="prompt">1. Wann fühlt Lena sich nicht gut?<br>A) Montagmorgen　B) Donnerstagabend　C) Freitagmorgen</div><input type="text" data-save placeholder="A, B oder C"><div class="solution">A – Montagmorgen</div></div>
+<div class="task"><div class="prompt">2. Wie hoch ist ihr Fieber?<br>A) 37 Grad　B) 38 Grad　C) 39 Grad</div><input type="text" data-save><div class="solution">B – 38 Grad</div></div>
+<div class="task"><div class="prompt">3. Was macht Lena nach dem Anruf im Büro?<br>A) Sie geht arbeiten.　B) Sie kauft Tee.　C) Sie vereinbart einen Arzttermin.</div><input type="text" data-save><div class="solution">C – Sie vereinbart einen Arzttermin.</div></div>
+<div class="task"><div class="prompt">4. Was hat Lena laut Ärztin?<br>A) eine leichte Grippe　B) Bauchschmerzen　C) nur Schnupfen</div><input type="text" data-save><div class="solution">A – eine leichte Grippe</div></div>
+<div class="task"><div class="prompt">5. Wie lange wird Lena krankgeschrieben?<br>A) zwei Tage　B) vier Tage　C) eine Woche</div><input type="text" data-save><div class="solution">B – vier Tage</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>10. Transfer – Nachricht an die Arztpraxis</h3>
+<p>Schreibe eine kurze Nachricht. Du bist krank und möchtest einen Termin. Nenne mindestens <strong>zwei Symptome</strong> und frage nach einem Termin. <span class="vn">Viết một tin nhắn ngắn cho phòng khám: nêu ít nhất hai triệu chứng và hỏi lịch hẹn.</span></p>
+<div class="violet"><strong>Hilfe:</strong> Guten Tag, · ich fühle mich nicht gut. · Mein ... tut weh. · Ich habe ... · Ich möchte einen Termin vereinbaren. · Haben Sie heute oder morgen einen Termin frei? · Vielen Dank.</div>
+<div class="task"><textarea data-save placeholder="Guten Tag,&#10;&#10;ich fühle mich ..."></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 18 · Körper &amp; Gesundheit<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+<script>
+const KEY="a1_l18_koerper_gesundheit_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

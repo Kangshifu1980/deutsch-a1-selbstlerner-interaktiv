@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 17 – Übungsblatt Das Wetter</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 17</h1>
+  <h2>Übungsblatt: Das Wetter · unpersönliches es · Wetterverben · Jahreszeiten</h2>
+  <div class="vn">Bài tập: Thời tiết · es vô nhân xưng · động từ thời tiết · các mùa</div>
+  <div class="rule">
+    <strong>Merke:</strong><br>
+    <strong>Wetterverb:</strong> Es regnet. · Es schneit. · Es donnert. · Es blitzt. · Es stürmt.<br>
+    <strong>es ist + Adjektiv:</strong> Es ist sonnig / windig / neblig / kalt / warm.<br>
+    <strong>es gibt + Nomen:</strong> Es gibt Regen / Schnee / ein Gewitter.<br>
+    <strong>Temperatur:</strong> Es sind 20 Grad.
+  </div>
+  <div class="toolbar">
+    <button onclick="saveAll()">💾 Antworten speichern</button>
+    <button class="secondary" onclick="loadAll()">↻ Gespeicherte Antworten laden</button>
+    <button class="light" onclick="clearAll()">Alles löschen</button>
+  </div>
+  <div id="status" class="status">Die Antworten werden automatisch im Browser gespeichert.</div>
+</header>
+
+<section>
+<h3>1. Wetter – Welches Wort passt?</h3>
+<p>Ergänze das passende Wetterwort. <span class="vn">Điền từ vựng thời tiết phù hợp.</span></p>
+<div class="wordbank">Sonne · Regen · Wind · Schnee · Gewitter · Wolke · Nebel · Donner · Blitz · Sturm</div>
+<div class="task"><div class="prompt">1. ☀️ → die ______</div><input type="text" data-save><div class="solution">Sonne</div></div>
+<div class="task"><div class="prompt">2. 🌧️ → der ______</div><input type="text" data-save><div class="solution">Regen</div></div>
+<div class="task"><div class="prompt">3. 💨 → der ______</div><input type="text" data-save><div class="solution">Wind</div></div>
+<div class="task"><div class="prompt">4. ❄️ → der ______</div><input type="text" data-save><div class="solution">Schnee</div></div>
+<div class="task"><div class="prompt">5. ⛈️ → das ______</div><input type="text" data-save><div class="solution">Gewitter</div></div>
+<div class="task"><div class="prompt">6. 🌫️ → der ______</div><input type="text" data-save><div class="solution">Nebel</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. Jahreszeiten & Temperatur</h3>
+<p>Ergänze die passende Jahreszeit oder Temperaturangabe. <span class="vn">Điền mùa hoặc cách nói nhiệt độ phù hợp.</span></p>
+<div class="wordbank">Frühling · Sommer · Herbst · Winter · Grad</div>
+<div class="task"><div class="prompt">1. 🌸 → der ______</div><input type="text" data-save><div class="solution">Frühling</div></div>
+<div class="task"><div class="prompt">2. ☀️ → der ______</div><input type="text" data-save><div class="solution">Sommer</div></div>
+<div class="task"><div class="prompt">3. 🍂 → der ______</div><input type="text" data-save><div class="solution">Herbst</div></div>
+<div class="task"><div class="prompt">4. ⛄ → der ______</div><input type="text" data-save><div class="solution">Winter</div></div>
+<div class="task"><div class="prompt">5. Heute sind es 20 ______ Celsius.</div><input type="text" data-save><div class="solution">Grad</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. Wetterverben</h3>
+<p>Ergänze die richtige Wetterverbform. <span class="vn">Điền dạng đúng của động từ thời tiết.</span></p>
+<div class="wordbank">regnet · schneit · donnert · blitzt · stürmt</div>
+<div class="task"><div class="prompt">1. Es ______ heute den ganzen Tag. (regnen)</div><input type="text" data-save><div class="solution">regnet</div></div>
+<div class="task"><div class="prompt">2. Im Winter ______ es oft. (schneien)</div><input type="text" data-save><div class="solution">schneit</div></div>
+<div class="task"><div class="prompt">3. Bei einem Gewitter ______ es laut. (donnern)</div><input type="text" data-save><div class="solution">donnert</div></div>
+<div class="task"><div class="prompt">4. Am Himmel ______ es. (blitzen)</div><input type="text" data-save><div class="solution">blitzt</div></div>
+<div class="task"><div class="prompt">5. Heute ______ es sehr stark. (stürmen)</div><input type="text" data-save><div class="solution">stürmt</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. es ist + Adjektiv</h3>
+<p>Ergänze das passende Wetter-Adjektiv. <span class="vn">Điền tính từ chỉ thời tiết phù hợp.</span></p>
+<div class="wordbank">sonnig · wolkig · windig · neblig · stürmisch · regnerisch · schön · warm · kalt</div>
+<div class="task"><div class="prompt">1. Im Sommer ist es oft ______.</div><input type="text" data-save><div class="solution">sonnig</div></div>
+<div class="task"><div class="prompt">2. Heute ist der Himmel sehr ______.</div><input type="text" data-save><div class="solution">wolkig</div></div>
+<div class="task"><div class="prompt">3. Im Herbst ist es oft ______.</div><input type="text" data-save><div class="solution">windig</div></div>
+<div class="task"><div class="prompt">4. Am Morgen sieht man fast nichts. Es ist ______.</div><input type="text" data-save><div class="solution">neblig</div></div>
+<div class="task"><div class="prompt">5. Das Wetter ist heute wirklich ______!</div><input type="text" data-save><div class="solution">schön</div></div>
+<div class="task"><div class="prompt">6. Im Winter kann es sehr ______ sein.</div><input type="text" data-save><div class="solution">kalt</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Wetterverb, Adjektiv oder Nomen?</h3>
+<p>Ergänze den Satz mit der passenden Form. <span class="vn">Hoàn thành câu bằng đúng cấu trúc: động từ, tính từ hoặc danh từ.</span></p>
+<div class="note"><strong>Verb:</strong> Es regnet. · <strong>Adjektiv:</strong> Es ist sonnig. · <strong>Nomen:</strong> Es gibt Regen.</div>
+<div class="task"><div class="prompt">1. Heute ______ es. (Regen → Verb)</div><input type="text" data-save><div class="solution">regnet</div></div>
+<div class="task"><div class="prompt">2. Heute ist es ______. (Sonne → Adjektiv)</div><input type="text" data-save><div class="solution">sonnig</div></div>
+<div class="task"><div class="prompt">3. Heute gibt es ______. (Regen → Nomen)</div><input type="text" data-save><div class="solution">Regen</div></div>
+<div class="task"><div class="prompt">4. Im Winter ______ es oft. (Schnee → Verb)</div><input type="text" data-save><div class="solution">schneit</div></div>
+<div class="task"><div class="prompt">5. Am Morgen ist es ______. (Nebel → Adjektiv)</div><input type="text" data-save><div class="solution">neblig</div></div>
+<div class="task"><div class="prompt">6. Am Abend gibt es ______. (Gewitter → Nomen)</div><input type="text" data-save><div class="solution">ein Gewitter</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. Wortstellung mit dem Wetter-es</h3>
+<p>Bringe die Wörter in die richtige Reihenfolge. <span class="vn">Sắp xếp các từ thành câu đúng với <strong>es</strong> chỉ thời tiết.</span></p>
+<div class="task"><div class="wordbank">heute / ist / es / kalt</div><input type="text" data-save><div class="solution">Heute ist es kalt.</div></div>
+<div class="task"><div class="wordbank">im Winter / schneit / es / oft</div><input type="text" data-save><div class="solution">Im Winter schneit es oft.</div></div>
+<div class="task"><div class="wordbank">am Wochenende / gibt / es / ein Gewitter</div><input type="text" data-save><div class="solution">Am Wochenende gibt es ein Gewitter.</div></div>
+<div class="task"><div class="wordbank">heute / ist / es / sehr warm</div><input type="text" data-save><div class="solution">Heute ist es sehr warm.</div></div>
+<div class="task"><div class="wordbank">im Frühling / regnet / es / oft</div><input type="text" data-save><div class="solution">Im Frühling regnet es oft.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Fehler finden und korrigieren</h3>
+<p>Jeder Satz hat einen Fehler. Schreibe den ganzen Satz richtig. <span class="vn">Mỗi câu có một lỗi. Viết lại toàn bộ câu cho đúng.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> Wetter-es · Verbform · Wortstellung · Adjektiv ohne Endung.</div>
+<div class="task"><div class="prompt">1. Der Regen regnet.</div><input type="text" data-save><div class="solution">Es regnet.</div></div>
+<div class="task"><div class="prompt">2. Es ist regnet.</div><input type="text" data-save><div class="solution">Es regnet.</div></div>
+<div class="task"><div class="prompt">3. Heute es ist kalt.</div><input type="text" data-save><div class="solution">Heute ist es kalt.</div></div>
+<div class="task"><div class="prompt">4. Es ist sonniges heute.</div><input type="text" data-save><div class="solution">Es ist heute sonnig.</div></div>
+<div class="task"><div class="prompt">5. Das Wetter ist heute schönes.</div><input type="text" data-save><div class="solution">Das Wetter ist heute schön.</div></div>
+<div class="task"><div class="prompt">6. Der Himmel ist wolkiger heute.</div><input type="text" data-save><div class="solution">Der Himmel ist heute wolkig.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Lesen – Wetterbericht</h3>
+<div class="violet">Heute ist das Wetter sehr unterschiedlich. In Berlin ist es sonnig und warm. Es sind 24 Grad. In Hamburg ist es windig und es regnet. In München ist es kalt; dort sind es nur 8 Grad. Am Abend gibt es in Köln ein Gewitter.</div>
+<p>Beantworte die Fragen. <span class="vn">Đọc bản tin thời tiết và trả lời câu hỏi.</span></p>
+<div class="task"><div class="prompt">1. Wie ist das Wetter in Berlin?</div><input type="text" data-save><div class="solution">Es ist sonnig und warm.</div></div>
+<div class="task"><div class="prompt">2. Wie viele Grad sind es in Berlin?</div><input type="text" data-save><div class="solution">Es sind 24 Grad.</div></div>
+<div class="task"><div class="prompt">3. Was passiert in Hamburg?</div><input type="text" data-save><div class="solution">Es ist windig und es regnet.</div></div>
+<div class="task"><div class="prompt">4. Wie viele Grad sind es in München?</div><input type="text" data-save><div class="solution">Es sind 8 Grad.</div></div>
+<div class="task"><div class="prompt">5. Was gibt es am Abend in Köln?</div><input type="text" data-save><div class="solution">Es gibt ein Gewitter.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Wetter & Aktivitäten</h3>
+<p>Ergänze eine passende Aktivität. Benutze bekannte Strukturen aus früheren Lektionen. <span class="vn">Điền một hoạt động phù hợp. Dùng các cấu trúc đã học ở các bài trước.</span></p>
+<div class="task"><div class="prompt">1. Es ist sonnig. Ich kann ______.</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">2. Es regnet. Ich kann ______.</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">3. Es schneit. Ich kann ______.</div><input type="text" data-save></div>
+<div class="task"><div class="prompt">4. Es ist sehr warm. Ich möchte ______.</div><input type="text" data-save></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>10. Mein Wetterbericht</h3>
+<p>Schreibe 5–7 Sätze über das Wetter. Benutze mindestens einmal ein <strong>Wetterverb</strong>, einmal <strong>es ist + Adjektiv</strong>, einmal <strong>es gibt + Nomen</strong> und eine Temperatur. <span class="vn">Viết 5–7 câu về thời tiết. Dùng ít nhất một lần <strong>động từ thời tiết</strong>, <strong>es ist + tính từ</strong>, <strong>es gibt + danh từ</strong> và một câu nhiệt độ.</span></p>
+<div class="violet"><strong>Hilfe:</strong> Heute ist es … · Es regnet / schneit … · Es gibt … · Es sind … Grad. · Im Sommer / Winter …</div>
+<div class="task"><textarea data-save placeholder="Heute ist es ..."></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 17 · Das Wetter<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+
+<script>
+const KEY="a1_l17_wetter_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 – Lektion 21 – Extra-Übungsblatt interaktiv</title>
+<style>
+:root{
+  --blue:#1e3a8a;--blue2:#2563eb;--teal:#0f766e;--bg:#f4f6f8;--card:#fff;
+  --line:#dbe3ea;--soft:#eff6ff;--green:#f0fdf4;--yellow:#fefce8;
+  --red:#fff7ed;--text:#1f2937;--muted:#64748b;--violet:#f5f3ff
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:920px;margin:28px auto;padding:0 16px 56px}
+header{background:linear-gradient(135deg,#eff6ff,#f0fdfa);border:1px solid var(--line);border-radius:18px;padding:26px}
+h1{margin:0 0 5px;color:var(--blue);font-size:1.9rem}
+h2{color:var(--blue);font-size:1.25rem;margin:0 0 8px}
+h3{margin:0 0 8px;color:var(--blue)}
+.vn{color:var(--teal);font-size:.94rem;font-style:italic}
+.rule{margin-top:16px;padding:13px 15px;border-left:4px solid var(--blue2);background:white;border-radius:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:21px;margin-top:18px}
+.task{padding:12px 0;border-bottom:1px dashed #e5e7eb}.task:last-child{border-bottom:0}
+.prompt{font-weight:600;margin-bottom:6px}
+input[type=text],textarea,select{width:100%;border:1px solid #b9c6d2;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #93c5fd;border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wordbank{background:var(--soft);padding:10px 12px;border-radius:9px;margin:8px 0;font-weight:600}
+.solution{display:none;background:var(--green);border:1px solid #bbf7d0;border-radius:8px;padding:9px 11px;margin-top:8px;color:#166534}
+.note{background:var(--yellow);border-left:4px solid #ca8a04;padding:10px 12px;border-radius:7px;margin:10px 0}
+.errorbox{background:var(--red);border-left:4px solid #ea580c;padding:10px 12px;border-radius:7px}
+.violet{background:var(--violet);border-left:4px solid #7c3aed;padding:10px 12px;border-radius:7px}
+.clockgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.clockgrid div{padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;text-align:center;font-weight:700}
+button{border:0;border-radius:9px;padding:10px 14px;background:var(--blue2);color:white;font-weight:700;cursor:pointer;margin:8px 6px 0 0}
+button.secondary{background:#64748b}button.light{background:#e2e8f0;color:#334155}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.status{font-size:.92rem;color:var(--teal);font-weight:600;margin-top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+@media(max-width:680px){.row,.clockgrid{grid-template-columns:1fr}h1{font-size:1.55rem}}
+@media print{body{background:white}main{max-width:none;margin:0}section,header{break-inside:avoid}.toolbar,button{display:none!important}input,textarea,select{border:1px solid #aaa}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🇩🇪 Deutsch A1 – Lektion 21</h1>
+  <h2>Extra-Übungsblatt: Perfekt – Teil 3 · unregelmäßige Partizipien · trennbare Verben</h2>
+</header>
+
+<div class="toolbar">
+  <button onclick="saveAll()">💾 Antworten speichern</button>
+  <button onclick="loadAll()">📂 Antworten laden</button>
+  <button class="danger" onclick="clearAll()">🗑️ Alles löschen</button>
+  <span id="status">Die Antworten werden automatisch im Browser gespeichert.</span>
+</div>
+
+<section>
+<h3>1. Zeitausdrücke der Vergangenheit</h3>
+<p>Ergänze den passenden Zeitausdruck. <span class="vn">Điền trạng từ chỉ thời gian quá khứ phù hợp.</span></p>
+<div class="wordbank">gestern · vorgestern · letzte Woche · letzten Monat · letztes Jahr · neulich · vor zwei Tagen</div>
+<div class="task"><div class="prompt">1. Heute ist Mittwoch. Am Dienstag war ______.</div><input type="text" data-save><div class="solution">gestern</div></div>
+<div class="task"><div class="prompt">2. Heute ist Mittwoch. Am Montag war ______.</div><input type="text" data-save><div class="solution">vorgestern / vor zwei Tagen</div></div>
+<div class="task"><div class="prompt">3. Im August war ich in Berlin. Jetzt ist September. → ______ war ich in Berlin.</div><input type="text" data-save><div class="solution">Letzten Monat</div></div>
+<div class="task"><div class="prompt">4. 2025 war ich in Deutschland. Jetzt ist 2026. → ______ war ich in Deutschland.</div><input type="text" data-save><div class="solution">Letztes Jahr</div></div>
+<div class="task"><div class="prompt">5. Vor kurzer Zeit habe ich einen interessanten Film gesehen. → ______ habe ich einen interessanten Film gesehen.</div><input type="text" data-save><div class="solution">Neulich</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>2. Die 12 unregelmäßigen Partizipien</h3>
+<p>Schreibe das Partizip II. <span class="vn">Viết phân từ quá khứ II.</span></p>
+<div class="task"><div class="prompt">1. essen →</div><input type="text" data-save><div class="solution">gegessen</div></div>
+<div class="task"><div class="prompt">2. trinken →</div><input type="text" data-save><div class="solution">getrunken</div></div>
+<div class="task"><div class="prompt">3. lesen →</div><input type="text" data-save><div class="solution">gelesen</div></div>
+<div class="task"><div class="prompt">4. schreiben →</div><input type="text" data-save><div class="solution">geschrieben</div></div>
+<div class="task"><div class="prompt">5. sehen →</div><input type="text" data-save><div class="solution">gesehen</div></div>
+<div class="task"><div class="prompt">6. nehmen →</div><input type="text" data-save><div class="solution">genommen</div></div>
+<div class="task"><div class="prompt">7. geben →</div><input type="text" data-save><div class="solution">gegeben</div></div>
+<div class="task"><div class="prompt">8. finden →</div><input type="text" data-save><div class="solution">gefunden</div></div>
+<div class="task"><div class="prompt">9. sprechen →</div><input type="text" data-save><div class="solution">gesprochen</div></div>
+<div class="task"><div class="prompt">10. helfen →</div><input type="text" data-save><div class="solution">geholfen</div></div>
+<div class="task"><div class="prompt">11. schlafen →</div><input type="text" data-save><div class="solution">geschlafen</div></div>
+<div class="task"><div class="prompt">12. vergessen →</div><input type="text" data-save><div class="solution">vergessen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>3. Unregelmäßige Verben im Satz</h3>
+<p>Ergänze das richtige Partizip. <span class="vn">Điền phân từ đúng.</span></p>
+<div class="task"><div class="prompt">1. Ich habe gestern Pizza ______. (essen)</div><input type="text" data-save><div class="solution">gegessen</div></div>
+<div class="task"><div class="prompt">2. Wir haben viel Wasser ______. (trinken)</div><input type="text" data-save><div class="solution">getrunken</div></div>
+<div class="task"><div class="prompt">3. Hast du das Buch schon ______? (lesen)</div><input type="text" data-save><div class="solution">gelesen</div></div>
+<div class="task"><div class="prompt">4. Anna hat eine E-Mail ______. (schreiben)</div><input type="text" data-save><div class="solution">geschrieben</div></div>
+<div class="task"><div class="prompt">5. Wir haben einen guten Film ______. (sehen)</div><input type="text" data-save><div class="solution">gesehen</div></div>
+<div class="task"><div class="prompt">6. Er hat den Bus ______. (nehmen)</div><input type="text" data-save><div class="solution">genommen</div></div>
+<div class="task"><div class="prompt">7. Die Lehrerin hat uns Hausaufgaben ______. (geben)</div><input type="text" data-save><div class="solution">gegeben</div></div>
+<div class="task"><div class="prompt">8. Ich habe endlich meinen Schlüssel ______. (finden)</div><input type="text" data-save><div class="solution">gefunden</div></div>
+<div class="task"><div class="prompt">9. Sie hat mit ihrer Mutter ______. (sprechen)</div><input type="text" data-save><div class="solution">gesprochen</div></div>
+<div class="task"><div class="prompt">10. Du hast mir sehr ______. (helfen)</div><input type="text" data-save><div class="solution">geholfen</div></div>
+<div class="task"><div class="prompt">11. Wir haben acht Stunden ______. (schlafen)</div><input type="text" data-save><div class="solution">geschlafen</div></div>
+<div class="task"><div class="prompt">12. Ich habe den Termin ______. (vergessen)</div><input type="text" data-save><div class="solution">vergessen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>4. Trennbare Verben – Partizip II</h3>
+<p>Bilde das Partizip. Achte auf <strong>Präfix + ge + Stamm</strong>. <span class="vn">Tạo phân từ. Chú ý: tiền tố + ge + gốc từ.</span></p>
+<div class="task"><div class="prompt">1. aufstehen →</div><input type="text" data-save><div class="solution">aufgestanden</div></div>
+<div class="task"><div class="prompt">2. einkaufen →</div><input type="text" data-save><div class="solution">eingekauft</div></div>
+<div class="task"><div class="prompt">3. fernsehen →</div><input type="text" data-save><div class="solution">ferngesehen</div></div>
+<div class="task"><div class="prompt">4. anrufen →</div><input type="text" data-save><div class="solution">angerufen</div></div>
+<div class="task"><div class="prompt">5. mitkommen →</div><input type="text" data-save><div class="solution">mitgekommen</div></div>
+<div class="task"><div class="prompt">6. zurückkommen →</div><input type="text" data-save><div class="solution">zurückgekommen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>5. Trennbare Verben im Perfekt</h3>
+<p>Ergänze Hilfsverb und Partizip II. <span class="vn">Điền trợ động từ và phân từ II.</span></p>
+<div class="task"><div class="prompt">1. Ich ______ heute um 6 Uhr ______. (aufstehen)</div><input type="text" data-save placeholder="z. B. bin ..."><div class="solution">bin heute um 6 Uhr aufgestanden / bin ... aufgestanden</div></div>
+<div class="task"><div class="prompt">2. Meine Mutter ______ im Supermarkt ______. (einkaufen)</div><input type="text" data-save><div class="solution">hat im Supermarkt eingekauft / hat ... eingekauft</div></div>
+<div class="task"><div class="prompt">3. Wir ______ gestern Abend ______. (fernsehen)</div><input type="text" data-save><div class="solution">haben gestern Abend ferngesehen / haben ... ferngesehen</div></div>
+<div class="task"><div class="prompt">4. Du ______ deine Oma ______. (anrufen)</div><input type="text" data-save><div class="solution">hast deine Oma angerufen / hast ... angerufen</div></div>
+<div class="task"><div class="prompt">5. Er ______ zur Party ______. (mitkommen)</div><input type="text" data-save><div class="solution">ist zur Party mitgekommen / ist ... mitgekommen</div></div>
+<div class="task"><div class="prompt">6. Ihr ______ spät ______. (zurückkommen)</div><input type="text" data-save><div class="solution">seid spät zurückgekommen / seid ... zurückgekommen</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>6. haben oder sein?</h3>
+<p>Schreibe nur das richtige Hilfsverb in der passenden Form. <span class="vn">Chỉ viết trợ động từ đúng ở dạng phù hợp.</span></p>
+<div class="task"><div class="prompt">1. Ich ______ ein Buch gelesen.</div><input type="text" data-save><div class="solution">habe</div></div>
+<div class="task"><div class="prompt">2. Du ______ früh aufgestanden.</div><input type="text" data-save><div class="solution">bist</div></div>
+<div class="task"><div class="prompt">3. Er ______ seine Schwester angerufen.</div><input type="text" data-save><div class="solution">hat</div></div>
+<div class="task"><div class="prompt">4. Wir ______ nach Hause gefahren.</div><input type="text" data-save><div class="solution">sind</div></div>
+<div class="task"><div class="prompt">5. Ihr ______ lange ferngesehen.</div><input type="text" data-save><div class="solution">habt</div></div>
+<div class="task"><div class="prompt">6. Anna ______ spät zurückgekommen.</div><input type="text" data-save><div class="solution">ist</div></div>
+<div class="task"><div class="prompt">7. Die Kinder ______ acht Stunden geschlafen.</div><input type="text" data-save><div class="solution">haben</div></div>
+<div class="task"><div class="prompt">8. Tom und Mia ______ zur Party mitgekommen.</div><input type="text" data-save><div class="solution">sind</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>7. Fehler finden und korrigieren</h3>
+<p>Jeder Satz enthält einen Fehler. Schreibe den Satz richtig. <span class="vn">Mỗi câu có một lỗi. Hãy sửa lại.</span></p>
+<div class="errorbox"><strong>Prüfe:</strong> Partizipform · trennbares Verb · haben/sein · Satzende.</div>
+<div class="task"><div class="prompt">1. Ich habe Pizza geesst.</div><input type="text" data-save><div class="solution">Ich habe Pizza gegessen.</div></div>
+<div class="task"><div class="prompt">2. Er hat mir geholft.</div><input type="text" data-save><div class="solution">Er hat mir geholfen.</div></div>
+<div class="task"><div class="prompt">3. Ich habe das gevergessen.</div><input type="text" data-save><div class="solution">Ich habe das vergessen.</div></div>
+<div class="task"><div class="prompt">4. Wir haben gefernsehen.</div><input type="text" data-save><div class="solution">Wir haben ferngesehen.</div></div>
+<div class="task"><div class="prompt">5. Du hast geanrufen.</div><input type="text" data-save><div class="solution">Du hast angerufen.</div></div>
+<div class="task"><div class="prompt">6. Ich habe heute früh aufgestanden.</div><input type="text" data-save><div class="solution">Ich bin heute früh aufgestanden.</div></div>
+<div class="task"><div class="prompt">7. Sie ist gestern eingekauft.</div><input type="text" data-save><div class="solution">Sie hat gestern eingekauft.</div></div>
+<div class="task"><div class="prompt">8. Wir sind die Nachrichten gesehen.</div><input type="text" data-save><div class="solution">Wir haben die Nachrichten gesehen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>8. Perfekt-Marathon</h3>
+<p>Bilde vollständige Perfekt-Sätze. <span class="vn">Tạo câu Perfekt hoàn chỉnh.</span></p>
+<div class="task"><div class="prompt">1. ich / gestern / Reis / essen</div><input type="text" data-save><div class="solution">Ich habe gestern Reis gegessen.</div></div>
+<div class="task"><div class="prompt">2. wir / letztes Jahr / nach Berlin / fahren</div><input type="text" data-save><div class="solution">Wir sind letztes Jahr nach Berlin gefahren.</div></div>
+<div class="task"><div class="prompt">3. du / heute Morgen / früh / aufstehen</div><input type="text" data-save><div class="solution">Du bist heute Morgen früh aufgestanden.</div></div>
+<div class="task"><div class="prompt">4. sie / gestern / ihre Mutter / anrufen</div><input type="text" data-save><div class="solution">Sie hat gestern ihre Mutter angerufen.</div></div>
+<div class="task"><div class="prompt">5. er / am Abend / die Nachrichten / sehen</div><input type="text" data-save><div class="solution">Er hat am Abend die Nachrichten gesehen.</div></div>
+<div class="task"><div class="prompt">6. ihr / spät / von der Reise / zurückkommen</div><input type="text" data-save><div class="solution">Ihr seid spät von der Reise zurückgekommen.</div></div>
+<div class="task"><div class="prompt">7. wir / acht Stunden / schlafen</div><input type="text" data-save><div class="solution">Wir haben acht Stunden geschlafen.</div></div>
+<div class="task"><div class="prompt">8. Anna / ihren Schlüssel / finden</div><input type="text" data-save><div class="solution">Anna hat ihren Schlüssel gefunden.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>9. Lesen – Mein Tag gestern</h3>
+<div class="violet">Gestern bin ich um halb sieben aufgestanden. Zum Frühstück habe ich Brot gegessen und Kaffee getrunken. Danach bin ich zur Arbeit gefahren. In der Mittagspause habe ich meine Schwester angerufen. Am Nachmittag hat mir ein Kollege bei einem Problem geholfen. Nach der Arbeit habe ich im Supermarkt eingekauft. Am Abend habe ich die Nachrichten gesehen und noch ein bisschen gelesen. Um elf Uhr bin ich ins Bett gegangen und habe acht Stunden geschlafen.</div>
+<p>Beantworte die Fragen. <span class="vn">Trả lời các câu hỏi.</span></p>
+<div class="task"><div class="prompt">1. Wann ist die Person aufgestanden?</div><input type="text" data-save><div class="solution">Um halb sieben.</div></div>
+<div class="task"><div class="prompt">2. Was hat die Person zum Frühstück gegessen und getrunken?</div><input type="text" data-save><div class="solution">Brot und Kaffee.</div></div>
+<div class="task"><div class="prompt">3. Wen hat die Person in der Mittagspause angerufen?</div><input type="text" data-save><div class="solution">Ihre Schwester.</div></div>
+<div class="task"><div class="prompt">4. Wer hat am Nachmittag geholfen?</div><input type="text" data-save><div class="solution">Ein Kollege.</div></div>
+<div class="task"><div class="prompt">5. Was hat die Person nach der Arbeit gemacht?</div><input type="text" data-save><div class="solution">Sie hat im Supermarkt eingekauft.</div></div>
+<div class="task"><div class="prompt">6. Was hat die Person am Abend gemacht?</div><input type="text" data-save><div class="solution">Sie hat die Nachrichten gesehen und gelesen.</div></div>
+<button onclick="toggleSolutions(this)">Lösungen zeigen</button>
+</section>
+
+<section>
+<h3>10. Transfer – Mein Tag gestern</h3>
+<p>Schreibe 6–8 Sätze über deinen gestrigen Tag im Perfekt. Benutze mindestens <strong>2 unregelmäßige Verben</strong>, <strong>2 trennbare Verben</strong>, einen Satz mit <strong>haben</strong> und einen Satz mit <strong>sein</strong>. <span class="vn">Viết 6–8 câu về ngày hôm qua ở thì Perfekt. Dùng ít nhất 2 động từ bất quy tắc, 2 động từ tách rời, một câu với haben và một câu với sein.</span></p>
+<div class="violet"><strong>Hilfe:</strong> Gestern bin ich ... aufgestanden. · Zum Frühstück habe ich ... gegessen. · Danach bin ich ... · Am Nachmittag habe ich ... angerufen. · Am Abend habe ich ... gesehen.</div>
+<div class="task"><textarea data-save placeholder="Gestern bin ich ...&#10;Zum Frühstück habe ich ...&#10;Danach ..."></textarea></div>
+</section>
+
+<footer>
+Deutsch A1 · Lektion 21 · Das Perfekt – Teil 3<br>
+Deine Eingaben bleiben auf diesem Gerät im Browser gespeichert.
+</footer>
+</main>
+<script>
+const KEY="a1_l21_perfekt_teil3_extra_answers_v1";
+function fields(){return [...document.querySelectorAll("[data-save]")];}
+function saveAll(show=true){
+  const data=fields().map(el=>el.value);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  if(show){
+    const s=document.getElementById("status");
+    s.textContent="✓ Antworten gespeichert.";
+    setTimeout(()=>s.textContent="Die Antworten werden automatisch im Browser gespeichert.",1800);
+  }
+}
+function loadAll(){
+  const raw=localStorage.getItem(KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    fields().forEach((el,i)=>{if(data[i]!==undefined)el.value=data[i];});
+    document.getElementById("status").textContent="✓ Gespeicherte Antworten geladen.";
+  }catch(e){
+    document.getElementById("status").textContent="Gespeicherte Antworten konnten nicht geladen werden.";
+  }
+}
+function clearAll(){
+  if(!confirm("Möchtest du wirklich alle Antworten löschen?"))return;
+  fields().forEach(el=>el.value="");
+  localStorage.removeItem(KEY);
+  document.querySelectorAll(".solution").forEach(x=>x.style.display="none");
+  document.querySelectorAll("section button").forEach(btn=>btn.textContent="Lösungen zeigen");
+  document.getElementById("status").textContent="Alle Antworten wurden gelöscht.";
+}
+function toggleSolutions(btn){
+  const sec=btn.closest("section");
+  const sols=[...sec.querySelectorAll(".solution")];
+  const show=sols.some(x=>getComputedStyle(x).display==="none");
+  sols.forEach(x=>x.style.display=show?"block":"none");
+  btn.textContent=show?"Lösungen verstecken":"Lösungen zeigen";
+}
+fields().forEach(el=>el.addEventListener("input",()=>saveAll(false)));
+window.addEventListener("DOMContentLoaded",loadAll);
+</script>
+</body>
+</html>
