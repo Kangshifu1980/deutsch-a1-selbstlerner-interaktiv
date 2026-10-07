@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lektion 0 · Alphabet und Aussprache mit Audio</title>
+<style>
+@media print {
+  body { margin: 0; }
+  .page { page-break-after: always !important; padding: 12mm 14mm 8mm 14mm !important; margin: 0 !important; box-shadow: none !important; min-height: 0 !important; }
+  .page.compact { padding: 9mm 14mm 4mm 14mm !important; }
+  .page:last-child { page-break-after: avoid !important; }
+  .phon-card, .pair-card, .phon-card-top, .pair-top, .sprech-karte { page-break-inside: avoid !important; break-inside: avoid !important; }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.35; color: #1a1a1a; background: #f5f5f5; }
+.page { background: white; width: 210mm; min-height: 297mm; margin: 12px auto; padding: 12mm 14mm 8mm 14mm; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.doc-header { border-bottom: 2.5px solid #2563eb; padding-bottom: 5px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: flex-end; }
+.doc-header h1 { font-size: 17px; font-weight: 700; color: #1e3a8a; letter-spacing: 0.3px; }
+.doc-header h2 { font-size: 11px; font-weight: 500; color: #475569; margin-top: 2px; }
+.doc-header .badge { font-size: 10px; font-weight: 600; background: #dbeafe; color: #1e40af; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #64748b; margin: 9px 0 4px 0; border-bottom: 0.5px solid #e2e8f0; padding-bottom: 2px; }
+.lernziele { background: #eff6ff; border-left: 3px solid #2563eb; border-radius: 0 6px 6px 0; padding: 5px 10px; margin-bottom: 3px; }
+.lernziele p { font-size: 10.5px; margin-bottom: 1px; }
+.lernziele .de { color: #1e3a8a; font-weight: 600; }
+.lernziele .vn { color: #3b82f6; font-size: 10px; }
+.der { display:inline-block; background:#dbeafe; color:#1e40af; font-weight:700; font-size:10px; padding:1px 5px; border-radius:4px; margin-right:2px; }
+.die { display:inline-block; background:#fce7f3; color:#9d174d; font-weight:700; font-size:10px; padding:1px 5px; border-radius:4px; margin-right:2px; }
+.das { display:inline-block; background:#dcfce7; color:#14532d; font-weight:700; font-size:10px; padding:1px 5px; border-radius:4px; margin-right:2px; }
+.warn { color: #b45309; font-size: 11px; font-weight: 700; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 5px; }
+table.vocab { table-layout: fixed; }
+table.vocab th { background: #f1f5f9; color: #374151; font-size: 9px; font-weight: 700; padding: 2px 4px; text-align: left; border: 0.5px solid #cbd5e1; white-space: nowrap; }
+table.vocab td { padding: 2px 4px; border: 0.5px solid #e2e8f0; font-size: 9.5px; vertical-align: top; word-break: break-word; }
+table.vocab tr:nth-child(even) td { background: #f8fafc; }
+.phonetik { color: #64748b; font-size: 9px; }
+.vn-word { color: #0f766e; font-size: 9.5px; }
+.gram-box { border: 0.5px solid #e2e8f0; border-radius: 6px; padding: 6px 10px; margin-bottom: 6px; background: #fafafa; }
+.gram-box h4 { font-size: 10.5px; font-weight: 700; color: #1e3a8a; margin-bottom: 3px; }
+.gram-box .rule-de { font-size: 10.5px; color: #1a1a1a; margin-bottom: 1px; }
+.gram-box .rule-vn { font-size: 10px; color: #0f766e; font-style: italic; margin-bottom: 4px; }
+.warn-box { background: #fff7ed; border-left: 3px solid #ea580c; border-radius: 0 6px 6px 0; padding: 5px 9px; margin: 4px 0 8px 0; font-size: 10px; }
+.warn-box .wb-title { color: #9a3412; font-weight: 700; margin-bottom: 3px; }
+.fehler-item { margin-bottom: 4px; padding-bottom: 4px; border-bottom: 1px dashed #fed7aa; }
+.fehler-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.fehler-item .falsch { color: #b91c1c; font-weight: 700; }
+.fehler-item .richtig { color: #15803d; font-weight: 700; }
+.fehler-item .erkl-de { color: #7c2d12; margin-top: 1px; }
+.fehler-item .erkl-vn { color: #c2410c; font-style: italic; }
+.kultur-box { background: #ecfeff; border: 0.5px solid #a5f3fc; border-radius: 8px; padding: 7px 12px; margin: 6px 0 10px 0; }
+.kultur-box .kb-title { font-size: 10.5px; font-weight: 700; color: #0e7490; margin-bottom: 3px; }
+.kultur-box .kb-de { font-size: 10.5px; color: #164e63; margin-bottom: 2px; }
+.kultur-box .kb-vn { font-size: 10px; color: #0891b2; font-style: italic; }
+.dialog-box { border: 0.5px solid #c7d2fe; border-radius: 6px; background: #eef2ff; padding: 6px 10px; margin-bottom: 5px; }
+.dialog-line { font-size: 10.5px; margin-bottom: 2px; }
+.dialog-line .speaker { font-weight: 700; color: #3730a3; margin-right: 4px; }
+.lese-box { border: 0.5px solid #d1fae5; border-radius: 6px; background: #f0fdf4; padding: 6px 10px; margin-bottom: 5px; font-size: 10.5px; line-height: 1.45; }
+.ubung-header { background: #1e3a8a; color: white; font-size: 10.5px; font-weight: 700; padding: 3px 8px; border-radius: 5px 5px 0 0; }
+.ubung-body { border: 0.5px solid #cbd5e1; border-top: none; border-radius: 0 0 5px 5px; padding: 6px 8px; margin-bottom: 6px; }
+.ubung-body .instr-de { font-size: 10px; color: #374151; font-style: italic; }
+.ubung-body .instr-vn { font-size: 9.5px; color: #0f766e; font-style: italic; margin-bottom: 3px; }
+.fill-line { display: flex; align-items: center; gap: 5px; font-size: 10.5px; margin-bottom: 4px; flex-wrap: wrap; }
+.fill-line .num { color: #64748b; min-width: 16px; font-weight: 600; }
+.blank { border-bottom: 1px solid #94a3b8; min-width: 90px; display: inline-block; }
+.antworten { background: #f0fdf4; border: 0.5px solid #86efac; border-radius: 6px; padding: 6px 10px; margin-top: 6px; }
+.antworten h4 { font-size: 10.5px; font-weight: 700; color: #14532d; margin-bottom: 2px; }
+.antworten p { font-size: 10px; color: #166534; margin-bottom: 2px; }
+.ha-box { background: #fdf4ff; border: 0.5px solid #d8b4fe; border-radius: 6px; padding: 6px 10px; margin-top: 6px; }
+.ha-box h4 { font-size: 10.5px; font-weight: 700; color: #581c87; margin-bottom: 3px; }
+.ha-item { font-size: 10.5px; margin-bottom: 2px; color: #3b0764; }
+.ha-item .ha-vn { color: #7e22ce; font-size: 10px; }
+.footer { margin-top: 8px; padding-top: 4px; border-top: 0.5px solid #e2e8f0; font-size: 9px; color: #94a3b8; display: flex; justify-content: space-between; }
+.small { font-size: 10.5px; }
+
+.compact { line-height: 1.22; font-size: 11.2px; }
+.compact .doc-header { padding-bottom: 4px; margin-bottom: 6px; }
+.compact .section-title { margin: 6px 0 3px 0; }
+.compact table { margin-bottom: 4px; }
+.compact .gram-box { padding: 5px 9px; margin-bottom: 3px; }
+.compact .warn-box { padding: 3px 7px; margin: 2px 0 8px 0; }
+.compact .kultur-box { padding: 5px 9px; margin: 4px 0 8px 0; }
+.compact .ubung-header { padding: 2px 8px; }
+.compact .ubung-body { padding: 5px 8px; margin-bottom: 4px; }
+.compact .ubung-body .instr-vn { margin-bottom: 2px; }
+.compact .fill-line { margin-bottom: 1px; }
+.compact .footer { margin-top: 4px; padding-top: 3px; }
+
+.roomy { font-size: 12.5px; line-height: 1.55; }
+.roomy .doc-header { margin-bottom: 12px; padding-bottom: 7px; }
+.roomy .section-title { font-size: 12px; margin: 14px 0 7px 0; }
+.roomy .ha-box { padding: 9px 15px; margin-top: 8px; }
+.roomy .ha-box h4 { font-size: 12.5px; margin-bottom: 7px; }
+.roomy .ha-item { font-size: 12px; margin-bottom: 9px; }
+.roomy .ha-item .ha-vn { font-size: 11px; }
+.roomy .antworten { padding: 9px 15px; margin-top: 10px; }
+.roomy .antworten h4 { font-size: 12.5px; margin-bottom: 6px; }
+.roomy .antworten p { font-size: 11.5px; margin-bottom: 5px; line-height: 1.5; }
+.roomy .footer { margin-top: 14px; padding-top: 7px; }
+
+.mc-block { margin-bottom: 6px; }
+.mc-frage { font-size: 10.5px; font-weight: 700; color: #1e3a8a; margin-bottom: 2px; }
+.mc-optionen { display: flex; flex-direction: column; gap: 1px; font-size: 10.5px; color: #1a1a1a; margin-bottom: 6px; padding-left: 4px; }
+.mc-optionen span { display: flex; align-items: center; gap: 4px; }
+.mc-kreis { display: inline-block; width: 9px; height: 9px; border: 1.3px solid #64748b; border-radius: 50%; flex-shrink: 0; }
+
+/* ===== Alphabet: einspaltige Tabelle (nutzt die Seitenhöhe besser aus) ===== */
+
+/* ===== Aussprache-Karten (übersetzt aus dem Vietnamesisch-Original, jetzt Chinesisch) ===== */
+.phon-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 8px; }
+.phon-card { border: 0.5px solid #e2e8f0; border-radius: 6px; overflow: hidden; }
+.phon-card.schwer { border: 1.5px solid #dc2626; }
+.phon-card-top { display: flex; }
+.phon-letter-box { min-width: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 9px 7px; gap: 2px; }
+.lb-blue { background: #1e40af; }
+.lb-purple { background: #7c3aed; }
+.lb-orange { background: #d97706; }
+.lb-red { background: #A32D2D; }
+.lb-green { background: #166534; }
+.phon-letter { font-size: 24px; font-weight: 700; color: #fff; line-height: 1; }
+.phon-ipa { font-size: 10px; color: rgba(255,255,255,0.85); margin-top: 3px; }
+.phon-body { flex: 1; padding: 7px 9px; background: #fff; }
+.tag-de { display:inline-block; font-size:9px; font-weight:600; padding:1px 6px; border-radius:4px; background:#eff6ff; color:#1e40af; margin-bottom:3px; }
+.tag-zh { display:inline-block; font-size:9px; font-weight:600; padding:1px 6px; border-radius:4px; background:#fef2f2; color:#991b1b; margin-bottom:3px; margin-top:3px; }
+.phon-expl-de { font-size: 10px; color: #1e40af; font-weight: 500; margin-bottom: 3px; line-height: 1.35; }
+.phon-expl-zh { font-size: 10px; color: #7f1d1d; line-height: 1.35; margin-bottom: 3px; }
+.phon-note { font-size: 9.5px; padding: 3px 6px; border-radius: 4px; line-height: 1.35; }
+.note-ok { background: #f0fdf4; color: #166534; }
+.note-warn { background: #fff9f9; color: #A32D2D; }
+.note-info { background: #fffbeb; color: #92400e; }
+.phon-words { background: #f9fafb; border-top: 0.5px solid #f0f0f0; padding: 4px 9px; display: flex; gap: 5px; flex-wrap: wrap; }
+.phon-word { display: inline-flex; flex-direction: column; background: #fff; border: 0.5px solid #e5e7eb; border-radius: 5px; padding: 2px 6px; }
+.phon-word-de { font-size: 11px; font-weight: 600; color: #111; }
+.phon-word-zh { font-size: 9px; color: #888; }
+
+/* ===== Konsonantenpaar-Karten (Auslautverhärtung) ===== */
+.pair-card { border: 0.5px solid #e2e8f0; border-radius: 6px; overflow: hidden; margin-bottom: 7px; }
+.pair-top { display: grid; grid-template-columns: 1fr 1fr; }
+.pair-half { padding: 8px 10px; background: #fff; }
+.pair-half:first-child { border-right: 0.5px solid #f0f0f0; }
+.pair-letter { font-size: 19px; font-weight: 700; margin-bottom: 2px; }
+.pl-green { color: #166534; }
+.pl-red { color: #A32D2D; }
+.pair-expl-de { font-size: 10px; color: #333; line-height: 1.35; margin-bottom: 2px; }
+.pair-expl-zh { font-size: 10px; color: #166534; line-height: 1.35; }
+.pair-note { font-size: 9px; padding: 2px 6px; border-radius: 4px; margin-top: 4px; line-height: 1.35; }
+.pair-words { background: #f9fafb; border-top: 0.5px solid #f0f0f0; padding: 4px 9px; display: flex; gap: 5px; flex-wrap: wrap; }
+.rule-box { background: #eff6ff; color: #1e3a8a; font-size: 10px; padding: 5px 9px; border-radius: 5px; margin-bottom: 6px; line-height: 1.45; }
+
+
+/* ===== Drucklayout: exakt fünf A4-Seiten ===== */
+@media print {
+  @page { size: A4; margin: 0; }
+  html, body { margin: 0 !important; padding: 0 !important; background: #fff !important; }
+  .page {
+    position: relative !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
+    margin: 0 !important;
+    padding: 9mm 14mm 14mm 14mm !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+  .page:last-child { page-break-after: auto !important; break-after: auto !important; }
+  .footer {
+    position: absolute !important;
+    left: 14mm !important;
+    right: 14mm !important;
+    bottom: 5mm !important;
+    margin: 0 !important;
+    padding-top: 3px !important;
+  }
+  .exercise-block, .phon-card, .pair-card, .kultur-box, .dialog-box,
+  .gram-box, .warn-box, table, .lernziele {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+
+/* Seite 3 kompakter, damit sie nicht ungewollt auf zwei PDF-Seiten zerfällt. */
+.page3-tight { font-size: 9px; line-height: 1.08; }
+.page3-tight .doc-header { margin-bottom: 4px; padding-bottom: 3px; }
+.page3-tight .doc-header h1 { font-size: 14px; }
+.page3-tight .doc-header h2 { font-size: 9px; }
+.page3-tight .section-title { font-size: 8.7px; margin: 3px 0 2px; padding-bottom: 1px; }
+.page3-tight .rule-box { font-size: 8px; line-height: 1.18; padding: 3px 6px; margin-bottom: 3px; }
+.page3-tight .pair-card { margin-bottom: 3px; }
+.page3-tight .pair-half { padding: 3px 6px; }
+.page3-tight .pair-letter { font-size: 14px; margin-bottom: 0; }
+.page3-tight .pair-expl-de, .page3-tight .pair-expl-zh { font-size: 7.8px; line-height: 1.13; margin-bottom: 1px !important; margin-top: 1px !important; }
+.page3-tight .pair-note { font-size: 7.2px; line-height: 1.12; padding: 1px 4px; margin-top: 2px; }
+.page3-tight .pair-words { padding: 2px 6px; gap: 3px; }
+.page3-tight .phon-grid { grid-template-columns: repeat(3, 1fr); gap: 4px; margin-bottom: 3px; }
+.page3-tight .phon-letter-box { min-width: 45px; padding: 4px 3px; }
+.page3-tight .phon-letter { font-size: 17px; }
+.page3-tight .phon-ipa { font-size: 7px; margin-top: 1px; }
+.page3-tight .phon-body { padding: 3px 5px; }
+.page3-tight .tag-de, .page3-tight .tag-zh { font-size: 6.8px; padding: 0 3px; margin-bottom: 1px; margin-top: 1px; }
+.page3-tight .phon-expl-de, .page3-tight .phon-expl-zh { font-size: 7.3px; line-height: 1.12; margin-bottom: 1px; }
+.page3-tight .phon-note { font-size: 7px; line-height: 1.1; padding: 1px 3px; }
+.page3-tight .phon-words { padding: 2px 5px; gap: 2px; }
+.page3-tight .phon-word { padding: 1px 3px; }
+.page3-tight .phon-word-de { font-size: 8px; }
+.page3-tight .phon-word-zh { font-size: 6.5px; }
+.page3-tight table.vocab th { font-size: 7px; padding: 1px 3px; }
+.page3-tight table.vocab td { font-size: 7.5px; padding: 1px 3px; }
+</style>
+</head>
+<body>
+<!-- ═════════════════════════════ SEITE 1 / 4 ═════════════════════════════ -->
+<div class="page compact">
+<div class="doc-header">
+<div>
+<h1>🇩🇪 Deutsch A1 — Lektion 0</h1>
+<h2>Phonetik &amp; Alphabet / Ngữ âm &amp; Bảng chữ cái</h2>
+</div>
+<div class="badge">A1 · Lektion 0 · Seite 1 / 5</div>
+</div>
+<div class="section-title">🎯 LERNZIELE / Mục tiêu bài học</div>
+<div class="lernziele">
+<p class="de">✓ Das deutsche Alphabet flüssig aufsagen können. <span class="vn">— Đọc trôi chảy bảng chữ cái tiếng Đức.</span></p>
+<p class="de">✓ Umlaute (ä, ö, ü) und schwierige Laute (ch, r, z) präzise aussprechen können. <span class="vn">— Phát âm chính xác các nguyên âm biến âm (ä, ö, ü) và các âm khó (ch, r, z).</span></p>
+<p class="de">✓ Die Auslautverhärtung am Wortende anwenden. <span class="vn">— Áp dụng đúng quy tắc "cứng hóa phụ âm cuối từ".</span></p>
+<p class="de">✓ Den eigenen Namen fehlerfrei buchstabieren können. <span class="vn">— Đánh vần chính xác tên của mình.</span></p>
+</div>
+<div class="section-title">📚 WORTSCHATZ / Từ vựng (Das Alphabet / Bảng chữ cái)</div>
+<table class="vocab">
+<colgroup><col style="width:12%"/><col style="width:14%"/><col style="width:28%"/><col style="width:20%"/><col style="width:26%"/></colgroup>
+<thead><tr><th>Chữ cái</th><th>Đọc là</th><th>Từ ví dụ</th><th>Đọc là</th><th>Tiếng Việt</th></tr></thead>
+<tbody>
+<tr><td>A a</td><td class="phonetik">a (kéo dài)</td><td><span class="der">der</span>Arm</td><td class="phonetik">a-rm</td><td class="vn-word">cánh tay</td></tr>
+<tr><td>B b</td><td class="phonetik">bê</td><td><span class="das">das</span>Bein</td><td class="phonetik">bain</td><td class="vn-word">chân</td></tr>
+<tr><td>C c</td><td class="phonetik">tsê</td><td><span class="das">das</span>Café</td><td class="phonetik">ca-phê</td><td class="vn-word">quán cà phê</td></tr>
+<tr><td>D d</td><td class="phonetik">đê</td><td>dan<strong>k</strong>e</td><td class="phonetik">đan-cơ</td><td class="vn-word">cảm ơn</td></tr>
+<tr><td>E e</td><td class="phonetik">ê (kéo dài)</td><td><span class="der">der</span>Esel</td><td class="phonetik">ê-zần</td><td class="vn-word">con lừa</td></tr>
+<tr><td>F f</td><td class="phonetik">ép</td><td>fün<strong>f</strong></td><td class="phonetik">fuynf</td><td class="vn-word">số năm</td></tr>
+<tr><td>G g</td><td class="phonetik">ghê</td><td>gu<strong>t</strong></td><td class="phonetik">gút</td><td class="vn-word">tốt</td></tr>
+<tr><td>H h</td><td class="phonetik">ha</td><td>haben</td><td class="phonetik">ha-bần</td><td class="vn-word">có</td></tr>
+<tr><td>I i</td><td class="phonetik">i (kéo dài)</td><td><span class="die">die</span>Liebe</td><td class="phonetik">li-bờ</td><td class="vn-word">tình yêu</td></tr>
+<tr><td>J j</td><td class="phonetik">i-ốt (như iốt)</td><td>ja</td><td class="phonetik">da</td><td class="vn-word">vâng/có</td></tr>
+<tr><td>K k</td><td class="phonetik">ka</td><td>kal<strong>t</strong></td><td class="phonetik">kalt</td><td class="vn-word">lạnh</td></tr>
+<tr><td>L l</td><td class="phonetik">eo-lờ</td><td>lesen</td><td class="phonetik">lê-zần</td><td class="vn-word">đọc sách</td></tr>
+<tr><td>M m</td><td class="phonetik">em (giống hệt "em")</td><td>morgen</td><td class="phonetik">mo-rgần</td><td class="vn-word">ngày mai</td></tr>
+<tr><td>N n</td><td class="phonetik">en</td><td><span class="der">der</span>Name</td><td class="phonetik">na-mờ</td><td class="vn-word">tên</td></tr>
+<tr><td>O o</td><td class="phonetik">ô (kéo dài)</td><td><span class="das">das</span>Obs<strong>t</strong></td><td class="phonetik">ốp-st</td><td class="vn-word">trái cây</td></tr>
+<tr><td>P p</td><td class="phonetik">pê</td><td><span class="die">die</span>Party</td><td class="phonetik">pa-ti</td><td class="vn-word">bữa tiệc</td></tr>
+<tr><td>Q q</td><td class="phonetik">ku (kéo dài)</td><td><span class="die">die</span>Quelle</td><td class="phonetik">cveo-lờ</td><td class="vn-word">nguồn nước</td></tr>
+<tr><td>R r</td><td class="phonetik">e-rờ (nhiều cách phát âm)</td><td>ro<strong>t</strong></td><td class="phonetik">rốt</td><td class="vn-word">màu đỏ</td></tr>
+<tr><td>S s</td><td class="phonetik">ét-xì</td><td>sein</td><td class="phonetik">zain</td><td class="vn-word">thì/là</td></tr>
+<tr><td>T t</td><td class="phonetik">tê</td><td><span class="die">die</span>Tür</td><td class="phonetik">tuy-a</td><td class="vn-word">cánh cửa</td></tr>
+<tr><td>U u</td><td class="phonetik">u (kéo dài, môi chúm)</td><td><span class="die">die</span>Uhr</td><td class="phonetik">u-a</td><td class="vn-word">đồng hồ</td></tr>
+<tr><td>V v</td><td class="phonetik">phao</td><td><span class="der">der</span>Vater</td><td class="phonetik">pha-tờ</td><td class="vn-word">bố ⚠️</td></tr>
+<tr><td>W w</td><td class="phonetik">vê</td><td><span class="die">die</span>Wohnung</td><td class="phonetik">vô-nung</td><td class="vn-word">căn hộ ⚠️</td></tr>
+<tr><td>X x</td><td class="phonetik">ích-xì</td><td><span class="das">das</span>Taxi</td><td class="phonetik">tác-xi</td><td class="vn-word">xe taxi</td></tr>
+<tr><td>Y y</td><td class="phonetik">úp-si-lon</td><td><span class="der">der</span>Typ</td><td class="phonetik">tuýp</td><td class="vn-word">kiểu/loại</td></tr>
+<tr><td>Z z</td><td class="phonetik">tsét</td><td><span class="der">der</span>Zu<strong>g</strong></td><td class="phonetik">tsúc</td><td class="vn-word">xe lửa ⚠️</td></tr>
+<tr><td>Ä ä</td><td class="phonetik">e mở (giữa a-ê)</td><td><span class="die">die</span>Ärz<strong>te</strong></td><td class="phonetik">e-rt-sờ-tơ</td><td class="vn-word">các bác sĩ ⚠️</td></tr>
+<tr><td>Ö ö</td><td class="phonetik">không có trong tiếng Việt</td><td>schön</td><td class="phonetik">sơn (môi tròn)</td><td class="vn-word">đẹp ⚠️</td></tr>
+<tr><td>Ü ü</td><td class="phonetik">không có trong tiếng Việt</td><td><span class="die">die</span>Übung</td><td class="phonetik">uy-bung</td><td class="vn-word">bài tập ⚠️</td></tr>
+<tr><td>ß</td><td class="phonetik">ét-xét (= ss)</td><td>hei<strong>ß</strong></td><td class="phonetik">hais</td><td class="vn-word">nóng ⚠️</td></tr>
+</tbody>
+</table>
+<div class="small" style="color:#64748b; font-style:italic;">⚠️ = đặc biệt khó đối với người Việt — xem phần Đào sâu phát âm ở các trang tiếp theo. / Cột "Đọc là" dùng cách viết gần đúng theo chính tả tiếng Việt (Quốc Ngữ), không phải phiên âm quốc tế IPA.</div>
+<div class="footer">
+<span>Deutsch A1 · Lektion 0</span>
+<span>Seite 1 / 5</span>
+</div>
+</div>
+<!-- ═════════════════════════════ SEITE 2 / 4 ═════════════════════════════ -->
+<div class="page compact">
+<div class="doc-header">
+<div>
+<h1>🇩🇪 Deutsch A1 — Lektion 0</h1>
+<h2>Aussprache-Vertiefung 1: Vokale &amp; Umlaute / Đào sâu phát âm 1: Nguyên âm &amp; Nguyên âm biến âm</h2>
+</div>
+<div class="badge">A1 · Lektion 0 · Seite 2 / 5</div>
+</div>
+<div class="section-title">🔵 VOKALE / Nguyên âm — A · E · I · O · U</div>
+<div class="rule-box">🇩🇪 <strong>Wichtig:</strong> Die Vokalbuchstaben A, E, I, O, U können in deutschen Wörtern lang oder kurz gesprochen werden. Die Karten zeigen zuerst typische Grundformen; achte immer auch auf das konkrete Wort.<br/>🇻🇳 <strong>Quan trọng:</strong> Các chữ A, E, I, O, U trong từ tiếng Đức có thể được phát âm dài hoặc ngắn. Các thẻ dưới đây giới thiệu trước những dạng cơ bản; hãy luôn chú ý cách phát âm của từng từ cụ thể.</div>
+<div class="phon-grid">
+<div class="phon-card">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-blue"><div class="phon-letter">A a</div><div class="phon-ipa">a-a</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Deutsch</span> Mund weit öffnen, Zunge flach — tiefer Vokal aus der Kehle. Lang halten!</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳 Tiếng Việt</span> Gần giống âm "a" trong tiếng Việt (như trong "ba") — mở miệng rộng, kéo dài âm.</div>
+<div class="phon-note note-ok">✓ Rất giống tiếng Việt — dễ!</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">der Arm</span><span class="phon-word-zh">cánh tay</span></div>
+<div class="phon-word"><span class="phon-word-de">der Abend</span><span class="phon-word-zh">buổi tối</span></div>
+</div>
+</div>
+<div class="phon-card">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-blue"><div class="phon-letter">E e</div><div class="phon-ipa">ê</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Deutsch</span> Zunge flach, Mundwinkel leicht nach außen — wie beim Lächeln. Lippen nicht runden!</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳 Tiếng Việt</span> Gần giống âm "ê" trong tiếng Việt (như trong "bê") — lưỡi để phẳng, khóe miệng hơi kéo ra hai bên như đang cười, môi không tròn.</div>
+<div class="phon-note note-ok">✓ Gần giống âm "ê" tiếng Việt — khá dễ!</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">der Esel</span><span class="phon-word-zh">con lừa</span></div>
+<div class="phon-word"><span class="phon-word-de">der Tee</span><span class="phon-word-zh">trà</span></div>
+</div>
+</div>
+<div class="phon-card">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-blue"><div class="phon-letter">I i</div><div class="phon-ipa">i-i</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Deutsch</span> Langer hoher Vokal — Mundwinkel stark nach außen, Zunge hoch vorne im Mund.</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳 Tiếng Việt</span> Gần giống âm "i" trong tiếng Việt (như trong "đi") — kéo dài âm, khóe miệng kéo mạnh sang hai bên, lưỡi đưa cao ra phía trước.</div>
+<div class="phon-note note-ok">✓ Rất giống âm "i" tiếng Việt — dễ!</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">die Liebe</span><span class="phon-word-zh">tình yêu</span></div>
+<div class="phon-word"><span class="phon-word-de">vier</span><span class="phon-word-zh">bốn</span></div>
+</div>
+</div>
+<div class="phon-card">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-blue"><div class="phon-letter">O · U</div><div class="phon-ipa">ô · u</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 O — Lippen rund wie ein Kreis!</span> Lippen weit nach vorne, kreisrund formen — wie ein rundes „O".</div>
+<span class="tag-de" style="margin-top:3px;">🇩🇪 U — Lippen extrem spitz!</span>
+<div class="phon-expl-de" style="margin-bottom:0;">Lippen wie beim Pfeifen formen, sehr eng.</div>
+<div class="phon-note note-ok" style="margin-top:4px;">✓ Cả hai âm đều gần giống âm "ô" và "u" trong tiếng Việt — đều dễ!</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">rot</span><span class="phon-word-zh">màu đỏ</span></div>
+<div class="phon-word"><span class="phon-word-de">die Uhr</span><span class="phon-word-zh">đồng hồ</span></div>
+</div>
+</div>
+</div>
+<div class="section-title">🟣 UMLAUTE / Nguyên âm biến âm — Ä · Ö · Ü · ß (những âm đặc biệt của tiếng Đức!)</div>
+<div class="phon-grid">
+<div class="phon-card">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-purple"><div class="phon-letter">Ä ä</div><div class="phon-ipa">[ɛː] / [ɛ]</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Deutsch</span> Ä klingt wie ein offenes E. Es kann lang sein (<strong>spät</strong> [ɛː]) oder kurz (<strong>Ärzte</strong> [ɛ]).</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳 Tiếng Việt</span> Ä gần với âm „e" mở. Âm này có thể dài (<strong>spät</strong>) hoặc ngắn (<strong>Ärzte</strong>).</div>
+<div class="phon-note note-ok">✓ Gần âm „e" mở trong tiếng Việt; chú ý độ dài của từng từ.</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">die Ärz<strong>te</strong></span><span class="phon-word-zh">các bác sĩ</span></div>
+<div class="phon-word"><span class="phon-word-de">spä<strong>t</strong></span><span class="phon-word-zh">muộn / trễ</span></div>
+</div>
+</div>
+<div class="phon-card schwer">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-purple"><div class="phon-letter">Ö ö</div><div class="phon-ipa">ơ (môi tròn)</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Deutsch</span> Lippen rund wie „O" + gleichzeitig „E" sprechen — Mund rund, Zunge vorne!</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳 Tiếng Việt</span> Âm này <strong>không có âm tương đương trực tiếp</strong> trong tiếng Việt. Chúm môi tròn như khi phát âm "ô", nhưng lưỡi ở vị trí gần với "ê".</div>
+<div class="phon-note note-warn">⚠ Âm mới với nhiều người học! Luyện tập: ô … ê … ö!</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">schön</span><span class="phon-word-zh">đẹp</span></div>
+<div class="phon-word"><span class="phon-word-de">das Öl</span><span class="phon-word-zh">dầu</span></div>
+</div>
+</div>
+<div class="phon-card schwer">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-purple"><div class="phon-letter">Ü ü</div><div class="phon-ipa">i (môi tròn)</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Geheimtipp!</span> Langes „I" sprechen, dann Lippen rund nach vorne schieben — Zunge bleibt oben vorne!</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳 Tiếng Việt</span> Âm này <strong>không có âm tương đương trực tiếp</strong> trong tiếng Việt. Phát âm "i", rồi chúm môi tròn ra phía trước — lưỡi vẫn giữ gần vị trí của "i".</div>
+<div class="phon-note note-warn">⚠ Âm mới với nhiều người học! Luyện tập: i … ü!</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">müde</span><span class="phon-word-zh">mệt</span></div>
+<div class="phon-word"><span class="phon-word-de">die Übung</span><span class="phon-word-zh">bài tập</span></div>
+</div>
+</div>
+<div class="phon-card">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-orange"><div class="phon-letter">ß</div><div class="phon-ipa">ét-xét</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Sonderzeichen</span> Wie ein scharfes „ss" aussprechen — niemals summen! ß steht in der Regel nach langen Vokalen und Diphthongen.</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳 Tiếng Việt</span> Phát âm như „ss" sắc, không rung dây thanh. ß thường đứng sau nguyên âm dài và nguyên âm đôi. Ví dụ: hei<strong>ß</strong> → đọc như „hais".</div>
+<div class="phon-note note-info">ℹ ß = ss (cách đọc) · thường sau nguyên âm dài hoặc nguyên âm đôi · chữ hoa: ẞ</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">gro<strong>ß</strong></span><span class="phon-word-zh">to / cao</span></div>
+<div class="phon-word"><span class="phon-word-de">hei<strong>ß</strong></span><span class="phon-word-zh">nóng</span></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<span>Deutsch A1 · Lektion 0</span>
+<span>Seite 2 / 5</span>
+</div>
+</div>
+<!-- ═════════════════════════════ SEITE 3 / 4 (Aussprache + Grammatik) ═════════════════════════════ -->
+<div class="page compact page3-tight">
+<div class="doc-header">
+<div>
+<h1>🇩🇪 Deutsch A1 — Lektion 0</h1>
+<h2>Aussprache-Vertiefung 2 &amp; Grammatik / Đào sâu phát âm 2 &amp; Ngữ pháp</h2>
+</div>
+<div class="badge">A1 · Lektion 0 · Seite 3 / 5</div>
+</div>
+<div class="section-title">🟢 KONSONANTENPAARE (AUSLAUTVERHÄRTUNG) / Cặp phụ âm (Cứng hóa phụ âm cuối từ)</div>
+<div class="rule-box">
+    🇩🇪 <strong>Auslautverhärtung:</strong> Am Wort- oder Silbenende werden B, D und G stimmlos wie P, T und K gesprochen. Die Schreibweise bleibt unverändert. Der Endlaut muss dabei nicht so stark behaucht sein wie P, T oder K am Wortanfang.<br/>
+    🇻🇳 <strong>Cứng hóa phụ âm cuối:</strong> Ở cuối từ hoặc cuối âm tiết, B, D và G được phát âm vô thanh như P, T và K. Cách viết không thay đổi. Âm cuối không nhất thiết phải bật hơi mạnh như P, T hoặc K ở đầu từ.
+  </div>
+<div class="pair-card">
+<div class="pair-top">
+<div class="pair-half">
+<div class="pair-letter pl-green">B b <span style="font-size:11px;font-weight:400;color:#888">(bê)</span></div>
+<div class="pair-expl-de" style="margin-top:2px;"><span class="tag-de">🇩🇪</span> Lippen schließen, sanft loslassen — kein Luftstoß! Stimmbänder vibrieren.</div>
+<div class="pair-expl-zh" style="margin-top:2px;"><span class="tag-zh">🇻🇳</span> Gần giống âm "b" trong tiếng Việt — mím môi, bật nhẹ, không đẩy hơi, dây thanh rung.</div>
+<div class="pair-note note-warn">⚠ 🇩🇪 Am Wortende: B → [p], z. B. Gra<strong>b</strong> → „Grap".<br/>🇻🇳 Ở cuối từ: B → [p], ví dụ Gra<strong>b</strong> → đọc như „Grap".</div>
+</div>
+<div class="pair-half">
+<div class="pair-letter pl-red">P p <span style="font-size:11px;font-weight:400;color:#888">(pê)</span></div>
+<div class="pair-expl-de" style="margin-top:2px;"><span class="tag-de">🇩🇪</span> Lippen fest schließen, dann mit starkem Luftstoß — Hand vorhalten: Luft spüren!</div>
+<div class="pair-expl-zh" style="margin-top:2px;"><span class="tag-zh">🇻🇳</span> Khác hẳn "p" tiếng Việt (không bật hơi)! Mím chặt môi rồi bật hơi thật mạnh — giống âm "ph" nhưng khép môi trước.</div>
+<div class="pair-note note-warn">⚠ 🇩🇪 Am Wortanfang mit deutlichem Luftstoß sprechen.<br/>🇻🇳 Ở đầu từ, phát âm với luồng hơi rõ — khác với B.</div>
+</div>
+</div>
+<div class="pair-words">
+<div class="phon-word"><span class="phon-word-de">das Bein</span><span class="phon-word-zh">chân</span></div>
+<div class="phon-word"><span class="phon-word-de">bitte</span><span class="phon-word-zh">xin mời</span></div>
+<div class="phon-word"><span class="phon-word-de">die Party</span><span class="phon-word-zh">bữa tiệc</span></div>
+<div class="phon-word"><span class="phon-word-de">der Pas<strong>s</strong></span><span class="phon-word-zh">hộ chiếu</span></div>
+</div>
+</div>
+<div class="pair-card">
+<div class="pair-top">
+<div class="pair-half">
+<div class="pair-letter pl-green">G g <span style="font-size:11px;font-weight:400;color:#888">(ghê)</span></div>
+<div class="pair-expl-de" style="margin-top:2px;"><span class="tag-de">🇩🇪</span> Laut entsteht hinten im Rachen — weich, kein Luftstoß. Stimmbänder vibrieren.</div>
+<div class="pair-expl-zh" style="margin-top:2px;"><span class="tag-zh">🇻🇳</span> Gần giống âm "g" trong tiếng Việt (như "gà") — phát ra từ sâu trong họng, mềm, không bật hơi.</div>
+<div class="pair-note note-warn">⚠ 🇩🇪 Am Wortende: G → [k], z. B. Ta<strong>g</strong> → „Tak".<br/>🇻🇳 Ở cuối từ: G → [k], ví dụ Ta<strong>g</strong> → đọc như „Tak".</div>
+</div>
+<div class="pair-half">
+<div class="pair-letter pl-red">K k <span style="font-size:11px;font-weight:400;color:#888">(ka)</span></div>
+<div class="pair-expl-de" style="margin-top:2px;"><span class="tag-de">🇩🇪</span> Der Laut entsteht hinten im Mund. Am Wortanfang hört man meist einen deutlichen Luftstoß; am Wortende kann er schwächer sein.</div>
+<div class="pair-expl-zh" style="margin-top:2px;"><span class="tag-zh">🇻🇳</span> Âm được tạo ra ở phía sau khoang miệng. Ở đầu từ thường có luồng hơi rõ; ở cuối từ luồng hơi có thể nhẹ hơn.</div>
+<div class="pair-note note-warn">⚠ 🇩🇪 Am Wortanfang meist mit hörbarem Luftstoß.<br/>🇻🇳 Ở đầu từ thường có luồng hơi nghe rõ.</div>
+</div>
+</div>
+<div class="pair-words">
+<div class="phon-word"><span class="phon-word-de">gu<strong>t</strong></span><span class="phon-word-zh">tốt</span></div>
+<div class="phon-word"><span class="phon-word-de">der Ta<strong>g</strong></span><span class="phon-word-zh">ngày</span></div>
+<div class="phon-word"><span class="phon-word-de">kaufen</span><span class="phon-word-zh">mua</span></div>
+<div class="phon-word"><span class="phon-word-de">kal<strong>t</strong></span><span class="phon-word-zh">lạnh</span></div>
+</div>
+</div>
+<div class="pair-card">
+<div class="pair-top">
+<div class="pair-half">
+<div class="pair-letter pl-green">D d <span style="font-size:11px;font-weight:400;color:#888">(đê)</span></div>
+<div class="pair-expl-de" style="margin-top:2px;"><span class="tag-de">🇩🇪</span> Zungenspitze kurz an obere Zähne — weich lösen, kein Luftstoß.</div>
+<div class="pair-expl-zh" style="margin-top:2px;"><span class="tag-zh">🇻🇳</span> Rất gần với âm "đ" trong tiếng Việt — đầu lưỡi chạm nhẹ răng trên, bật nhẹ, không đẩy hơi.</div>
+<div class="pair-note note-warn">⚠ 🇩🇪 Am Wortende: D → [t], z. B. un<strong>d</strong> → „unt", Aben<strong>d</strong> → „Abent".<br/>🇻🇳 Ở cuối từ: D → [t], ví dụ un<strong>d</strong> → „unt", Aben<strong>d</strong> → „Abent".</div>
+</div>
+<div class="pair-half">
+<div class="pair-letter pl-red">T t <span style="font-size:11px;font-weight:400;color:#888">(tê)</span></div>
+<div class="pair-expl-de" style="margin-top:2px;"><span class="tag-de">🇩🇪</span> Die Zungenspitze berührt den Zahndamm. Am Wortanfang hört man meist einen deutlichen Luftstoß; am Wortende kann er schwächer sein.</div>
+<div class="pair-expl-zh" style="margin-top:2px;"><span class="tag-zh">🇻🇳</span> Đầu lưỡi chạm lợi trên. Ở đầu từ thường có luồng hơi rõ; ở cuối từ luồng hơi có thể nhẹ hơn.</div>
+<div class="pair-note note-warn">⚠ 🇩🇪 Am Wortanfang meist deutlich behaucht.<br/>🇻🇳 Ở đầu từ thường bật hơi rõ.</div>
+</div>
+</div>
+<div class="pair-words">
+<div class="phon-word"><span class="phon-word-de">danke</span><span class="phon-word-zh">cảm ơn</span></div>
+<div class="phon-word"><span class="phon-word-de">die Tür</span><span class="phon-word-zh">cánh cửa</span></div>
+<div class="phon-word"><span class="phon-word-de">trinken</span><span class="phon-word-zh">uống</span></div>
+</div>
+</div>
+<div class="section-title">🟣 SONDERLAUTE (DIE SCHWIERIGSTEN!) / Âm đặc biệt (những âm khó nhất!)</div>
+<div class="phon-grid">
+<div class="phon-card schwer">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-purple"><div class="phon-letter">ch</div><div class="phon-ipa">âm nhẹ / âm nặng</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Grundregel!</span> Nach <strong>i/e/ä/ö/ü/ei/eu</strong> und häufig nach Konsonanten hört man den ich-Laut [ç]. Nach <strong>a/o/u/au</strong> hört man meist den ach-Laut [x]. Übe die Wörter immer als Ganzes.</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳 Quy tắc cơ bản:</span> Sau <strong>i/e/ä/ö/ü/ei/eu</strong> và thường sau phụ âm, „ch" thường là âm nhẹ [ç]. Sau <strong>a/o/u/au</strong>, „ch" thường là âm [x], gần với „kh" tiếng Việt. Hãy luyện từng từ hoàn chỉnh.</div>
+<div class="phon-note note-warn">⚠ Luyện đối chiếu: ich / Milch [ç] ↔ Bach / Buch [x]</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">i<strong>ch</strong> (nhẹ)</span><span class="phon-word-zh">tôi</span></div>
+<div class="phon-word"><span class="phon-word-de">der Ba<strong>ch</strong> (nặng)</span><span class="phon-word-zh">con suối</span></div>
+<div class="phon-word"><span class="phon-word-de">au<strong>ch</strong> (nặng)</span><span class="phon-word-zh">cũng</span></div>
+<div class="phon-word"><span class="phon-word-de">re<strong>chts</strong> (nhẹ)</span><span class="phon-word-zh">bên phải</span></div>
+</div>
+</div>
+<div class="phon-card">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-purple"><div class="phon-letter">sch</div><div class="phon-ipa">sờ (môi tròn)</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Kussmund!</span> Lippen runden (Kussmund!), Zähne leicht zusammen, Luft scharf ausströmen.</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳</span> Chúm môi tròn về phía trước như hôn gió, đồng thời rụt lưỡi về phía sau (khác với "s"/"x" tiếng Việt, lưỡi để ở phía trước) — tạo ra âm xì trầm và đục hơn.</div>
+<div class="phon-note note-warn">⚠ SCH luôn phải chúm môi tròn!</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">schön</span><span class="phon-word-zh">đẹp</span></div>
+<div class="phon-word"><span class="phon-word-de">schreiben</span><span class="phon-word-zh">viết</span></div>
+</div>
+</div>
+<div class="phon-card">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-purple"><div class="phon-letter">st · sp</div><div class="phon-ipa">"sờ-t" · "sờ-p"</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 „Scht/Schp"!</span> Am Wortanfang und am Anfang einer betonten Silbe spricht man st/sp wie „scht"/„schp".</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳</span> Ở đầu từ và đầu âm tiết được nhấn, st/sp được phát âm như „scht"/„schp": <strong>Straße → „Schtraße" · spielen → „Schpielen"</strong>.</div>
+<div class="phon-note note-warn">⚠ Đừng đọc theo kiểu tiếng Anh "s-t"!</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">die Straße</span><span class="phon-word-zh">con đường</span></div>
+<div class="phon-word"><span class="phon-word-de">spielen</span><span class="phon-word-zh">chơi</span></div>
+</div>
+</div>
+<div class="phon-card schwer">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-red"><div class="phon-letter">Z z</div><div class="phon-ipa">"ts"</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Immer „ts"!</span> Kurzes „t" + sofortiges scharfes „s" — zusammen: „ts". Nie „s" allein!</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳</span> Tiếng Việt không có âm đầu này! Hãy đọc thật nhanh "t" rồi nối liền ngay với "s" — giống như đang nói "tsờ" chỉ trong một nhịp. Ví dụ: Zu<strong>g</strong> → đọc như "Tsuk".</div>
+<div class="phon-note note-warn">⚠ Z không phải là "d" hay "gi" trong tiếng Việt!</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">der Zu<strong>g</strong></span><span class="phon-word-zh">xe lửa</span></div>
+<div class="phon-word"><span class="phon-word-de">bezahlen</span><span class="phon-word-zh">thanh toán</span></div>
+</div>
+</div>
+<div class="phon-card schwer">
+<div class="phon-card-top">
+<div class="phon-letter-box lb-red"><div class="phon-letter">R r</div><div class="phon-ipa">mehrere Varianten</div></div>
+<div class="phon-body">
+<div class="phon-expl-de"><span class="tag-de">🇩🇪 Mehrere Varianten!</span> Das R kann im Rachen oder mit der Zungenspitze gesprochen werden. Beide Varianten sind korrekt. Wichtig: nicht wie das englische R sprechen.</div>
+<div class="phon-expl-zh"><span class="tag-zh">🇻🇳</span> Âm R có thể được phát âm trong họng hoặc rung bằng đầu lưỡi. Cả hai cách đều đúng. Quan trọng: không phát âm giống R trong tiếng Anh.</div>
+<div class="phon-note note-warn">⚠ Cuối từ: R → "ơ" nhẹ! Ví dụ: Vate<strong>r</strong> → đọc như "Fa-tơ"</div>
+</div>
+</div>
+<div class="phon-words">
+<div class="phon-word"><span class="phon-word-de">rot</span><span class="phon-word-zh">màu đỏ</span></div>
+<div class="phon-word"><span class="phon-word-de">der Bruder</span><span class="phon-word-zh">anh/em trai</span></div>
+</div>
+</div>
+</div>
+<div class="section-title">🔧 WICHTIGE PHRASEN / Cụm từ quan trọng</div>
+<table class="vocab">
+<colgroup><col style="width:34%"/><col style="width:32%"/><col style="width:34%"/></colgroup>
+<thead><tr><th>Deutsch</th><th>Đọc là</th><th>Tiếng Việt</th></tr></thead>
+<tbody>
+<tr><td>Wie heiß<strong>t</strong> du?</td><td class="phonetik">vi hais<strong>t</strong> đu</td><td class="vn-word">Bạn tên là gì?</td></tr>
+<tr><td>Ich heiße …</td><td class="phonetik">ích hai-sờ …</td><td class="vn-word">Tôi tên là …</td></tr>
+<tr><td>Können Sie das bitte buchstabieren?</td><td class="phonetik">cơ-nần zi đas bít-tơ buc-sờ-ta-bi-rần</td><td class="vn-word">Bạn có thể đánh vần giúp tôi không?</td></tr>
+</tbody>
+</table>
+<div class="footer">
+<span>Deutsch A1 · Lektion 0</span>
+<span>Seite 3 / 5</span>
+</div>
+</div>
+<!-- ═════════════════════════════ SEITE 4 / 4 ═════════════════════════════ -->
+<div class="page compact"><div class="doc-header"><div><h1>🇩🇪 Deutsch A1 — Lektion 0</h1><h2>Grammatik, Übungen &amp; Dialog / Ngữ pháp, Bài tập &amp; Hội thoại</h2></div><div class="badge">A1 · Lektion 0 · Seite 4 / 5</div></div><div class="section-title">📖 GRAMMATIK 1: Die Umlaute (Ä, Ö, Ü) — Zusammenfassung / Tổng kết nguyên âm biến âm</div><div class="gram-box">
+<div class="rule-de">Ä, Ö und Ü sind eigene Vokallaute. Ein fehlender oder falscher Umlaut kann die Schreibweise oder die Bedeutung eines Wortes verändern. Ö und Ü haben keine direkte Entsprechung im Vietnamesischen und sind deshalb für viele vietnamesische Lernende ungewohnt (siehe Aussprache-Vertiefung, Seite 2).</div>
+<div class="rule-vn">Ä, Ö và Ü là những nguyên âm riêng. Thiếu hoặc dùng sai Umlaut có thể làm sai chính tả hoặc thay đổi nghĩa của từ. Ö và Ü không có âm tương đương trực tiếp trong tiếng Việt nên thường khá mới đối với người học Việt Nam (xem phần Đào sâu phát âm, trang 2).</div>
+</div><div class="warn-box">
+<div class="wb-title">⚠️ Häufige Fehler / Lỗi thường gặp</div>
+<div class="fehler-item">
+<div><span class="falsch">❌ Falsch:</span> Ich bin mude.</div>
+<div><span class="richtig">✅ Richtig:</span> Ich bin müde.</div>
+<div class="erkl-de">Erklärung: „mude" existiert nicht. Ohne Umlaut ist das Wort falsch.</div>
+<div class="erkl-vn">Giải thích: từ "mude" hoàn toàn không tồn tại. Thiếu dấu biến âm là sai chính tả.</div>
+</div>
+<div class="fehler-item">
+<div><span class="falsch">❌ Falsch:</span> Das Wetter ist schon.</div>
+<div><span class="richtig">✅ Richtig:</span> Das Wetter ist schön.</div>
+<div class="erkl-de">Erklärung: „schon" bedeutet "đã/rồi". „schön" bedeutet "đẹp".</div>
+<div class="erkl-vn">Giải thích: "schon" nghĩa là "đã/rồi", còn "schön" nghĩa là "đẹp" — hai từ hoàn toàn khác nhau.</div>
+</div>
+</div><div class="exercise-block"><div class="ubung-header">📝 Übung 1: Umlaut oder Vokal? / Bài tập 1: Chọn nguyên âm đúng</div><div class="ubung-body">
+<div class="instr-de">Bitte wähle das richtige Wort basierend auf der Bedeutung.</div>
+<div class="instr-vn">Hãy chọn từ đúng dựa theo nghĩa của câu.</div>
+<div class="fill-line"><span class="num">1.</span> Ich muss schlafen. Ich bin (mude / müde): <span class="blank"></span></div>
+<div class="fill-line"><span class="num">2.</span> Die Blume ist sehr (schon / schön): <span class="blank"></span></div>
+<div class="fill-line"><span class="num">3.</span> Wir machen jetzt eine (Ubung / Übung): <span class="blank"></span></div>
+</div></div><div class="kultur-box">
+<div class="kb-title">🌍 KULTURINFO #1: Das geheimnisvolle „ß" / Chữ cái bí ẩn „ß"</div>
+<div class="kb-de">Das „ß" (Eszett) ist ein besonderes Zeichen der deutschen Rechtschreibung und wird wie ein scharfes „ss" gesprochen. Es steht in der Regel nach langen Vokalen und Diphthongen. In der Schweiz schreibt man stattdessen immer „ss". Als Großbuchstabe gibt es auch ẞ.</div>
+<div class="kb-vn">Chữ „ß" (Eszett) là một ký tự đặc biệt trong chính tả tiếng Đức và được phát âm như „ss" sắc. Nó thường đứng sau nguyên âm dài và nguyên âm đôi. Ở Thụy Sĩ người ta luôn viết „ss" thay thế. Dạng chữ hoa là ẞ.</div>
+</div><div class="section-title">📖 GRAMMATIK 2: Die Auslautverhärtung — Zusammenfassung / Tổng kết quy tắc cứng hóa phụ âm cuối từ</div><div class="gram-box">
+<div class="rule-de">Am Silben- oder Wortende werden die weichen Konsonanten B, D, G automatisch hart wie P, T, K ausgesprochen (siehe Aussprache-Vertiefung, Seite 3).</div>
+<div class="rule-vn">Ở cuối âm tiết hoặc cuối từ, các phụ âm mềm B, D, G tự động được đọc cứng như P, T, K (xem phần Đào sâu phát âm, trang 3).</div>
+</div><div class="warn-box">
+<div class="wb-title">⚠️ Häufige Fehler / Lỗi thường gặp</div>
+<div class="fehler-item">
+<div><span class="falsch">❌ Falsch:</span> Guten Abend (mit weichem D am Ende gesprochen).</div>
+<div><span class="richtig">✅ Richtig:</span> Guten Aben<strong>d</strong> (gesprochen wie „Abent").</div>
+<div class="erkl-de">Erklärung: Das D am Ende verliert seine Stimmhaftigkeit.</div>
+<div class="erkl-vn">Giải thích: chữ D ở cuối từ mất đi tính "rung" (hữu thanh) và đọc cứng thành T.</div>
+</div>
+</div><div class="exercise-block"><div class="ubung-header">📝 Übung 2: Wie klingt das Wort? / Bài tập 2: Từ này thực sự đọc thế nào?</div><div class="ubung-body">
+<div class="instr-de">Schreibe die gesprochene Endung auf (p, t oder k).</div>
+<div class="instr-vn">Hãy viết ra phụ âm cuối thực sự được phát âm (p, t hoặc k).</div>
+<div class="fill-line"><span class="num">1.</span> un<strong>d</strong>  →  un<span class="blank" style="min-width:30px;"></span></div>
+<div class="fill-line"><span class="num">2.</span> der Ta<strong>g</strong>  →  Ta<span class="blank" style="min-width:30px;"></span></div>
+<div class="fill-line"><span class="num">3.</span> das Kin<strong>d</strong>  →  Kin<span class="blank" style="min-width:30px;"></span></div>
+<div class="fill-line"><span class="num">4.</span> gel<strong>b</strong>  →  gel<span class="blank" style="min-width:30px;"></span></div>
+</div></div><div class="section-title">💬 BEISPIELDIALOG / Đoạn hội thoại mẫu</div><div class="dialog-box">
+<div class="dialog-line"><span class="speaker">A:</span>Guten Tag! Wie heißen Sie?</div>
+<div class="dialog-line"><span class="speaker">B:</span>Guten Tag! Ich heiße Minh.</div>
+<div class="dialog-line"><span class="speaker">A:</span>Können Sie das bitte buchstabieren?</div>
+<div class="dialog-line"><span class="speaker">B:</span>Ja, natürlich: <b>M – I – N – H</b>.</div>
+<div class="dialog-line"><span class="speaker">A:</span>Danke schön!</div>
+</div><div class="footer"><span>Deutsch A1 · Lektion 0</span><span>Seite 4 / 5</span></div></div><div class="page compact">
+<div class="doc-header">
+<div>
+<h1>🇩🇪 Deutsch A1 — Lektion 0</h1>
+<h2>Lesetext, Hausaufgaben &amp; Antworten / Bài đọc, Bài tập về nhà &amp; Đáp án</h2>
+</div>
+<div class="badge">A1 · Lektion 0 · Seite 5 / 5</div>
+</div>
+<div class="section-title">📖 LESETEXT / Bài đọc hiểu</div>
+<div class="lese-box">
+    Im Deutschkurs sind zwei Studenten. Sie heißen Max und Minh. Max kommt aus Deutschland. Minh kommt aus Vietnam, aus Hanoi. Der Lehrer fragt: „Wie schreibt man Ihren Namen?" Minh buchstabiert seinen Namen: „M – I – N – H". Der Kurs macht viel Spaß.
+  </div>
+<div class="mc-block">
+<div class="mc-frage">1. Wer kommt aus Hanoi?</div>
+<div class="mc-optionen">
+<span><span class="mc-kreis"></span> a) Max</span>
+<span><span class="mc-kreis"></span> b) Minh</span>
+<span><span class="mc-kreis"></span> c) Der Lehrer</span>
+</div>
+<div class="mc-frage">2. Was macht der Kurs?</div>
+<div class="mc-optionen">
+<span><span class="mc-kreis"></span> a) Er ist langweilig.</span>
+<span><span class="mc-kreis"></span> b) Er macht Spaß.</span>
+<span><span class="mc-kreis"></span> c) Er ist zu schwer.</span>
+</div>
+<div class="mc-frage">3. Was fragt der Lehrer?</div>
+<div class="mc-optionen">
+<span><span class="mc-kreis"></span> a) Wie alt bist du?</span>
+<span><span class="mc-kreis"></span> b) Wo wohnst du?</span>
+<span><span class="mc-kreis"></span> c) Wie schreibt man Ihren Namen?</span>
+</div>
+<div class="mc-frage">4. Wer kommt aus Deutschland?</div>
+<div class="mc-optionen">
+<span><span class="mc-kreis"></span> a) Max</span>
+<span><span class="mc-kreis"></span> b) Minh</span>
+<span><span class="mc-kreis"></span> c) Niemand</span>
+</div>
+<div class="mc-frage">5. Wie buchstabiert Minh seinen Namen?</div>
+<div class="mc-optionen">
+<span><span class="mc-kreis"></span> a) W – E – I</span>
+<span><span class="mc-kreis"></span> b) M – A – X</span>
+<span><span class="mc-kreis"></span> c) M – I – N – H</span>
+</div>
+<div class="mc-frage" style="margin-top:4px;">✍️ Freie Zusatzfrage:</div>
+<div class="small" style="color:#374151;">Wie buchstabiert man dein Heimatland auf Deutsch?</div>
+</div>
+<div class="kultur-box">
+<div class="kb-title">🌍 KULTURINFO #2: Buchstabieren im Alltag / Văn hóa đánh vần trong đời sống</div>
+<div class="kb-de">Die deutsche Aussprache folgt vielen regelmäßigen Regeln, aber ein Buchstabe kann je nach Wort unterschiedlich klingen. Am Telefon helfen beim Buchstabieren oft zusätzliche Wörter, zum Beispiel „A wie Aachen", damit Namen und Adressen sicher verstanden werden.</div>
+<div class="kb-vn">Phát âm tiếng Đức có nhiều quy tắc đều đặn, nhưng một chữ cái có thể được phát âm khác nhau tùy theo từ. Khi đánh vần qua điện thoại, người ta thường dùng thêm một từ minh họa, ví dụ „A wie Aachen", để tên và địa chỉ được nghe rõ hơn.</div>
+</div>
+<div class="ha-box">
+<h4>🏠 HAUSAUFGABEN / Bài tập về nhà (Đảm bảo không áp lực!)</h4>
+<div class="ha-item">1. 🔊 <strong>Sprechen / Nói:</strong> Sprich das Alphabet (A–Z) dreimal laut vor einem Spiegel durch.
+      <div class="ha-vn">Đứng trước gương và đọc to bảng chữ cái (A–Z) ba lần.</div>
+</div>
+<div class="ha-item">2. ✏️ <strong>Schreiben / Viết:</strong> Schreib deinen eigenen Vor- und Nachnamen auf ein Blatt Papier und buchstabiere ihn laut auf Deutsch. <span class="ha-vn">Viết họ và tên của mình ra giấy, sau đó đánh vần to bằng tiếng Đức.</span>
+</div>
+<div class="ha-item">3. 👂 <strong>Hören / Nghe:</strong> Sprecht die Wörter schon (already) und schön (beautiful) direkt hintereinander aus. Achtet auf die Lippenrundung! <span class="ha-vn">Đọc liền hai từ schon (đã/rồi) và schön (đẹp), chú ý động tác chúm tròn môi!</span>
+</div>
+<div class="ha-item">4. 🔁 <strong>Wiederholen / Ôn tập:</strong> Übe fünf besonders wichtige bzw. ungewohnte Laute aus Seite 2–3 noch einmal laut: Ö, Ü, ch, Z, R.
+      <div class="ha-vn">Luyện tập to lại 5 âm khó nhất ở trang 2–3: Ö, Ü, ch, Z, R.</div>
+</div>
+</div>
+<div class="antworten">
+<h4>✅ ANTWORTEN / Đáp án</h4>
+<p><strong>Übung 1:</strong> 1. müde   2. schön   3. Übung</p>
+<p><strong>Übung 2:</strong> 1. t (un<strong>t</strong>)   2. k (Ta<strong>k</strong>)   3. t (Kin<strong>t</strong>)   4. p (gel<strong>p</strong>)</p>
+<p><strong>Lesetext-MC:</strong> 1. b   2. b   3. c   4. a   5. c</p>
+<p><strong>Freie Zusatzfrage:</strong> Beispiel: <em>Vietnam = V – I – E – T – N – A – M.</em> Wenn dein Heimatland anders heißt, buchstabiere den deutschen Namen selbst und vergleiche anschließend Buchstabe für Buchstabe.</p>
+</div>
+<div class="footer">
+<span>Deutsch A1 · Lektion 0 · Viel Erfolg! / Chúc bạn học tốt!</span>
+<span>Seite 5 / 5</span>
+</div>
+</div>
+<script>(() => {
+  'use strict';
+  const panel = document.createElement('section');
+  panel.id = 'audio-test';
+  panel.innerHTML = `<h2>Lektion 0 · Alphabet hören und nachsprechen</h2>
+  <p><strong>So öffnest du die Audioübung:</strong> Lade diese HTML-Datei aus Google Drive herunter und öffne sie in Chrome oder Edge. Die Hörbuttons funktionieren nicht direkt in der Drive-Vorschau.</p><p lang="vi"><strong>Cách mở bài luyện nghe:</strong> Tải tệp HTML này từ Google Drive về máy và mở bằng Chrome hoặc Edge. Các nút nghe không hoạt động trực tiếp trong bản xem trước của Google Drive.</p>
+  <p><strong>Buchstabenname ≠ Laut im Wort.</strong> „B“ heißt „Be“. Im Wort „Bein“ hörst du /b/ ohne zusätzliches „e“. Die Namensbuttons sprechen den Buchstaben in einem kurzen Satz.</p>
+  <p lang="vi">Bấm „Tên chữ“ để nghe tên chữ cái, „Từ ví dụ“ để nghe từ ví dụ. Nghe rồi nhắc lại.</p>
+  <div class="audio-controls"><label>Deutsche Stimme <select id="audio-voice"></select></label>
+  <label>Tempo <select id="audio-rate"><option value="1">Normal</option><option value="0.8">Langsam</option></select></label>
+  <label>Nachsprechpause <select id="audio-gap"><option value="2000">2 Sekunden</option><option value="4000">4 Sekunden</option></select></label></div>
+  <div class="audio-controls"><button id="audio-all" data-audio>▶ A–Z mit Beispielwörtern</button><button id="audio-special" data-audio>▶ Ä · Ö · Ü · ß mit Wörtern</button><button id="audio-stop">■ Stopp</button></div>
+  <p id="audio-status" role="status" aria-live="polite">Deutsche Stimmen werden geladen …</p>
+  <details><summary>Anleitung / Hướng dẫn</summary><p>1. Oben eine deutsche Stimme auswählen. 2. Neben einem Buchstaben oder Beispielwort auf den Hörbutton klicken. 3. Zuhören und laut nachsprechen. Mit „Langsam“ das Tempo reduzieren. Für die ganze Reihe „A–Z mit Beispielwörtern“ wählen. „Stopp“ beendet die Wiedergabe.</p><p lang="vi">1. Chọn giọng tiếng Đức ở phía trên. 2. Bấm nút nghe bên cạnh chữ cái hoặc từ ví dụ. 3. Nghe và nhắc lại thành tiếng. Chọn „Langsam“ để nghe chậm hơn. Chọn „A–Z mit Beispielwörtern“ để nghe cả bảng chữ cái kèm từ ví dụ. Bấm „Stopp“ để dừng.</p><p>Die verfügbaren Stimmen hängen von deinem Gerät und Browser ab. Manche Stimmen benötigen Internet.</p><p lang="vi">Các giọng đọc có sẵn tùy thuộc vào thiết bị và trình duyệt của bạn. Một số giọng đọc cần kết nối Internet.</p></details>`;
+  document.body.prepend(panel);
+  const style = document.createElement('style');
+  style.textContent = `#audio-test{max-width:1000px;margin:20px auto;padding:24px;background:#edf5ff;border:1px solid #bbd0eb;border-radius:16px;font:15px/1.5 'Segoe UI',sans-serif;color:#163657}#audio-test h2{font-size:25px;margin:0 0 10px}#audio-test p{margin:8px 0}#audio-test details{margin-top:12px}.audio-controls{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;align-items:end}.audio-controls label{display:flex;flex-direction:column;gap:4px}#audio-test select,#audio-test button,.audio-button{padding:8px 12px;border:1px solid #a7bed8;border-radius:7px;background:white;color:#153754;font:14px 'Segoe UI',sans-serif;cursor:pointer}#audio-test select{max-width:100%}.audio-button{margin:4px 2px;display:inline-block;font-size:12px}button[data-audio]:disabled{opacity:.45;cursor:not-allowed}.audio-playing{outline:3px solid #f1ad30!important;background:#fff2cd!important}#audio-status{font-weight:600;min-height:24px}button:focus-visible,select:focus-visible{outline:3px solid #e09d30;outline-offset:2px}@media screen{.page{width:min(1000px,calc(100% - 24px));min-height:0;padding:28px;margin:16px auto}.alphabet-table td{font-size:14px!important;padding:8px!important}.alphabet-table th{font-size:12px!important}.alphabet-table td:first-child{min-width:125px}.alphabet-table td:nth-child(3){min-width:145px}}@media(max-width:650px){#audio-test{margin:12px;padding:16px}.page{overflow-x:auto;padding:14px}.alphabet-table{min-width:720px}.audio-controls{display:block}.audio-controls label,.audio-controls button{margin:8px 0}}@media print{#audio-test,.audio-button{display:none!important}.audio-playing{outline:0!important}}`;
+  document.head.append(style);
+  const status = document.getElementById('audio-status');
+  const select = document.getElementById('audio-voice');
+  const synth = window.speechSynthesis;
+  const supported = !!synth && typeof window.SpeechSynthesisUtterance === 'function';
+  let voices = [], generation = 0, timer = null, watchdog = null, active = null, retained = null;
+  const rows = Array.from(document.querySelectorAll('table')).find(t => t.textContent.includes('Chữ cái'));
+  if (!rows) { status.textContent = 'Alphabet-Tabelle nicht gefunden.'; return; }
+  rows.classList.add('alphabet-table');
+  function reset(message) {
+    generation++; clearTimeout(timer); clearTimeout(watchdog);
+    if (supported) synth.cancel();
+    active?.classList.remove('audio-playing'); active = null; retained = null;
+    if (message) status.textContent = message;
+  }
+  function play(items) {
+    reset();
+    const voice = voices.find(v => v.voiceURI === select.value);
+    if (!supported || !voice) { status.textContent = 'Keine deutsche Stimme verfügbar. Öffne die Datei in Chrome oder Edge mit einer deutschen Sprachstimme.'; return; }
+    const token = generation;
+    const rate = Number(document.getElementById('audio-rate').value);
+    const gap = Number(document.getElementById('audio-gap').value);
+    let i = 0;
+    function next() {
+      if (token !== generation) return;
+      active?.classList.remove('audio-playing');
+      if (i >= items.length) { active = null; retained = null; status.textContent = 'Fertig. Du kannst jedes Wort erneut anhören.'; return; }
+      const item = items[i++]; active = item.el; active?.classList.add('audio-playing');
+      status.textContent = `Hören (${i}/${items.length}): ${item.label}`;
+      const u = new SpeechSynthesisUtterance(item.text); retained = u;
+      u.voice = voice; u.lang = voice.lang; u.rate = rate;
+      u.onend = () => { if (token !== generation) return; clearTimeout(watchdog); status.textContent = 'Jetzt nachsprechen: ' + item.label; timer = setTimeout(next, gap); };
+      u.onerror = event => { if (token !== generation) return; reset('Wiedergabe fehlgeschlagen (' + event.error + '). Bitte eine andere deutsche Stimme wählen.'); };
+      watchdog = setTimeout(() => { if (token === generation) reset('Die Stimme antwortet nicht. Bitte eine andere deutsche Stimme wählen und erneut starten.'); }, 20000);
+      synth.speak(u);
+    }
+    next();
+  }
+  function button(parent, label, text, readable) {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'audio-button'; b.dataset.audio = '';
+    b.textContent = label; b.setAttribute('aria-label', readable); b.onclick = () => play([{text, label:readable, el:b}]); parent.append(b); return b;
+  }
+  const entries = [];
+  for (const row of rows.querySelectorAll('tbody tr')) {
+    const cells = row.querySelectorAll('td'); if (cells.length < 3) continue;
+    const letter = cells[0].textContent.trim().split(/\s/)[0];
+    const wordCopy = cells[2].cloneNode(true);
+    wordCopy.querySelectorAll('span.der,span.die,span.das').forEach(el => el.after(document.createTextNode(' ')));
+    const word = wordCopy.textContent.trim().replace(/\s+/g,' ');
+    const letterText = letter === 'ß' ? 'Dieser Buchstabe heißt Eszett.' : `Der Buchstabe ${letter}.`;
+    const lb = button(cells[0], '🔊 Tên chữ', letterText, 'Buchstabenname: ' + letter);
+    const wb = button(cells[2], '🔊 Từ ví dụ', word, 'Beispielwort: ' + word);
+    entries.push([{text:letterText,label:'Buchstabenname: '+letter,el:lb},{text:word,label:word,el:wb}]);
+  }
+  document.querySelectorAll('.phon-word-de').forEach(el => { const word = el.textContent.replace(/\([^)]*\)/g, "").replace(/\s+/g, " ").trim(); button(el.parentElement, '🔊 Hören', word, word); });
+  document.getElementById('audio-all').onclick = () => play(entries.slice(0,26).flat());
+  document.getElementById('audio-special').onclick = () => play(entries.slice(26).flat());
+  document.getElementById('audio-stop').onclick = () => reset('Gestoppt.');
+  function populate() {
+    const previous = select.value;
+    voices = supported ? synth.getVoices().filter(v => /^de(?:[-_]|$)/i.test(v.lang)) : [];
+    select.replaceChildren();
+    voices.forEach(v => { const o = document.createElement('option'); o.value = v.voiceURI; o.textContent = v.name + ' · ' + v.lang; select.append(o); });
+    if (voices.some(v => v.voiceURI === previous)) select.value = previous;
+    else if (voices.length) select.value = (voices.find(v => /^de[-_]DE$/i.test(v.lang)) || voices[0]).voiceURI;
+    document.querySelectorAll('[data-audio]').forEach(b => b.disabled = !voices.length);
+    if (!voices.length) { if (active) reset(); status.textContent = supported ? 'Keine deutsche Stimme verfügbar. Bitte in Chrome oder Edge öffnen und deutsche Sprachstimmen prüfen.' : 'Dieser Browser unterstützt die Sprachausgabe nicht. Bitte Chrome oder Edge verwenden.'; }
+    else if (!active) status.textContent = 'Bereit. Wähle einen Buchstabennamen oder ein Beispielwort.';
+  }
+  select.onchange = () => reset('Stimme gewechselt. Bitte einen Hörbutton wählen.');
+  if (supported) synth.addEventListener('voiceschanged', populate);
+  populate(); window.addEventListener('pagehide', () => reset());
+})();
+</script></body>
+</html>
